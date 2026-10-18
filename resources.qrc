@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>assets/img/icon/logo.png</file>
+        <file>assets/img/icon/min_logo.png</file>
+        <file>assets/img/icon/max_logo.png</file>
+        <file>assets/img/icon/favicon_32x32.ico</file>
+        <file>assets/img/icon/favicon_64x64.ico</file>
+        <file>assets/img/icon/favicon_128x128.ico</file>
+        <file>assets/img/background.png</file>
+        <file>assets/img/down_arrow.png</file>
+        <file>assets/img/loading.gif</file>
+        <file>assets/img/no_avatar.png</file>
+        <file>assets/img/no_banner.png</file>
+        <file>assets/img/no_camera.png</file>
+        <file>assets/img/no_img.png</file>
+        <file>assets/img/no_video.png</file>
+        <file>assets/img/qrcode.png</file>
+        <file>assets/img/template.png</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file>assets/font/bold.ttf</file>
+        <file>assets/font/light.ttf</file>
+        <file>assets/font/iconfont.ttf</file>
+        <file>assets/font/iconfont.woff</file>
+        <file>assets/font/iconfont.woff2</file>
+    </qresource>
+    <qresource prefix="/styles">
+        <file>assets/style/main.qss</file>
+    </qresource>
+    <qresource prefix="/wood">
+        <file>assets/img/icon/min_logo.png</file>
+        <file>assets/img/icon/favicon_128x128.ico</file>
+    </qresource>
+</RCC>
