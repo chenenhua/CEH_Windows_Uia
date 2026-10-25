@@ -1,0 +1,5 @@
+#pragma code_page(65001)
+
+#include <windows.h>
+
+IDI_ICON1 ICON DISCARDABLE "../../assets/img/icon/favicon_128x128.ico"

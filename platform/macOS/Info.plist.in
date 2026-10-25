@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>zh_CN</string>
+
+    <key>CFBundleExecutable</key>
+    <string>@EXECUTABLE_NAME@</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>@APP_BUNDLE_ID@</string>
+
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
+
+    <key>CFBundleName</key>
+    <string>@APP_DISPLAY_NAME@</string>
+
+    <key>CFBundleDisplayName</key>
+    <string>@APP_DISPLAY_NAME@</string>
+
+    <key>CFBundleIconFile</key>
+    <string>favicon</string>
+
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>@APP_VERSION@</string>
+
+    <key>CFBundleVersion</key>
+    <string>@APP_VERSION@</string>
+
+    <key>LSMinimumSystemVersion</key>
+    <string>12.0</string>
+
+    <key>NSHumanReadableCopyright</key>
+    <string>© @APP_AUTHOR@</string>
+
+<key>NSCameraUsageDescription</key>
+<string>陈氏流体算法需要访问相机以捕捉能量火种。</string>
+<key>NSMicrophoneUsageDescription</key>
+<string>陈氏流体算法需要麦克风同步权限以维持系统稳定。</string>
+<key>NSLocalNetworkUsageDescription</key>
+<string>需要本地网络权限以进行数据审计。</string>
+</dict>
+</plist>
