@@ -1,4 +1,4 @@
-﻿# CEH Windows UIA
+# CEH Windows UIA
 
 > **木头自动系统控制 / CEH_Windows_Uia**  
 > 基于 **C++17 + Qt6 + Windows UI Automation + 本地 LLM/VLM + 视觉定位 + 鼠标键盘控制** 的 Windows 桌面智能控制助手。
