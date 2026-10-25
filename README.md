@@ -1,132 +1,216 @@
-# CEH Windows UIA
+# CEH Windows UIA（木头自动系统控制）
+### *Local AI Desktop Agent — Natural Language Windows Control*
 
-> **木头自动系统控制 / CEH_Windows_Uia**  
-> 基于 **C++17 + Qt6 + Windows UI Automation + 本地 LLM/VLM + 视觉定位 + 鼠标键盘控制** 的 Windows 桌面智能控制助手。
+<p align="center">
+  <a href="assets/uppic/video/sm.mp4">
+    <img src="assets/uppic/video/sm.JPG" alt="CEH Windows UIA 演示" width="920" />
+  </a>
+</p>
 
-CEH Windows UIA 的目标不是为每个软件单独写自动化脚本，而是让用户直接用自然语言告诉程序：
+<p align="center">
+  <strong>让用户不再写自动化脚本，而是直接告诉电脑：“我要做什么。”</strong>
+</p>
 
-- 打开什么软件
-- 在当前软件里做什么
-- 分析当前窗口
-- 操作某个按钮
-- 输入文字
-- 和当前联系人聊天
-- 分析用户上传的图片或截图
+<p align="center">
+  <a href="assets/uppic/video/sm.mp4"><strong>▶ 点击上方图片观看项目演示视频</strong></a>
+</p>
 
-系统根据当前窗口、UIA 可用性、视觉识别结果和本地模型推理结果，动态选择 UIA、Vision、Mouse、Keyboard 等方式执行任务。
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-1.0.0-00a361.svg" alt="Version 1.0.0" />
+  <img src="https://img.shields.io/badge/Platform-Windows%2010%20%7C%2011%20(x64)-blue.svg" alt="Platform" />
+  <img src="https://img.shields.io/badge/C%2B%2B-17%20(MSVC%20x64)-00599c.svg" alt="C++17" />
+  <img src="https://img.shields.io/badge/Framework-Qt%206.11.1-41cd52.svg" alt="Qt 6.11.1" />
+  <img src="https://img.shields.io/badge/AI%20Engine-llama.cpp-orange.svg" alt="AI Engine" />
+  <img src="https://img.shields.io/badge/Vision-Local%20VLM-purple.svg" alt="Local VLM" />
+  <img src="https://img.shields.io/badge/Automation-UIA%20%7C%20VisionMouse-0078d4.svg" alt="Automation" />
+  <img src="https://img.shields.io/badge/Privacy-Local--First-green.svg" alt="Privacy" />
+</p>
 
 ---
 
-## 项目目标
+## 目录
 
-一句话：
+- [一、项目概述与软件定位](#一项目概述与软件定位)
+- [二、项目要解决的问题](#二项目要解决的问题)
+- [三、核心功能](#三核心功能)
+- [四、项目演示](#四项目演示)
+- [五、系统架构](#五系统架构)
+- [六、本地模型与运行机制](#六本地模型与运行机制)
+- [七、硬件支持与运行环境](#七硬件支持与运行环境)
+- [八、工程目录结构](#八工程目录结构)
+- [九、快速开始与编译](#九快速开始与编译)
+- [十、日志与安全边界](#十日志与安全边界)
+- [十一、设计原则](#十一设计原则)
+- [十二、当前限制与 Roadmap](#十二当前限制与-roadmap)
+- [十三、免责声明与知识产权声明](#十三免责声明与知识产权声明)
 
-> **让普通用户通过自然语言控制 Windows 电脑。**
+---
 
-典型使用方式：
+## 一、项目概述与软件定位
+
+**CEH Windows UIA（木头自动系统控制）** 是一个基于 **C++17 + Qt6 + Windows UI Automation + 本地 LLM/VLM + Visual Grounding + 鼠标键盘控制** 构建的 Windows 本地 AI 桌面智能控制系统。
+
+本项目不希望为每一个软件单独编写自动化脚本，也不要求普通用户学习 UIA、AutomationId、坐标、RPA、宏命令等技术细节。
+
+真正的目标只有一个：
+
+> **用户正常说话，告诉电脑“用什么软件做什么”，系统自己理解当前窗口、自己观察、自己操作、自己验证。**
+
+例如：
 
 ```text
-打开 qq
-```
-
-```text
+打开 QQ
 打开微信
-```
-
-```text
 和他聊天
-```
-
-```text
 和他聊天，问出他做什么职业
-```
-
-```text
 看看这个窗口里有什么
-```
-
-```text
 分析这张图片
 ```
 
-程序负责完成：
+系统执行：
 
 ```text
-任务理解
-→ 窗口/应用识别
-→ 能力判断
-→ 视觉/UIA观察
-→ 动作执行
+自然语言目标
+→ 任务理解
+→ 当前软件/窗口识别
+→ UIA / Vision 能力判断
+→ 目标定位
+→ 鼠标键盘执行
 → 效果验证
 → 等待 / 继续 / 完成
 ```
 
+> [!IMPORTANT]
+> **Local-First / 本地优先**  
+> 项目当前采用本地 `llama.cpp` 驱动 LLM / VLM。任务规划、窗口视觉理解、图片分析等能力可以在本机完成。
+
 ---
 
-# 核心特性
+## 二、项目要解决的问题
 
-## 1. 自然语言控制电脑
+### 1. 传统自动化太依赖固定脚本
 
-用户不需要了解：
+传统 RPA 常常需要提前知道：
+
+```text
+软件叫什么
+控件 ID 是什么
+坐标是多少
+按钮在哪里
+下一步点击什么
+```
+
+软件版本或界面一变化，脚本就容易失效。
+
+CEH Windows UIA 希望变成：
+
+```text
+用户只给目标
+→ AI 自己观察当前界面
+→ 自己决定下一步
+```
+
+### 2. 现代软件 UIA 经常不完整
+
+Chromium、DirectUI、自绘控件、GPU UI、Canvas 等界面可能只返回很少的 UIA 节点。
+
+例如：
+
+```text
+UIA nodes=2
+actionable=0
+```
+
+系统会自动判定：
+
+```text
+UIA unavailable
+```
+
+并切换：
+
+```text
+Local VLM
+→ Vision Target
+→ VisionMouse
+```
+
+### 3. 单纯视觉点击不够可靠
+
+视觉模型能够判断“按钮大概在哪里”，但坐标可能有偏差。
+
+所以实际流程是：
+
+```text
+Vision
+→ Grounding
+→ Permission Check
+→ Mouse Action
+→ Effect Verification
+```
+
+### 4. AI 说“成功”不等于真的成功
+
+例如：
+
+```text
+keyboard_type 成功
+```
+
+只说明文字输入成功，不代表消息已经发送。
+
+因此系统增加：
+
+```text
+Pending Commit
+Strict Verification
+WAIT_FOR_CHANGE
+```
+
+把“AI理解”与“C++实际执行效果”分开。
+
+---
+
+## 三、核心功能
+
+### 1. 自然语言控制电脑
+
+用户无需了解：
 
 ```text
 UIA
-XPath
 AutomationId
+XPath
 坐标
-脚本
-宏
 RPA
+宏
+脚本
 ```
 
-只需要正常说：
+只需要直接下达目标。
+
+### 2. 桌面控制
+
+开启桌面识别后可以执行：
 
 ```text
 打开 qq
+打开某个软件
+查找目标程序
+切换到目标窗口
 ```
 
-或者：
+桌面模式使用：
 
 ```text
-和他聊天
+DESKTOP_CONTROL
 ```
 
----
+作为授权范围。
 
-## 2. Windows 应用启动
+### 3. 指定窗口控制
 
-程序支持确定性应用启动流程：
-
-```text
-应用解析
-→ 已运行窗口检查
-→ 启动进程
-→ 等待顶层窗口
-→ 获取 PID
-→ 获取 HWND
-→ 获取窗口标题
-→ 确认启动完成
-```
-
-示例日志：
-
-```text
-[APP_LIFECYCLE] 确定性打开流程开始：qq
-[APP_LIFECYCLE] 打开确认完成：
-pid=12748
-hwnd=9835080
-title=QQ
-```
-
-程序不会仅因为 `CreateProcess` 成功就认为软件已经真正打开。
-
----
-
-## 3. 指定窗口控制
-
-用户可以手动选择一个窗口。
-
-系统会锁定：
+用户手动选择窗口后，系统锁定：
 
 ```text
 Process
@@ -136,82 +220,31 @@ Window Rect
 Window Title
 ```
 
-之后任务限制在：
+指定窗口任务使用：
 
 ```text
 WINDOW_CONTROL
 ```
 
-授权范围中执行。
+只允许在用户选中的目标窗口范围内执行。
 
-适用于：
+### 4. Windows UI Automation
 
-- 微信
-- QQ
-- 浏览器
-- Office
-- 普通 Windows 软件
-- 自绘 UI
-- UIA 信息不完整的软件
-
----
-
-## 4. 桌面控制
-
-桌面模式允许执行：
-
-```text
-打开 qq
-打开某个软件
-切换窗口
-查找目标应用
-```
-
-桌面任务使用：
-
-```text
-DESKTOP_CONTROL
-```
-
-作为授权边界。
-
----
-
-## 5. Windows UI Automation
-
-程序集成 Windows UI Automation，可读取：
+支持读取：
 
 - 控件树
-- 控件名称
-- 控件类型
-- Automation ID
-- 可操作节点
-- 顶层窗口
+- Name
+- ControlType
+- AutomationId
+- Bounding Rectangle
+- Actionable Nodes
+- Top Level Window
 
-程序不会盲目依赖 UIA。
+UIA 不可靠时不会反复扫描，而是转视觉控制。
 
-如果扫描结果类似：
+### 5. Local VLM / VisionMouse
 
-```text
-nodes=2
-actionable=0
-```
-
-系统会锁定：
-
-```text
-UIA unavailable
-```
-
-然后切换到视觉控制。
-
----
-
-## 6. VLM 视觉理解
-
-UIA 不可用时，可以通过本地视觉模型分析当前窗口。
-
-示例：
+本地 VLM 可以返回：
 
 ```json
 {
@@ -233,20 +266,11 @@ UIA 不可用时，可以通过本地视觉模型分析当前窗口。
 }
 ```
 
-Vision 负责回答：
+之后由 C++ 将归一化坐标转换为真实屏幕坐标。
 
-```text
-当前是什么界面
-任务相关内容是什么
-哪里可以操作
-目标位于哪里
-```
+### 6. 鼠标键盘动作
 
----
-
-## 7. 鼠标键盘执行
-
-当前支持：
+当前基础动作：
 
 ```text
 mouse_move
@@ -257,42 +281,29 @@ keyboard_type
 keyboard_hotkey
 ```
 
-视觉目标通过：
+### 7. 自然聊天
+
+聊天任务当前流程：
 
 ```text
-norm_x
-norm_y
-norm_rect
-```
-
-转换为实际屏幕坐标。
-
----
-
-## 8. 自然聊天
-
-聊天任务当前采用：
-
-```text
-识别当前会话
-→ 找到输入框
-→ 生成自然口语
-→ 输入文字
+当前会话
+→ Vision 找输入框
+→ 自动生成自然口语
+→ keyboard_type
+→ pending_commit
 → 定位发送按钮
-→ 提交
-→ 验证
+→ 点击
+→ 严格验证
 → WAIT_FOR_CHANGE
-→ 等待下一次界面变化
 ```
 
 例如：
 
 ```text
-用户：
-和他聊天，问出他做什么职业
+用户：和他聊天，问出他做什么职业
 ```
 
-程序可以生成：
+系统可以生成：
 
 ```text
 最近在忙什么呀？
@@ -304,11 +315,9 @@ norm_rect
 你现在是做什么工作的呀？
 ```
 
----
+### 8. 当前会话保护
 
-## 9. 当前会话保护
-
-当用户已经手动选中当前聊天窗口，而且没有明确说要切换联系人时：
+如果用户已经选择当前聊天窗口，没有明确指定新联系人：
 
 ```text
 和他聊天
@@ -316,124 +325,39 @@ norm_rect
 问他做什么工作
 ```
 
-默认含义是：
-
-> **操作当前已经打开的会话。**
-
-程序不会擅自：
-
-- 点击第一个联系人
-- 点击第一个群聊
-- 切换到服务号
-- 随机选择聊天对象
-
-只有用户明确说：
+默认：
 
 ```text
-打开张三
+当前会话 = 用户目标
 ```
 
-或者：
+不会自行随机选择左侧联系人、群聊或服务号。
 
-```text
-和张三聊天
-```
+### 9. Pending Commit 提交事务
 
-才允许执行联系人切换。
-
----
-
-## 10. Pending Commit 事务
-
-`keyboard_type` 成功只代表：
-
-```text
-文字输入成功
-```
-
-不代表：
-
-```text
-消息已经发送
-```
-
-所以程序建立：
-
-```text
-pending_commit
-```
-
-流程：
+输入文字后不会直接判定发送成功。
 
 ```text
 keyboard_type
 ↓
+记录 lastTypedText
+↓
 pending_commit
 ↓
-定位发送/提交按钮
+定位发送 / 提交按钮
 ↓
-点击发送
+执行提交
 ↓
 重新观察
 ↓
-验证提交结果
+验证
 ```
 
-用于减少：
+发送按钮优先使用 `norm_rect` 几何中心；如果点击后文字仍存在，则继续重试，而不是直接进入等待。
 
-- 只输入不发送
-- 点击偏移
-- 重复发送
-- 未提交就进入等待
+### 10. WAIT_FOR_CHANGE
 
----
-
-## 11. 发送按钮命中与重试
-
-发送/提交按钮优先使用：
-
-```text
-norm_rect
-```
-
-几何中心。
-
-如果 Vision 没有返回矩形，则退回：
-
-```text
-norm_x
-norm_y
-```
-
-如果点击后仍检测到刚输入的文字：
-
-```text
-发送失败
-```
-
-程序不会直接进入等待，而是：
-
-```text
-重新定位发送按钮
-→ 再次点击
-→ 再验证
-```
-
-并记录：
-
-```text
-[COMMIT_CLICK]
-```
-
-日志。
-
----
-
-## 12. WAIT_FOR_CHANGE
-
-连续任务中，系统支持低频等待外部状态变化。
-
-例如：
+连续任务支持：
 
 ```text
 发送消息
@@ -444,97 +368,113 @@ norm_y
 
 ```text
 没有变化
-→ C++继续等待
+→ C++低频检测
 ```
-
-而不是不断调用 Planner。
 
 检测到变化后：
 
 ```text
-重新观察
-→ 重新规划
+重新 Vision
+→ 更新 World State
+→ 继续任务
 ```
 
-适用于：
+### 11. 用户图片与截图分析
 
-- 聊天回复
-- 网页加载
-- 软件启动
-- 弹窗
-- 异步任务
+支持普通图片和用户截图。
+
+这一模式使用独立 Vision 提示词，直接返回自然语言，不返回 Agent 内部 JSON。
+
+### 12. 应用启动生命周期
+
+应用启动：
+
+```text
+Resolve Executable
+→ Existing Window Check
+→ Start Process
+→ Wait PID
+→ Wait HWND
+→ Read Window Title
+→ Confirm Ready
+```
+
+只有真实顶层窗口确认后才认为 GUI 应用启动完成。
 
 ---
 
-## 13. 用户图片 / 截图分析
+## 四、项目演示
 
-用户直接上传图片或截图时，会进入独立 Vision 流程。
+<p align="center">
+  <a href="assets/uppic/video/sm.mp4">
+    <img src="assets/uppic/video/sm.JPG" alt="项目视频演示封面" width="920" />
+  </a>
+</p>
 
-这一模式不会返回 Agent 内部结构：
+<p align="center">
+  <a href="assets/uppic/video/sm.mp4"><strong>▶ 点击图片打开完整 MP4 演示</strong></a>
+</p>
+
+仓库演示资源：
 
 ```text
-targets
-norm_x
-norm_y
-UIA
-Planner
+assets/uppic/video/sm.JPG
+assets/uppic/video/sm.mp4
 ```
 
-而是直接输出自然语言分析结果。
+视频直链：
 
-程序会检查：
-
-- 空结果
-- 极短结果
-- 无效结果
-
-如果结果无效，会自动重试一次。
+[assets/uppic/video/sm.mp4](assets/uppic/video/sm.mp4)
 
 ---
 
-# 架构
+## 五、系统架构
 
-```text
-USER GOAL
-   ↓
-Task Understanding
-   ↓
-Runtime App Profile
-   ↓
-Capability Resolver
-   ├─ UIA
-   ├─ Vision
-   ├─ Mouse
-   ├─ Keyboard
-   └─ Application Lifecycle
-   ↓
-World State
-   ↓
-Planner
-   ↓
-Semantic Action
-   ↓
-Grounding
-   ↓
-Executor
-   ↓
-Verifier
-   ↓
-Wait / Continue / Complete
+```mermaid
+flowchart TD
+    User["User Goal / 自然语言目标"] --> Task["Task Understanding"]
+    Task --> Profile["Runtime App Profile"]
+    Profile --> Capability["Capability Resolver"]
+
+    Capability --> UIA["Windows UI Automation"]
+    Capability --> Vision["Local VLM / Vision"]
+    Capability --> Input["Mouse / Keyboard"]
+    Capability --> Lifecycle["Application Lifecycle"]
+
+    UIA --> World["World State"]
+    Vision --> World
+    Lifecycle --> World
+
+    World --> Planner["Planner"]
+    Planner --> Semantic["Semantic Action"]
+    Semantic --> Ground["Grounding"]
+    Ground --> Executor["Executor"]
+    Executor --> Verify["Effect Verifier"]
+    Verify --> Commit["Pending Commit"]
+    Commit --> Wait["WAIT_FOR_CHANGE"]
+    Wait --> World
 ```
 
-设计原则：
+核心职责：
 
 ```text
-AI负责理解
-C++负责执行
+LLM      → 理解目标 / 规划 / 生成自然语言
+VLM      → 理解屏幕 / 定位视觉目标
+UIA      → 提供结构化控件信息
+Grounding→ 把语义目标变成可执行位置
+Executor → 真正操作鼠标键盘
+Verifier → 判断动作有没有真正生效
 ```
 
 ---
 
-# 本地模型
+## 六、本地模型与运行机制
 
-当前项目采用本地推理。
+当前主要使用：
+
+```text
+llama.cpp
+```
 
 测试模型：
 
@@ -548,412 +488,186 @@ gemma-4-E4B-it-Q4_0.gguf
 mmproj-gemma-4-E4B-it-Q8_0.gguf
 ```
 
-推理服务：
+### LLM 典型参数
 
 ```text
-llama.cpp
+Host        127.0.0.1
+Port        8888
+Context     16384
+Threads     12
+GPU Layers  42
+Batch       256
+UBatch      64
 ```
+
+### VLM 典型参数
+
+```text
+Host        127.0.0.1
+Port        8889
+Context     8192
+Threads     12
+GPU Layers  42
+Batch       256
+UBatch      64
+```
+
+VLM 按需加载，减少长期显存占用。
 
 ---
 
-## LLM
+## 七、硬件支持与运行环境
 
-典型配置：
-
-```text
-host        127.0.0.1
-port        8888
-ctx         16384
-threads     12
-gpu layers  42
-batch       256
-ubatch      64
-```
-
----
-
-## VLM
-
-典型配置：
-
-```text
-host        127.0.0.1
-port        8889
-ctx         8192
-threads     12
-gpu layers  42
-batch       256
-ubatch      64
-```
-
-VLM 按需加载。
-
----
-
-# 当前测试环境
+### 当前主要测试环境
 
 | 项目 | 环境 |
-|---|---|
-| OS | Windows 10 64-bit |
+| :--- | :--- |
+| 操作系统 | Windows 10 64-bit |
 | CPU | Intel Core i9-9900KF |
-| RAM | 32 GB |
-| GPU | NVIDIA RTX 3080 10 GB |
+| 内存 | 32 GB |
+| GPU | NVIDIA GeForce RTX 3080 10 GB |
 | C++ | C++17 |
-| Compiler | MSVC |
-| Qt | Qt 6.11.x |
+| 编译器 | MSVC |
+| Qt | Qt 6.11.1 |
 | OpenCV | OpenCV 4.x |
 | IDE | CLion |
-| Local AI | llama.cpp |
+| AI Runtime | llama.cpp |
 | Model | Gemma 4 E4B GGUF |
 
-项目不要求必须使用 RTX 3080。
+### 推荐配置
 
-实际性能取决于：
+| 级别 | CPU | RAM | GPU | 适用场景 |
+| :--- | :--- | :--- | :--- | :--- |
+| 基础 | 现代 6 核以上 | 16 GB | 可无独显 | CPU 小模型、基础自动化 |
+| 标准 | 8 核 / 16 线程 | 32 GB | RTX 3060 级 | 推荐本地 LLM/VLM |
+| 高性能 | i7/i9 / Ryzen 7/9 | 32 GB+ | RTX 3080/4070/4080/4090 | 更高速度、更大上下文 |
 
-- 模型大小
-- GGUF 量化
-- Context 长度
-- GPU 显存
-- CPU 性能
-- GPU Offload
+### Runtime
+
+```text
+runtime/
+└── Windows/
+    ├── cpu/
+    ├── cuda13/
+    └── vulkan/
+```
+
+大型 Runtime DLL 建议使用 **Git LFS**。
 
 ---
 
-# 推荐环境
+## 八、工程目录结构
 
-## 最低建议
+```text
+CEH_Windows_Uia/
+│
+├── CMakeLists.txt
+├── README.md
+├── main.cpp
+├── resources.qrc
+│
+├── assets/
+│   ├── config/
+│   │   ├── agent.json
+│   │   ├── app.json
+│   │   ├── app_capabilities.json
+│   │   ├── camera.json
+│   │   ├── permissions.json
+│   │   └── tools.json
+│   ├── db/
+│   │   └── wood.db
+│   ├── font/
+│   ├── models/
+│   │   └── prompts/
+│   ├── style/
+│   │   └── main.qss
+│   └── uppic/
+│       ├── log/
+│       └── video/
+│           ├── sm.JPG
+│           └── sm.mp4
+│
+├── platform/
+│   ├── Windows/
+│   └── macOS/
+│
+└── runtime/
+    └── Windows/
+        ├── cpu/
+        ├── cuda13/
+        └── vulkan/
+```
+
+---
+
+## 九、快速开始与编译
+
+### 开发环境
 
 ```text
 Windows 10 / 11 x64
-16 GB RAM
-现代 6 核以上 CPU
-Qt6 x64
-```
-
-CPU 推理可以运行，但速度会明显更慢。
-
-## 推荐
-
-```text
-Windows 10 / 11 x64
-32 GB RAM
-8 核 / 16 线程以上 CPU
-NVIDIA RTX 3060 或更高
-```
-
----
-
-# 依赖
-
-主要依赖：
-
-```text
-C++17
-Qt6 Core
-Qt6 Gui
-Qt6 Widgets
-Qt6 Network
-Qt6 Sql
-Qt6 Concurrent
-Windows UI Automation
-OpenCV
-llama.cpp
-```
-
----
-
-# Qt
-
-当前测试：
-
-```text
-Qt 6.11.1
-MSVC 2022 x64
-```
-
-示例路径：
-
-```text
-C:\Qt\6.11.1\msvc2022_64
-```
-
----
-
-# OpenCV
-
-示例：
-
-```text
-C:\opencv\opencv\build
-```
-
-需要正确配置：
-
-```text
-include
-lib
-bin
-```
-
----
-
-# 项目目录
-
-```text
-windows_uia/
-│
-├─ main.cpp
-├─ CMakeLists.txt
-├─ resources.qrc
-│
-├─ assets/
-│  ├─ config/
-│  │  ├─ agent.json
-│  │  ├─ app_capabilities.json
-│  │  ├─ tools.json
-│  │  └─ permissions.json
-│  │
-│  ├─ models/
-│  │  └─ prompts/
-│  │     ├─ planner.txt
-│  │     ├─ vision.txt
-│  │     ├─ verifier.txt
-│  │     ├─ system.txt
-│  │     └─ context_summary.txt
-│  │
-│  ├─ db/
-│  │  └─ wood.db
-│  │
-│  └─ uppic/
-│     └─ log/
-│
-├─ platform/
-│  └─ Windows/
-│
-└─ cmake-build-debug/
-```
-
----
-
-# 配置文件
-
-## `agent.json`
-
-Agent 运行配置，包括：
-
-- Workflow
-- Generic Policy
-- Vision
-- WAIT_FOR_CHANGE
-- Pending Commit
-- Text Composer
-- Current Conversation Protection
-- User Image Analysis
-
-## `app_capabilities.json`
-
-应用能力提示。
-
-它不是软件白名单。
-
-未知应用仍可以通过动态 Runtime Profile 工作。
-
-## `planner.txt`
-
-Planner 负责：
-
-```text
-下一步做什么
-```
-
-## `vision.txt`
-
-Vision 负责：
-
-```text
-当前看到了什么
-哪里可以操作
-哪些内容和任务相关
-```
-
-## `verifier.txt`
-
-Verifier 负责：
-
-```text
-动作有没有真正产生效果
-```
-
----
-
-# 编译
-
-## 1. 准备
-
-安装：
-
-```text
 Visual Studio / MSVC
 CMake
 Ninja
-Qt6
+Qt 6.11.1
 OpenCV
+CLion
 ```
 
-## 2. CMake
+### CMake
 
-```bash
+```powershell
 cmake -S . -B cmake-build-debug -G Ninja
 ```
 
-## 3. Build
+构建：
 
-```bash
-cmake --build cmake-build-debug -j 14
+```powershell
+cmake --build cmake-build-debug --target CEH_Windows_Uia -j 14
 ```
 
-也可以直接在 CLion：
+CLion：
 
 ```text
 Build → CEH_Windows_Uia
 ```
 
----
+### Git LFS
 
-# 模型文件
+Runtime 含大型 DLL 时：
 
-不建议把大型模型直接提交 GitHub：
+```powershell
+git lfs install
+git lfs track "runtime/**/*.dll"
+```
+
+模型文件：
 
 ```text
 *.gguf
-mmproj-*.gguf
 ```
 
-建议通过 README 说明模型放置位置。
+建议不要作为普通 Git 文件提交。
 
 ---
 
-# 建议 `.gitignore`
+## 十、日志与安全边界
 
-```gitignore
-.idea/
-
-cmake-build-*/
-build/
-out/
-
-.vs/
-*.user
-*.suo
-
-*.exe
-*.dll
-*.lib
-*.obj
-*.pdb
-
-*_autogen/
-moc_*
-qrc_*
-ui_*
-
-*.log
-assets/uppic/log/
-
-*.db-shm
-*.db-wal
-
-*.gguf
-*.bin
-
-*.tmp
-*.cache
-Thumbs.db
-.DS_Store
-```
-
----
-
-# 使用方式
-
-## 普通聊天
-
-切换到：
-
-```text
-普通聊天
-```
-
-直接和本地 LLM 对话。
-
-## 用户图片
-
-上传图片，然后问：
-
-```text
-这张图是什么？
-```
-
-## 指定窗口
-
-选择：
-
-```text
-指定识别
-```
-
-再选择目标窗口。
-
-例如：
-
-```text
-微信
-```
-
-然后：
-
-```text
-和他聊天
-```
-
-或者：
-
-```text
-和他聊天，问出他做什么职业
-```
-
-## 桌面模式
-
-开启：
-
-```text
-桌面识别
-```
-
-然后：
-
-```text
-打开 qq
-```
-
----
-
-# 日志
-
-日志默认保存：
+日志默认：
 
 ```text
 assets/uppic/log/
 ```
 
-记录：
+主要记录：
 
 ```text
 启动
 模型加载
-资源监控
+CPU / RAM / GPU
 任务理解
 Runtime Profile
+Capability
 UIA
 Vision
 Planner
@@ -962,149 +676,45 @@ Mouse / Keyboard
 Pending Commit
 Verifier
 WAIT_FOR_CHANGE
-任务结束
+任务完成
 ```
 
----
-
-# 资源监控
-
-程序会记录：
-
-```text
-RAM
-CPU
-GPU显存
-GPU利用率
-GPU温度
-```
-
----
-
-# 安全边界
-
-系统区分：
+安全模式：
 
 ```text
 DESKTOP_CONTROL
-```
-
-和：
-
-```text
 WINDOW_CONTROL
 ```
 
-指定窗口模式只允许操作用户选定的 HWND 范围。
+指定窗口任务严格限制在用户主动选择的 HWND 范围。
 
-任务切换时：
+### Generation Cancel
 
-```text
-旧 generation 作废
-```
+任何新任务、模式切换、新窗口选择都会建立新的 `generation`。
 
-旧推理结果和后续动作不会继续执行。
+旧任务的推理结果、回调和待执行动作全部失效。
 
 ---
 
-# 当前已实际跑通的主要链路
+## 十一、设计原则
 
-## 打开应用
-
-```text
-打开 QQ
-→ PID
-→ HWND
-→ Window Title
-→ Completed
-```
-
-## 指定窗口聊天
+### 1. AI 理解，C++ 执行
 
 ```text
-锁定微信窗口
-→ Vision找到输入框
-→ 自然语言生成
-→ keyboard_type
-→ pending_commit
-→ 定位发送按钮
-→ mouse_click
-→ 验证
+AI
+→ 理解任务
+→ 理解画面
+→ 生成意图
+
+C++
+→ 权限检查
+→ 坐标检查
+→ 鼠标键盘
+→ 进程控制
+→ 效果验证
 ```
 
-## UIA 自动降级
-
-```text
-UIA信息不足
-→ UIA unavailable
-→ VisionMouse
-```
-
-## 用户图片分析
-
-```text
-用户图片
-→ VLM
-→ 自然语言结果
-```
-
----
-
-# 当前限制
-
-项目仍处于持续开发阶段。
-
-目前主要限制：
-
-## VLM OCR
-
-可能出现：
-
-- 漏字
-- 错字
-- 联系人姓名识别错误
-- 自己消息与对方消息混淆
-
-## 自绘 UI
-
-Chromium、DirectUI、Canvas、GPU UI 等软件的 UIA 信息可能非常少。
-
-## 视觉坐标
-
-小按钮、DPI 缩放、多显示器、窗口边框可能影响点击精度。
-
-## 本地模型
-
-较小模型可能出现：
-
-- JSON字段遗漏
-- Planner误判
-- Vision文字不完整
-- 长上下文信息丢失
-
-因此项目在 C++ Runtime 中保留大量确定性校验和容错。
-
----
-
-# 设计原则
-
-## AI 理解，C++ 执行
-
-```text
-AI:
-理解任务
-理解画面
-生成动作意图
-
-C++:
-权限检查
-坐标检查
-鼠标键盘
-进程控制
-效果验证
-```
-
-## 不为单个软件写死流程
+### 2. 不为单个软件写死流程
 
 项目尽量使用：
 
@@ -1113,132 +723,87 @@ C++:
 按钮
 列表
 窗口
-确认
 发送
+确认
 提交
 ```
 
-等通用语义。
+这些通用语义。
 
-## 不相信单次模型结论
-
-模型说：
+### 3. UIA 与 Vision 互补
 
 ```text
-成功
+UIA + Vision + Mouse + Keyboard + Verifier
 ```
 
-不代表真的成功。
+### 4. 不相信单次模型输出
 
-必须通过：
+模型说成功，不代表执行层真的成功。
 
-```text
-窗口
-UIA
-Vision
-输入框状态
-进程
-HWND
-```
-
-进一步验证。
+系统还需要验证窗口、UIA、视觉变化、输入区状态、进程与 HWND。
 
 ---
 
-# Roadmap
+## 十二、当前限制与 Roadmap
 
-- [ ] 更稳定区分自己消息 / 对方消息
-- [ ] 更稳定的聊天正文 OCR
-- [ ] 更准确的按钮矩形 Grounding
-- [ ] DPI 缩放增强
-- [ ] 多显示器坐标增强
+### 当前限制
+
+- VLM OCR 可能出现漏字、错字和人名误识别；
+- 自己消息 / 对方消息方向仍需继续增强；
+- 小按钮、窗口边框、DPI、多显示器可能影响坐标精度；
+- 自绘软件可能需要完全依赖 VisionMouse；
+- 小型本地模型可能出现 JSON 字段遗漏和长任务上下文丢失。
+
+### Roadmap
+
+- [ ] 更稳定地区分自己消息 / 对方消息
+- [ ] 更强聊天正文 OCR
+- [ ] 更准确 `norm_rect` Grounding
 - [ ] UIA + Vision 融合
-- [ ] 更快的模型切换
-- [ ] 更稳定的长任务上下文
-- [ ] 更多普通 Windows 软件适配
+- [ ] DPI 缩放增强
+- [ ] 多显示器增强
+- [ ] 更快 LLM/VLM 切换
+- [ ] 长任务稳定性增强
 - [ ] Application Profile 缓存
-- [ ] 更完善的失败恢复
+- [ ] 更多普通 Windows 软件控制
+- [ ] Vulkan Runtime 完善
+- [ ] Linux / macOS 后端探索
 
 ---
 
-# 项目信息
+## 十三、免责声明与知识产权声明
 
-项目名：
+### 1. 知识产权
 
-```text
-CEH_Windows_Uia
-```
+本项目软件设计、源代码、UI 设计、Agent 运行逻辑、自动控制流程及相关工程实现的知识产权归项目作者 / 权利人所有。
 
-中文名：
+未经明确授权，不得恶意篡改项目来源、冒用作者身份或用于违法用途。
 
-```text
-木头自动系统控制
-```
+### 2. 自动控制风险
 
-方向：
+桌面自动化可能产生错误点击、错误发送、文件覆盖、软件状态改变或数据变化。
 
-```text
-Windows Local AI Desktop Agent
-```
+请仅在自己或明确授权的设备、窗口和软件中使用。
 
-核心技术：
+### 3. AI 输出
 
-```text
-C++
-Qt6
-Windows UI Automation
-OpenCV
-Local LLM
-Local VLM
-llama.cpp
-Visual Grounding
-Mouse / Keyboard Automation
-```
+LLM / VLM 属于概率模型，不保证所有识别和决策始终正确。
+
+项目通过权限检查、Grounding、Pending Commit、Verifier 等机制降低风险，但不能保证完全消除模型误判。
+
+### 4. Local-First
+
+项目设计方向为本地优先。
+
+如果用户自行配置第三方在线 API、云模型或外部服务，对应数据处理方式由第三方服务决定。
 
 ---
 
-# License
+<p align="center">
+  <strong>CEH Windows UIA · 木头自动系统控制</strong><br>
+  <em>Natural Language → Windows Control</em>
+</p>
 
-仓库如果还没有 `LICENSE` 文件，公开发布前请自行选择许可证，例如：
-
-```text
-MIT
-Apache-2.0
-GPL-3.0
-```
-
-模型文件、第三方 SDK、第三方资源应分别遵守其原始许可证。
-
----
-
-# Disclaimer
-
-本项目包含桌面自动控制能力。
-
-仅应在：
-
-- 自己的设备
-- 已授权的窗口
-- 已授权的软件
-- 合法用途
-
-中使用。
-
-自动化操作可能产生：
-
-- 错误点击
-- 错误发送
-- 文件覆盖
-- 数据变化
-
-当前项目仍处于开发阶段，不建议直接用于无人值守的高风险生产环境。
-
----
-
-# CEH Windows UIA
-
-**Natural Language → Windows Control**
-
-让用户不用写自动化脚本，只需要告诉电脑：
-
-> **“我要做什么。”**
+<p align="center">
+  <strong>Copyright © 2026. All rights reserved.</strong>
+</p>
