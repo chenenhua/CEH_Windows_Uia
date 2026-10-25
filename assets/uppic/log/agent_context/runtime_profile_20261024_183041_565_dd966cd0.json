@@ -1,0 +1,33 @@
+{
+    "created_at": "2026-10-24T18:30:45.363",
+    "goal": "和他聊天 咨询出 做上面职业为止",
+    "process": "Weixin.exe",
+    "runtime_profile": {
+        "confidence": 0.95,
+        "dynamic_generated": true,
+        "likely_targets": [
+            "chat_input_field",
+            "send_button",
+            "contact_list"
+        ],
+        "preferred_action_families": [
+            "uia",
+            "keyboard",
+            "vision"
+        ],
+        "preferred_observation": "uia_then_vision",
+        "process_profile": "Weixin.exe",
+        "rationale": "用户意图是与微信中的某个联系人进行聊天咨询，目标是完成对话。微信是一个典型的聊天应用，UI操作（如输入、发送消息）是核心，因此优先使用uia和keyboard进行交互。",
+        "source": "dynamic_llm",
+        "surface_type": "chat_interface",
+        "task_profile": "operate_application"
+    },
+    "task_id": "20261024_183041_565_dd966cd0",
+    "window_rect": [
+        371,
+        98,
+        796,
+        892
+    ],
+    "window_title": "微信"
+}

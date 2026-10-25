@@ -1,0 +1,108 @@
+[09:26:29.529] [SYSTEM] 日志文件：D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/25/2026_10_25_09_26_29_321_19788.txt
+[09:26:29.530] [SYSTEM] 上次运行正常退出，日志：D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/24/2026_10_24_18_28_39_235_27080.txt
+[09:26:29.534] [SYSTEM] [启动] 程序进程已创建
+[09:26:29.535] [SYSTEM] [启动] 正在检查运行目录与配置文件...
+[09:26:29.546] [SYSTEM] [启动] 配置与资源检查完成
+[09:26:29.547] [SYSTEM] [启动] 正在加载应用字体...
+[09:26:29.583] [SYSTEM] 正文字体加载成功：Microsoft YaHei
+[09:26:29.617] [SYSTEM] 粗体字体加载成功：Microsoft YaHei
+[09:26:29.618] [SYSTEM] [启动] 字体加载阶段完成
+[09:26:29.619] [SYSTEM] [启动] 正在初始化SQLite / wood.db...
+[09:26:29.695] [INFO] wood.db 已初始化：D:/桌面/project/CLion/windows_uia/cmake-build-debug/assets/db/wood.db
+[09:26:29.697] [SYSTEM] [启动] SQLite / wood.db 初始化成功
+[09:26:29.698] [SYSTEM] 运行目录：D:/桌面/project/CLion/windows_uia/cmake-build-debug
+[09:26:29.699] [SYSTEM] 源码目录：D:/桌面/project/CLion/windows_uia
+[09:26:29.759] [UI] [日志] 实时保存：D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/25/2026_10_25_09_26_29_321_19788.txt
+[09:26:29.766] [UI] [日志] 上次记录：D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/24/2026_10_24_18_28_39_235_27080.txt（日志区右键打开）
+[09:26:29.785] [UI] [启动] 正在启动后台工作线程...
+[09:26:29.788] [UI] [启动] Agent Worker 启动成功
+[09:26:29.791] [UI] [启动] Model Worker 启动成功
+[09:26:29.794] [UI] [启动] UIA Worker 启动成功
+[09:26:29.796] [UI] [启动] IO Worker 启动成功
+[09:26:29.803] [INFO] UIAutomation初始化成功
+[09:26:29.805] [INFO] UIAutomation初始化成功
+[09:26:29.806] [UI] [启动] UIAutomationEngine 加载成功
+[09:26:30.003] [SYSTEM] [启动] 主窗口创建成功，进入Qt事件循环
+[09:26:30.010] [UI] [启动] 配置加载成功
+[09:26:30.012] [UI] [启动] SQLite / wood.db 打开成功
+[09:26:30.015] [UI] [启动] UIA Worker / UIAutomation 加载成功
+[09:26:30.019] [UI] [启动] LLM服务启动中...
+[09:26:33.709] [AUTO_PLAN] 模型=gemma-4-E4B-it 架构=gemma4 层数=42 主文件=4378MiB mmproj=0MiB；CPU=Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz 逻辑线程=16；RAM=32711MiB 可用=17587MiB；GPU[0]=NVIDIA GeForce RTX 3080 总显存=10240MiB 可用=9395MiB；计划 GPU层=42 CPU线程=12 ctx=16384 batch=256/64 RAM估计/预算=3825/9409MiB GPU估计/预算=5811/7347MiB；
+[09:26:33.711] [MODEL] 第1/3次自适应启动：-m D:/桌面/project/models/gemma-4/gemma-4-E4B-it-Q4_0.gguf --host 127.0.0.1 --port 8888 -c 16384 -t 12 --n-gpu-layers 42 --parallel 1 --batch-size 256 --ubatch-size 64
+[09:26:34.213] [RESOURCE] RAM余量=17523MB 提交余量=20200MB CPU利用率=12% GPU=9395/10240MB余量 使用率1% 温度=41
+[09:26:37.266] [MODEL_STDERR] 0.00.027.083 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+
+[09:26:37.267] [MODEL_STDERR] 0.00.027.354 W srv  llama_server: -----------------
+0.00.027.355 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.027.355 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.027.356 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.027.356 W srv  llama_server: -----------------
+
+[09:26:37.274] [MODEL_STDERR] 0.00.035.064 I srv    load_model: loading model 'D:/桌面/project/models/gemma-4/gemma-4-E4B-it-Q4_0.gguf'
+
+[09:26:38.773] [MODEL_STDERR] 0.01.521.616 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.522.036 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+
+[09:26:39.006] [MODEL_STDERR] 0.01.560.560 W load: special_eog_ids contains '<|tool_response>', removing '</s>' token from EOG list
+
+[09:26:39.354] [RESOURCE] RAM余量=17231MB 提交余量=19627MB CPU利用率=4% GPU=9205/10240MB余量 使用率0% 温度=44
+[09:26:44.506] [RESOURCE] RAM余量=17714MB 提交余量=20127MB CPU利用率=0% GPU=9205/10240MB余量 使用率0% 温度=45
+[09:26:56.963] [RESOURCE] RAM余量=18171MB 提交余量=18008MB CPU利用率=22% GPU=6455/10240MB余量 使用率2% 温度=42
+[09:27:02.123] [RESOURCE] RAM余量=17412MB 提交余量=17656MB CPU利用率=43% GPU=6455/10240MB余量 使用率3% 温度=42
+[09:27:07.255] [RESOURCE] RAM余量=16958MB 提交余量=17584MB CPU利用率=17% GPU=6471/10240MB余量 使用率3% 温度=42
+[09:27:12.419] [RESOURCE] RAM余量=16554MB 提交余量=17564MB CPU利用率=32% GPU=6457/10240MB余量 使用率18% 温度=42
+[09:27:17.572] [RESOURCE] RAM余量=16031MB 提交余量=17477MB CPU利用率=17% GPU=6471/10240MB余量 使用率20% 温度=42
+[09:27:22.729] [RESOURCE] RAM余量=15645MB 提交余量=17455MB CPU利用率=9% GPU=6472/10240MB余量 使用率3% 温度=42
+[09:27:27.853] [RESOURCE] RAM余量=15226MB 提交余量=17460MB CPU利用率=4% GPU=6472/10240MB余量 使用率4% 温度=42
+[09:27:30.212] [MODEL_STDERR] 0.52.895.285 I cmn          init: llama threadpool init, n_threads = 12
+
+[09:27:32.988] [RESOURCE] RAM余量=14994MB 提交余量=16946MB CPU利用率=20% GPU=6126/10240MB余量 使用率0% 温度=42
+[09:27:35.119] [MODEL_STDERR] 0.57.826.163 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 16384, kv_unified = 'false'
+0.57.840.111 I srv  llama_server: model loaded
+0.57.840.115 I srv  llama_server: listening on http://127.0.0.1:8888
+
+[09:27:35.609] [AUTO_ACTUAL] 加载后实测：RAM余量=14853MB 提交余量=16815MB CPU利用率=10% GPU=6088/10240MB余量 使用率0% 温度=44
+[09:27:35.611] [UI] [启动] LLM服务启动成功
+[09:27:35.613] [UI] [启动] LLM模型加载成功
+[09:27:35.615] [UI] [启动] 检查VLM按需加载策略...
+[09:27:35.656] [UI] [启动] VLM按需加载已就绪；默认与LLM互斥驻留，实际分析图片时再加载。
+[09:27:35.660] [UI] [启动] Agent Worker 已就绪
+[09:27:35.662] [UI] [启动] 系统已就绪
+[09:27:38.168] [RESOURCE] RAM余量=14847MB 提交余量=16819MB CPU利用率=8% GPU=6088/10240MB余量 使用率0% 温度=43
+[09:27:43.328] [RESOURCE] RAM余量=14851MB 提交余量=16829MB CPU利用率=1% GPU=6088/10240MB余量 使用率2% 温度=42
+[09:27:48.477] [RESOURCE] RAM余量=14747MB 提交余量=16747MB CPU利用率=22% GPU=6088/10240MB余量 使用率0% 温度=42
+[09:27:53.636] [RESOURCE] RAM余量=14687MB 提交余量=16697MB CPU利用率=7% GPU=6086/10240MB余量 使用率0% 温度=42
+[09:27:58.760] [RESOURCE] RAM余量=14685MB 提交余量=16695MB CPU利用率=2% GPU=6086/10240MB余量 使用率3% 温度=42
+[09:28:03.891] [RESOURCE] RAM余量=14662MB 提交余量=16643MB CPU利用率=8% GPU=6086/10240MB余量 使用率1% 温度=42
+[09:28:09.038] [RESOURCE] RAM余量=14651MB 提交余量=16638MB CPU利用率=9% GPU=6086/10240MB余量 使用率4% 温度=42
+[09:28:14.148] [RESOURCE] RAM余量=14654MB 提交余量=16650MB CPU利用率=4% GPU=6086/10240MB余量 使用率8% 温度=43
+[09:28:19.298] [RESOURCE] RAM余量=14614MB 提交余量=16604MB CPU利用率=8% GPU=6086/10240MB余量 使用率1% 温度=42
+[09:28:24.450] [RESOURCE] RAM余量=14586MB 提交余量=16598MB CPU利用率=2% GPU=6086/10240MB余量 使用率0% 温度=42
+[09:28:29.600] [RESOURCE] RAM余量=14588MB 提交余量=16598MB CPU利用率=2% GPU=6086/10240MB余量 使用率1% 温度=42
+[09:28:34.756] [RESOURCE] RAM余量=14714MB 提交余量=16720MB CPU利用率=11% GPU=6086/10240MB余量 使用率0% 温度=42
+[09:28:39.901] [RESOURCE] RAM余量=14698MB 提交余量=16719MB CPU利用率=7% GPU=6086/10240MB余量 使用率5% 温度=42
+[09:28:45.012] [RESOURCE] RAM余量=14704MB 提交余量=16727MB CPU利用率=2% GPU=6086/10240MB余量 使用率0% 温度=42
+[09:28:50.167] [RESOURCE] RAM余量=14547MB 提交余量=16535MB CPU利用率=11% GPU=6086/10240MB余量 使用率0% 温度=42
+[09:28:55.320] [RESOURCE] RAM余量=14540MB 提交余量=16532MB CPU利用率=2% GPU=6086/10240MB余量 使用率2% 温度=43
+[09:29:00.434] [RESOURCE] RAM余量=14541MB 提交余量=16529MB CPU利用率=9% GPU=6086/10240MB余量 使用率4% 温度=42
+[09:29:05.578] [RESOURCE] RAM余量=14589MB 提交余量=16604MB CPU利用率=14% GPU=6088/10240MB余量 使用率3% 温度=43
+[09:29:06.251] [UI] [退出] 1/10 停止接收新任务...
+[09:29:06.254] [UI] [退出] 2/10 停止当前Agent与持续任务...
+[09:29:06.266] [UI] [退出] 3/10 等待Agent Worker结束...
+[09:29:06.270] [UI] [退出] Agent Worker 已退出
+[09:29:06.272] [UI] [退出] 4/10 停止LLM/VLM请求与模型服务...
+[09:29:09.493] [UI] [退出] LLM/VLM服务与Model Worker已退出
+[09:29:09.495] [UI] [退出] 5/10 停止UIA扫描与UIA Worker...
+[09:29:09.498] [UI] [退出] UIAutomationEngine与UIA Worker已退出
+[09:29:09.499] [UI] [退出] 6/10 等待IO Worker结束...
+[09:29:09.502] [UI] [退出] IO Worker已退出
+[09:29:09.502] [UI] [退出] 7/10 关闭SQLite / wood.db...
+[09:29:09.505] [UI] [退出] SQLite连接已关闭
+[09:29:09.506] [UI] [退出] 8/10 关闭Overlay与系统托盘...
+[09:29:09.512] [UI] [退出] 9/10 释放界面与运行资源...
+[09:29:09.527] [EXIT] Worker状态：agent=stopped model=stopped uia=stopped io=stopped
+[09:29:09.615] [UI] [退出] 10/10 程序关闭...
+[09:29:09.690] [EXIT] 程序退出请求已提交
+[09:29:09.732] [SYSTEM] [退出] Qt事件循环准备退出
+[09:29:09.733] [SYSTEM] [退出] Qt事件循环已结束
+[09:29:09.733] [SYSTEM] [退出] 主线程COM已释放，进程返回

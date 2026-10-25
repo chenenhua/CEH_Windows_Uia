@@ -1,0 +1,567 @@
+{
+  "tools": [
+    {
+      "name": "uia_scan",
+      "category": "uia",
+      "enabled": true,
+      "risk": "safe",
+      "description": "扫描整个桌面、活动窗口或用户指定窗口的 Windows UI Automation 控件。",
+      "parameters": {
+        "scope": {
+          "type": "string",
+          "required": false,
+          "allowed": [
+            "desktop",
+            "active_window",
+            "selected_window"
+          ],
+          "default": "desktop"
+        }
+      }
+    },
+    {
+      "name": "uia_invoke",
+      "category": "uia",
+      "enabled": true,
+      "risk": "safe",
+      "description": "调用支持 InvokePattern 的 UIA 控件。",
+      "parameters": {
+        "target_id": {
+          "type": "integer",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "uia_set_value",
+      "category": "uia",
+      "enabled": true,
+      "risk": "safe",
+      "description": "向支持 ValuePattern 的输入控件写入文本。",
+      "parameters": {
+        "target_id": {
+          "type": "integer",
+          "required": true
+        },
+        "value": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "uia_focus",
+      "category": "uia",
+      "enabled": true,
+      "risk": "safe",
+      "description": "让指定 UIA 控件获得焦点。",
+      "parameters": {
+        "target_id": {
+          "type": "integer",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "window_activate",
+      "category": "system",
+      "enabled": true,
+      "risk": "safe",
+      "description": "激活当前桌面中的指定窗口。WINDOW_CONTROL 下只能激活已选择窗口。",
+      "parameters": {
+        "target_id": {
+          "type": "integer",
+          "required": false
+        },
+        "hwnd": {
+          "type": "integer",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "mouse_move",
+      "category": "input",
+      "enabled": true,
+      "risk": "safe",
+      "description": "移动鼠标到指定屏幕坐标。仅在 UIA 无法完成任务时使用。",
+      "parameters": {
+        "x": {
+          "type": "integer",
+          "required": false
+        },
+        "y": {
+          "type": "integer",
+          "required": false
+        },
+        "norm_x": {
+          "type": "number",
+          "required": false,
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "norm_y": {
+          "type": "number",
+          "required": false,
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "target_id": {
+          "type": "integer",
+          "required": false,
+          "minimum": 1
+        },
+        "frame_id": {
+          "type": "string",
+          "required": false
+        }
+      },
+      "one_of_targets": [
+        "target_id",
+        "x+y",
+        "norm_x+norm_y"
+      ]
+    },
+    {
+      "name": "mouse_click",
+      "category": "input",
+      "enabled": true,
+      "risk": "safe",
+      "description": "在指定坐标点击鼠标。仅在 UIA 无法操作时使用。",
+      "parameters": {
+        "x": {
+          "type": "integer",
+          "required": false
+        },
+        "y": {
+          "type": "integer",
+          "required": false
+        },
+        "button": {
+          "type": "string",
+          "required": false,
+          "default": "left",
+          "allowed": [
+            "left",
+            "right",
+            "middle"
+          ]
+        },
+        "norm_x": {
+          "type": "number",
+          "required": false,
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "norm_y": {
+          "type": "number",
+          "required": false,
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "target_id": {
+          "type": "integer",
+          "required": false,
+          "minimum": 1
+        },
+        "frame_id": {
+          "type": "string",
+          "required": false
+        },
+        "click_count": {
+          "type": "integer",
+          "required": false,
+          "allowed": [
+            1,
+            2
+          ],
+          "default": 1
+        }
+      },
+      "one_of_targets": [
+        "target_id",
+        "x+y",
+        "norm_x+norm_y"
+      ]
+    },
+    {
+      "name": "mouse_drag",
+      "category": "input",
+      "enabled": true,
+      "risk": "safe",
+      "description": "从起点拖动鼠标到终点。WINDOW_CONTROL 下起点和终点必须位于指定窗口内。",
+      "parameters": {
+        "x1": {
+          "type": "integer",
+          "required": false
+        },
+        "y1": {
+          "type": "integer",
+          "required": false
+        },
+        "x2": {
+          "type": "integer",
+          "required": false
+        },
+        "y2": {
+          "type": "integer",
+          "required": false
+        },
+        "duration_ms": {
+          "type": "integer",
+          "required": false,
+          "default": 300
+        },
+        "norm_x1": {
+          "type": "number",
+          "required": false,
+          "minimum": 0,
+          "maximum": 1
+        },
+        "norm_y1": {
+          "type": "number",
+          "required": false,
+          "minimum": 0,
+          "maximum": 1
+        },
+        "norm_x2": {
+          "type": "number",
+          "required": false,
+          "minimum": 0,
+          "maximum": 1
+        },
+        "norm_y2": {
+          "type": "number",
+          "required": false,
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "one_of_targets": [
+        "x1+y1+x2+y2",
+        "norm_x1+norm_y1+norm_x2+norm_y2"
+      ]
+    },
+    {
+      "name": "mouse_path",
+      "category": "input",
+      "enabled": true,
+      "risk": "safe",
+      "description": "按照归一化坐标点序列连续按住左键绘制轨迹，适合画图、Photoshop、自绘画布。",
+      "parameters": {
+        "points": {
+          "type": "array",
+          "required": true,
+          "description": "[[norm_x,norm_y], ...]，范围0~1"
+        },
+        "duration_ms": {
+          "type": "integer",
+          "required": false,
+          "default": 800,
+          "minimum": 100,
+          "maximum": 10000
+        }
+      }
+    },
+    {
+      "name": "keyboard_type",
+      "category": "input",
+      "enabled": true,
+      "risk": "safe",
+      "description": "向当前已确认获得焦点的控件输入文字。",
+      "parameters": {
+        "text": {
+          "type": "string",
+          "required": true,
+          "maxLength": 8192
+        }
+      }
+    },
+    {
+      "name": "keyboard_hotkey",
+      "category": "input",
+      "enabled": true,
+      "risk": "safe",
+      "description": "发送组合键或单个功能键。",
+      "parameters": {
+        "hotkey": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "screen_capture",
+      "category": "vision",
+      "enabled": true,
+      "risk": "safe",
+      "description": "截图。控制模式下按 scope 捕获桌面、鼠标显示器或指定窗口。",
+      "parameters": {
+        "scope": {
+          "type": "string",
+          "required": false,
+          "allowed": [
+            "cursor_monitor",
+            "virtual_desktop",
+            "selected_window"
+          ],
+          "default": "selected_window"
+        }
+      }
+    },
+    {
+      "name": "vision_analyze",
+      "category": "vision",
+      "enabled": true,
+      "risk": "safe",
+      "description": "使用 VLM 分析最新截图或指定图片。控制模式下用于内部观察。",
+      "parameters": {
+        "prompt": {
+          "type": "string",
+          "required": false
+        },
+        "scope": {
+          "type": "string",
+          "required": false,
+          "allowed": [
+            "selected_window",
+            "cursor_monitor",
+            "virtual_desktop"
+          ]
+        }
+      }
+    },
+    {
+      "name": "cmd_exec",
+      "category": "shell",
+      "enabled": false,
+      "risk": "confirm",
+      "description": "通过 cmd.exe 执行命令。",
+      "parameters": {
+        "command": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "powershell_exec",
+      "category": "shell",
+      "enabled": false,
+      "risk": "confirm",
+      "description": "通过 PowerShell 执行命令。",
+      "parameters": {
+        "command": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "app_launch",
+      "category": "system",
+      "enabled": true,
+      "risk": "task_authorized",
+      "description": "仅打开用户任务中明确指定的应用。原生查找、启动后必须确认目标窗口出现。",
+      "parameters": {
+        "program": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "wait",
+      "category": "system",
+      "enabled": true,
+      "risk": "safe",
+      "description": "等待窗口启动、动画结束或界面加载。",
+      "parameters": {
+        "wait_ms": {
+          "type": "integer",
+          "required": true,
+          "minimum": 100,
+          "maximum": 10000
+        }
+      }
+    },
+    {
+      "name": "done",
+      "category": "agent",
+      "enabled": true,
+      "risk": "safe",
+      "description": "确认用户最终目标已经完成，并返回用户可读完成消息。",
+      "parameters": {
+        "done_message": {
+          "type": "string",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "uia_select",
+      "category": "uia",
+      "enabled": true,
+      "risk": "safe",
+      "description": "选择支持SelectionItemPattern的控件",
+      "parameters": {
+        "target_id": {
+          "type": "integer",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "uia_toggle",
+      "category": "uia",
+      "enabled": true,
+      "risk": "safe",
+      "description": "切换支持TogglePattern的控件",
+      "parameters": {
+        "target_id": {
+          "type": "integer",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "uia_scroll",
+      "category": "uia",
+      "enabled": true,
+      "risk": "safe",
+      "description": "滚动支持ScrollPattern的容器",
+      "parameters": {
+        "target_id": {
+          "type": "integer",
+          "required": true
+        },
+        "direction": {
+          "type": "string",
+          "required": true,
+          "allowed": [
+            "up",
+            "down",
+            "left",
+            "right"
+          ]
+        },
+        "page": {
+          "type": "boolean",
+          "required": false
+        }
+      }
+    },
+    {
+      "name": "wait_for_change",
+      "category": "system",
+      "enabled": true,
+      "risk": "safe",
+      "description": "低频等待当前应用画面或文字变化，不持续请求模型",
+      "parameters": {}
+    },
+    {
+      "name": "desktop_show",
+      "category": "system",
+      "enabled": true,
+      "risk": "safe",
+      "description": "仅桌面任务：显示桌面以查找用户指定的软件快捷方式",
+      "parameters": {}
+    },
+    {
+      "name": "mcp_call",
+      "category": "mcp",
+      "enabled": true,
+      "risk": "safe",
+      "description": "调用当前应用已经连接并声明的MCP工具",
+      "parameters": {
+        "tool": {
+          "type": "string",
+          "required": true
+        },
+        "arguments": {
+          "type": "object",
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "mcp_describe",
+      "category": "mcp",
+      "enabled": true,
+      "risk": "safe",
+      "description": "读取当前已连接MCP工具的完整参数定义",
+      "parameters": {
+        "tool": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  ],
+  "tool_policy": {
+    "prefer_uia": true,
+    "prefer_system_api_over_mouse": true,
+    "vision_fallback": true,
+    "coordinate_last_resort": true,
+    "window_control_restrict_to_selected_hwnd": true,
+    "desktop_control_allow_visible_windows": true,
+    "require_current_uia_id": true,
+    "hide_internal_tool_json_from_chat": true,
+    "vision_uia_id_zero_means_no_uia": true,
+    "prefer_normalized_visual_coordinates": true,
+    "normalize_action_aliases_before_validation": true,
+    "version": 2,
+    "enforce_before_execution": true,
+    "window_control_allow_shell": false,
+    "user_cancel_is_terminal": true
+  },
+  "action_aliases": {
+    "uia_click": "uia_invoke",
+    "invoke": "uia_invoke",
+    "click_element": "uia_invoke",
+    "click": "mouse_click",
+    "move_mouse": "mouse_move",
+    "drag": "mouse_drag",
+    "draw_path": "mouse_path",
+    "type_text": "keyboard_type",
+    "press_key": "keyboard_hotkey",
+    "hotkey": "keyboard_hotkey",
+    "capture": "screen_capture",
+    "analyze_image": "vision_analyze",
+    "launch_app": "app_launch",
+    "open_app": "app_launch",
+    "process_start": "app_launch"
+  },
+  "validation": {
+    "enabled": true,
+    "reject_unknown_action_after_alias": true,
+    "reject_target_id_zero_for_uia_actions": true,
+    "allowed_actions": [
+      "uia_scan",
+      "uia_invoke",
+      "uia_set_value",
+      "uia_focus",
+      "window_activate",
+      "mouse_move",
+      "mouse_click",
+      "mouse_drag",
+      "mouse_path",
+      "keyboard_type",
+      "keyboard_hotkey",
+      "screen_capture",
+      "vision_analyze",
+      "cmd_exec",
+      "powershell_exec",
+      "app_launch",
+      "wait",
+      "done",
+      "uia_select",
+      "uia_toggle",
+      "uia_scroll",
+      "wait_for_change",
+      "desktop_show",
+      "mcp_call",
+      "mcp_describe"
+    ]
+  }
+}

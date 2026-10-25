@@ -1,0 +1,33 @@
+{
+    "created_at": "2026-10-24T18:29:17.537",
+    "goal": "和他聊天 咨询出 做上面职业为止",
+    "process": "Weixin.exe",
+    "runtime_profile": {
+        "confidence": 0.9,
+        "dynamic_generated": true,
+        "likely_targets": [
+            "chat_input_field",
+            "send_button",
+            "contact_list"
+        ],
+        "preferred_action_families": [
+            "uia",
+            "keyboard",
+            "vision"
+        ],
+        "preferred_observation": "uia_then_vision",
+        "process_profile": "Weixin.exe",
+        "rationale": "用户意图是与微信中的某个联系人进行聊天和咨询，任务目标是操作微信应用。根据静态提示，应采用uia优先观察，目标是聊天输入框和发送按钮。",
+        "source": "dynamic_llm",
+        "surface_type": "chat_interface",
+        "task_profile": "operate_application"
+    },
+    "task_id": "20261024_182913_676_9bee9de1",
+    "window_rect": [
+        371,
+        98,
+        796,
+        892
+    ],
+    "window_title": "微信"
+}

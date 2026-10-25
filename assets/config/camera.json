@@ -1,0 +1,103 @@
+{
+  "desktop_capture": {
+    "enabled": true,
+    "backend": "gdi",
+    "preferred_backend": "dxgi",
+    "fallback_backend": "gdi",
+    "capture_virtual_desktop": true,
+    "capture_cursor_monitor": true,
+    "capture_active_window": true,
+    "capture_selected_window": true,
+    "capture_region": true,
+    "include_cursor": false
+  },
+  "monitor": {
+    "selection_mode": "cursor",
+    "cursor_monitor_priority": true,
+    "primary_monitor_fallback": true
+  },
+  "region_selector": {
+    "enabled": true,
+    "use_cursor_monitor": true,
+    "hide_main_window_before_select": true,
+    "restore_main_window_after_select": true,
+    "border_color": "#40c977",
+    "border_width": 2,
+    "fill_color": "#40c977",
+    "fill_opacity": 0.08,
+    "dim_background": true,
+    "dim_opacity": 0.22,
+    "minimum_width": 10,
+    "minimum_height": 10,
+    "show_size_text": true,
+    "cancel_with_escape": true,
+    "cancel_with_right_click": true
+  },
+  "screenshot": {
+    "format": "png",
+    "jpeg_quality": 95,
+    "save_original": true,
+    "save_marked": true,
+    "save_vlm_input": true,
+    "filename_timestamp": "yyyy_MM_dd_HH_mm_ss_zzz"
+  },
+  "vlm_image": {
+    "max_width": 1920,
+    "max_height": 1080,
+    "keep_aspect_ratio": true,
+    "allow_resize": true,
+    "png_compression": 3,
+    "always_provide_image_width_height": true,
+    "prefer_normalized_coordinates": true
+  },
+  "uia_overlay": {
+    "enabled": true,
+    "click_through": true,
+    "no_activate": true,
+    "tool_window": true,
+    "layered": true,
+    "draw_clickable_only": true,
+    "draw_id": true,
+    "draw_type": true,
+    "draw_name": true,
+    "draw_coordinates": false,
+    "border_thickness": 2,
+    "label_font_size": 13,
+    "max_label_length": 24,
+    "clickable_color": "#40c977",
+    "selected_color": "#ffd240",
+    "error_color": "#ff6764",
+    "text_color": "#ffffff",
+    "label_background": "#141414",
+    "desktop_refresh_interval_ms": 250,
+    "window_refresh_interval_ms": 150,
+    "window_glow_enabled": true,
+    "window_glow_color": "#40c977",
+    "window_glow_opacity": 0.0,
+    "window_glow_pulse_ms": 1200,
+    "window_edge_only": true,
+    "hide_only_for_vlm_capture": true,
+    "window_fill_enabled": false,
+    "hide_during_uia_scan": false,
+    "stable_swap": true,
+    "preserve_previous_frame_until_new_frame_ready": true,
+    "partial_repaint": true
+  },
+  "camera": {
+    "enabled": false,
+    "device_index": 0,
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "backend": "auto"
+  },
+  "window_capture": {
+    "preferred_backend": "printwindow",
+    "fallback_backend": "screen_rect",
+    "use_pw_render_full_content": true,
+    "black_frame_fallback": true,
+    "hide_overlay_before_capture": true,
+    "restore_overlay_after_capture": true,
+    "capture_target_hwnd_only": true
+  }
+}

@@ -1,0 +1,41 @@
+本文件定义Agent检查点的“当前世界状态”原则，不要求额外模型总结。
+
+检查点只保存完成下一步真正需要的信息：
+1. 用户任务、workflow和continuous状态；
+2. 当前软件、进程、HWND、屏幕ROI(x,y,w,h)；
+3. MCP/UIA/Vision能力状态和当前控制通道；
+4. 最新有效视觉截图路径和frame_id；
+5. 已找到的联系人、输入框、发送按钮、画布、画笔等视觉目标；
+6. 客服任务的当前联系人、已确认会话状态、下一目标；
+7. 最近1~2个关键动作结果；
+8. 恢复规则。
+
+不要保存几十次重复uia_scan、完整UIA列表、旧frame_id和旧UIA ID。
+MCP或UIA确认不可用后，本任务内记为unavailable并直接忽略。
+窗口移动/缩放或重新截图后，旧视觉坐标必须失效并重新观察。
+
+World State还应保留：
+- target_entity：从用户目标中提取的联系人/客户名称；
+- current_contact：已经实际点击并准备验证的联系人；
+- visual_watchdog：连续视觉观察数、grounding失败次数。
+这些信息用于避免反复寻找同一个联系人。
+
+World State需要保存RUNTIME_APP_PROFILE：
+- process_profile
+- surface_type
+- task_profile
+- preferred_observation
+- likely_targets
+- allowed_action_families
+- confidence/source
+它只描述本次任务策略，不等于永久软件事实。
+未知exe也允许有Runtime Profile。
+
+
+
+Action Resolver还需保存：
+- last_target_label：最近一次语义目标绑定；
+- last_note：Resolver如何把Planner动作补全；
+- pending_commit：文本是否已输入但尚未提交；
+- pending_commit_label：应执行的发送/提交目标。
+pending_commit=true时不能把任务状态总结成“等待回复”。

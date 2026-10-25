@@ -1,0 +1,1217 @@
+[18:28:39.964] [SYSTEM] 日志文件：D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/24/2026_10_24_18_28_39_235_27080.txt
+[18:28:39.965] [SYSTEM] 上次运行正常退出，日志：D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/24/2026_10_24_18_07_03_973_2944.txt
+[18:28:39.968] [SYSTEM] [启动] 程序进程已创建
+[18:28:39.969] [SYSTEM] [启动] 正在检查运行目录与配置文件...
+[18:28:39.982] [SYSTEM] [启动] 配置与资源检查完成
+[18:28:39.984] [SYSTEM] [启动] 正在加载应用字体...
+[18:28:40.016] [SYSTEM] 正文字体加载成功：Microsoft YaHei
+[18:28:40.186] [SYSTEM] 粗体字体加载成功：Microsoft YaHei
+[18:28:40.188] [SYSTEM] [启动] 字体加载阶段完成
+[18:28:40.189] [SYSTEM] [启动] 正在初始化SQLite / wood.db...
+[18:28:41.210] [INFO] wood.db 已初始化：D:/桌面/project/CLion/windows_uia/cmake-build-debug/assets/db/wood.db
+[18:28:41.211] [SYSTEM] [启动] SQLite / wood.db 初始化成功
+[18:28:41.213] [SYSTEM] 运行目录：D:/桌面/project/CLion/windows_uia/cmake-build-debug
+[18:28:41.213] [SYSTEM] 源码目录：D:/桌面/project/CLion/windows_uia
+[18:28:41.299] [UI] [日志] 实时保存：D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/24/2026_10_24_18_28_39_235_27080.txt
+[18:28:41.307] [UI] [日志] 上次记录：D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/24/2026_10_24_18_07_03_973_2944.txt（日志区右键打开）
+[18:28:41.328] [UI] [启动] 正在启动后台工作线程...
+[18:28:41.333] [UI] [启动] Agent Worker 启动成功
+[18:28:41.336] [UI] [启动] Model Worker 启动成功
+[18:28:41.338] [UI] [启动] UIA Worker 启动成功
+[18:28:41.341] [UI] [启动] IO Worker 启动成功
+[18:28:41.348] [INFO] UIAutomation初始化成功
+[18:28:41.349] [INFO] UIAutomation初始化成功
+[18:28:41.350] [UI] [启动] UIAutomationEngine 加载成功
+[18:28:41.551] [SYSTEM] [启动] 主窗口创建成功，进入Qt事件循环
+[18:28:41.560] [UI] [启动] 配置加载成功
+[18:28:41.563] [UI] [启动] SQLite / wood.db 打开成功
+[18:28:41.566] [UI] [启动] UIA Worker / UIAutomation 加载成功
+[18:28:41.570] [UI] [启动] LLM服务启动中...
+[18:28:44.666] [RESOURCE] RAM余量=16301MB 提交余量=14117MB CPU利用率=39% GPU=8948/10240MB余量 使用率7% 温度=44
+[18:28:46.241] [AUTO_PLAN] 模型=gemma-4-E4B-it 架构=gemma4 层数=42 主文件=4378MiB mmproj=0MiB；CPU=Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz 逻辑线程=16；RAM=32711MiB 可用=16439MiB；GPU[0]=NVIDIA GeForce RTX 3080 总显存=10240MiB 可用=8948MiB；计划 GPU层=42 CPU线程=12 ctx=16384 batch=256/64 RAM估计/预算=3825/8261MiB GPU估计/预算=5811/6900MiB；
+[18:28:46.243] [MODEL] 第1/3次自适应启动：-m D:/桌面/project/models/gemma-4/gemma-4-E4B-it-Q4_0.gguf --host 127.0.0.1 --port 8888 -c 16384 -t 12 --n-gpu-layers 42 --parallel 1 --batch-size 256 --ubatch-size 64
+[18:28:49.825] [RESOURCE] RAM余量=16776MB 提交余量=14384MB CPU利用率=22% GPU=8948/10240MB余量 使用率0% 温度=44
+[18:28:50.744] [MODEL_STDERR] 0.00.034.343 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+0.00.034.670 W srv  llama_server: -----------------
+0.00.034.672 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.034.672 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.034.672 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.034.673 W srv  llama_server: -----------------
+0.00.039.438 I srv    load_model: loading model 'D:/桌面/project/models/gemma-4/gemma-4-E4B-it-Q4_0.gguf'
+
+[18:28:52.573] [MODEL_STDERR] 0.01.928.812 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.929.236 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.967.261 W load: special_eog_ids contains '<|tool_response>', removing '</s>' token from EOG list
+
+[18:28:53.893] [MODEL_STDERR] 0.03.324.809 I cmn          init: llama threadpool init, n_threads = 12
+
+[18:28:54.108] [MODEL_STDERR] 0.03.414.811 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 16384, kv_unified = 'false'
+0.03.432.384 I srv  llama_server: model loaded
+0.03.432.389 I srv  llama_server: listening on http://127.0.0.1:8888
+
+[18:28:54.496] [AUTO_ACTUAL] 加载后实测：RAM余量=14667MB 提交余量=11485MB CPU利用率=7% GPU=5624/10240MB余量 使用率0% 温度=48
+[18:28:54.497] [UI] [启动] LLM服务启动成功
+[18:28:54.499] [UI] [启动] LLM模型加载成功
+[18:28:54.501] [UI] [启动] 检查VLM按需加载策略...
+[18:28:54.508] [UI] [启动] VLM按需加载已就绪；默认与LLM互斥驻留，实际分析图片时再加载。
+[18:28:54.511] [UI] [启动] Agent Worker 已就绪
+[18:28:54.513] [UI] [启动] 系统已就绪
+[18:28:54.982] [RESOURCE] RAM余量=14672MB 提交余量=11484MB CPU利用率=3% GPU=5624/10240MB余量 使用率0% 温度=48
+[18:28:57.046] [UI] [任务切换] 开始选择新的指定窗口；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:28:57.531] [UI] [任务切换] 切换到新的指定窗口；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:28:57.552] [UI] [指定] 已锁定：微信 | Process=Weixin.exe | PID=20124 | HWND=268132
+[18:29:00.127] [RESOURCE] RAM余量=14338MB 提交余量=11198MB CPU利用率=20% GPU=5621/10240MB余量 使用率2% 温度=45
+[18:29:05.282] [RESOURCE] RAM余量=14685MB 提交余量=11565MB CPU利用率=16% GPU=5620/10240MB余量 使用率5% 温度=45
+[18:29:10.420] [RESOURCE] RAM余量=14346MB 提交余量=11213MB CPU利用率=3% GPU=5620/10240MB余量 使用率12% 温度=45
+[18:29:13.729] [UI] [主题] 独立任务 20261024_182913_676_9bee9de1，不继承其他任务或普通聊天上下文。
+[18:29:13.770] [UI] [任务] 开始执行指定窗口任务：和他聊天 咨询出 做上面职业为止
+[18:29:13.775] [UI] [授权] WINDOW_CONTROL 已由用户主动选择目标窗口：微信；当前输入被授权在该 HWND 范围内执行。
+[18:29:13.832] [MODEL_STDERR] 0.23.331.103 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+0.23.331.158 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+
+[18:29:14.924] [MODEL_STDERR] 0.24.422.806 I slot print_timing: id  0 | task 0 | prompt eval time =     661.60 ms /   213 tokens (    3.11 ms per token,   321.95 tokens per second)
+0.24.422.811 I slot print_timing: id  0 | task 0 |        eval time =     430.02 ms /    31 tokens (   14.33 ms per token,    69.76 tokens per second)
+0.24.422.812 I slot print_timing: id  0 | task 0 |       total time =    1091.62 ms /   244 tokens
+0.24.422.814 I slot print_timing: id  0 | task 0 |    graphs reused =         31
+
+[18:29:14.925] [MODEL_STDERR] 0.24.422.936 I slot      release: id  0 | task 0 | stop processing: n_tokens = 243, truncated = 0
+
+[18:29:14.930] [UI] [任务理解] {"application":"微信","completion":"","continuous":true,"explicit_action":true,"goal":"和他聊天 咨询出 做上面职业为止","kind":"operate_application"}
+[18:29:14.991] [MODEL_STDERR] 0.24.490.624 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 24392379
+
+[18:29:15.003] [MODEL_STDERR] 0.24.502.701 I slot launch_slot_: id  0 | task 35 | processing task, is_child = 0
+
+[18:29:15.555] [RESOURCE] RAM余量=14101MB 提交余量=10822MB CPU利用率=77% GPU=5570/10240MB余量 使用率50% 温度=50
+[18:29:17.534] [MODEL_STDERR] 0.27.032.632 I slot print_timing: id  0 | task 35 | prompt eval time =     256.97 ms /   287 tokens (    0.90 ms per token,  1116.88 tokens per second)
+0.27.032.636 I slot print_timing: id  0 | task 35 |        eval time =    2272.94 ms /   168 tokens (   13.61 ms per token,    73.47 tokens per second)
+0.27.032.638 I slot print_timing: id  0 | task 35 |       total time =    2529.90 ms /   455 tokens
+0.27.032.639 I slot print_timing: id  0 | task 35 |    graphs reused =        199
+0.27.032.738 I slot      release: id  0 | task 35 | stop processing: n_tokens = 454, truncated = 0
+
+[18:29:17.630] [UI] [运行画像] {"confidence":0.9,"dynamic_generated":true,"likely_targets":["chat_input_field","send_button","contact_list"],"preferred_action_families":["uia","keyboard","vision"],"preferred_observation":"uia_then_vision","process_profile":"Weixin.exe","rationale":"用户意图是与微信中的某个联系人进行聊天和咨询，任务目标是操作微信应用。根据静态提示，应采用uia优先观察，目标是聊天输入框和发送按钮。","source":"dynamic_llm","surface_type":"chat_interface","task_profile":"operate_application"}
+[18:29:17.633] [UI] [能力锁定] Weixin.exe 未配置MCP，本任务后续忽略MCP。
+[18:29:17.646] [UI] [能力锁定] UIA不可用，本任务后续不再重复UIA扫描：UIA信息不足：nodes=2 actionable=0；阈值 nodes>=3 actionable>=1
+[18:29:17.649] [UI] [观察策略] app=Weixin.exe kind=operate_application policy=uia_then_vision UIA可操作=0
+[18:29:17.651] [PROTOCOL] planner=D:/桌面/project/CLion/windows_uia/cmake-build-debug/assets/models/prompts/planner.txt verifier=D:/桌面/project/CLion/windows_uia/cmake-build-debug/assets/models/prompts/verifier.txt version=workflow-v2
+[18:29:18.162] [MODEL] 按需切换至vlm，卸载另一模型服务
+[18:29:20.714] [RESOURCE] RAM余量=14086MB 提交余量=10884MB CPU利用率=9% GPU=5571/10240MB余量 使用率1% 温度=48
+[18:29:24.855] [AUTO_PLAN] 模型=gemma-4-E4B-it 架构=gemma4 层数=42 主文件=4378MiB mmproj=533MiB；CPU=Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz 逻辑线程=16；RAM=32711MiB 可用=17613MiB；GPU[0]=NVIDIA GeForce RTX 3080 总显存=10240MiB 可用=8945MiB；计划 GPU层=42 CPU线程=12 ctx=8192 batch=256/64 RAM估计/预算=3787/9436MiB GPU估计/预算=5256/6897MiB；
+[18:29:24.857] [MODEL] 第1/3次自适应启动：-m D:/桌面/project/models/gemma-4/gemma-4-E4B-it-Q4_0.gguf --host 127.0.0.1 --port 8889 -c 8192 -t 12 --n-gpu-layers 42 --parallel 1 --batch-size 256 --ubatch-size 64 --mmproj D:/桌面/project/models/gemma-4/mmproj-gemma-4-E4B-it-Q8_0.gguf
+[18:29:24.962] [MODEL_STDERR] 0.00.028.354 I cmn  common_param: common_params_print_info: verbosity = 3 (adjust with the `-lv N` CLI arg)
+
+[18:29:24.963] [MODEL_STDERR] 0.00.028.650 W srv  llama_server: -----------------
+0.00.028.652 W srv  llama_server: CORS is set to allow all origins ('*') and no API key is set
+0.00.028.652 W srv  llama_server: this can be a security risk (cross-origin attacks)
+0.00.028.652 W srv  llama_server: more info: https://github.com/ggml-org/llama.cpp/pull/25655
+0.00.028.652 W srv  llama_server: -----------------
+
+[18:29:24.976] [MODEL_STDERR] 0.00.042.185 I srv    load_model: loading model 'D:/桌面/project/models/gemma-4/gemma-4-E4B-it-Q4_0.gguf'
+
+[18:29:25.859] [RESOURCE] RAM余量=17226MB 提交余量=14193MB CPU利用率=7% GPU=8755/10240MB余量 使用率0% 温度=49
+[18:29:26.692] [MODEL_STDERR] 0.01.628.210 W load: control-looking token:     50 '<|tool_response>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.628.626 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.01.666.045 W load: special_eog_ids contains '<|tool_response>', removing '</s>' token from EOG list
+
+[18:29:28.043] [MODEL_STDERR] 0.02.996.963 I cmn          init: llama threadpool init, n_threads = 12
+
+[18:29:28.714] [MODEL_STDERR] 0.03.583.797 W init_audio: audio input is in experimental stage and may have reduced quality:
+    https://github.com/ggml-org/llama.cpp/discussions/13759
+0.03.583.903 I srv    load_model: loaded multimodal model, 'D:/桌面/project/models/gemma-4/mmproj-gemma-4-E4B-it-Q8_0.gguf'
+0.03.618.527 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 8192, kv_unified = 'false'
+0.03.642.316 I srv  llama_server: model loaded
+0.03.642.321 I srv  llama_server: listening on http://127.0.0.1:8889
+
+[18:29:28.987] [AUTO_ACTUAL] 加载后实测：RAM余量=14232MB 提交余量=10150MB CPU利用率=57% GPU=5007/10240MB余量 使用率1% 温度=50
+[18:29:29.075] [MODEL_STDERR] 0.04.141.185 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = -1
+
+[18:29:29.076] [MODEL_STDERR] 0.04.141.473 I slot launch_slot_: id  0 | task 0 | processing task, is_child = 0
+
+[18:29:31.017] [RESOURCE] RAM余量=13864MB 提交余量=9610MB CPU利用率=39% GPU=4911/10240MB余量 使用率55% 温度=52
+[18:29:34.028] [MODEL_STDERR] 0.09.094.325 I slot print_timing: id  0 | task 0 | n_gen =    212, tg =  70.25 t/s, tg_3s =  70.59 t/s
+
+[18:29:34.932] [MODEL_STDERR] 0.09.998.085 I slot print_timing: id  0 | task 0 | prompt eval time =    1949.46 ms /  2228 tokens (    0.87 ms per token,  1142.88 tokens per second)
+0.09.998.090 I slot print_timing: id  0 | task 0 |        eval time =    3907.12 ms /   277 tokens (   14.16 ms per token,    70.64 tokens per second)
+0.09.998.092 I slot print_timing: id  0 | task 0 |       total time =    5856.59 ms /  2505 tokens
+0.09.998.093 I slot print_timing: id  0 | task 0 |    graphs reused =        299
+
+[18:29:34.933] [MODEL_STDERR] 0.09.998.444 I slot      release: id  0 | task 0 | stop processing: n_tokens = 2504, truncated = 0
+
+[18:29:34.937] [VISION_USAGE] {"completion_tokens":277,"prompt_tokens":2228,"prompt_tokens_details":{"cached_tokens":0},"total_tokens":2505} finish_reason=stop
+[18:29:34.941] [UI] [观察] {"frame_id":"91c89c59198b4962899a8efd76caf0c8","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，左侧显示聊天列表，右侧是当前选中的会话窗口，用户目标是与当前会话进行聊天。","targets":[{"confidence":0.95,"description":"当前会话的消息输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.94},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.94}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户已选择当前会话，需要定位消息输入框和发送按钮以进行回复。"},"valid":true,"visible_text":["陈思","16:23","发送"]}
+[18:29:34.942] [TOOL_FULL] task=20261024_182913_676_9bee9de1 step=1
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"91c89c59198b4962899a8efd76caf0c8","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，左侧显示聊天列表，右侧是当前选中的会话窗口，用户目标是与当前会话进行聊天。","targets":[{"confidence":0.95,"description":"当前会话的消息输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.94},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.94}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户已选择当前会话，需要定位消息输入框和发送按钮以进行回复。"},"valid":true,"visible_text":["陈思","16:23","发送"]}
+[18:29:35.019] [UI] [压缩] WorldState摘要1814字符，保留近期1步；能力判定与视觉目标直接复用。
+[18:29:35.065] [UI] [当前会话] 已发现输入框，直接进入keyboard_type，禁止Planner擅自切换联系人。
+[18:29:35.066] [UI] [流程] task=20261024_182913_676_9bee9de1 stage=observe step=1 policy=ACTION_READY
+[18:29:35.067] [ACTION_RESOLVE] task=20261024_182913_676_9bee9de1 step=1
+RAW={"action":"keyboard_type","reason":"当前会话输入框已可见，直接生成并输入自然开场，不切换联系人。"}
+RESOLVED={"action":"keyboard_type","reason":"当前会话输入框已可见，直接生成并输入自然开场，不切换联系人。"}
+NOTE=当前会话输入框已可见，C++直接进入自然语言输入
+[18:29:35.068] [UI] [动作解析] 当前会话输入框已可见，C++直接进入自然语言输入
+[18:29:35.073] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:29:35.109] [MODEL_STDERR] 0.10.174.106 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 9973691
+
+[18:29:35.140] [MODEL_STDERR] 0.10.206.971 I slot launch_slot_: id  0 | task 288 | processing task, is_child = 0
+
+[18:29:35.436] [MODEL_STDERR] 0.10.501.570 I slot print_timing: id  0 | task 288 | prompt eval time =     200.49 ms /   216 tokens (    0.93 ms per token,  1077.38 tokens per second)
+0.10.501.575 I slot print_timing: id  0 | task 288 |        eval time =      94.07 ms /     7 tokens (   15.68 ms per token,    63.78 tokens per second)
+0.10.501.577 I slot print_timing: id  0 | task 288 |       total time =     294.56 ms /   223 tokens
+0.10.501.578 I slot print_timing: id  0 | task 288 |    graphs reused =        304
+0.10.501.630 I slot      release: id  0 | task 288 | stop processing: n_tokens = 223, truncated = 0
+
+[18:29:35.438] [TEXT_COMPOSER] task=20261024_182913_676_9bee9de1 step=1 turn=READY_TO_INITIATE chars=9 text=嗨，最近怎么样呀？
+[18:29:35.439] [UI] [文本生成] 已自动补全keyboard_type.text：嗨，最近怎么样呀？
+[18:29:35.711] [INPUT_FOCUS] 使用Vision目标聚焦输入区域 x=769 y=936
+[18:29:35.903] [UI] [动作事务] 文本已输入，建立pending_commit=发送按钮
+[18:29:35.905] [ACTION_RESULT] task=20261024_182913_676_9bee9de1 step=1 ok=1
+{"action":"keyboard_type","reason":"当前会话输入框已可见，直接生成并输入自然开场，不切换联系人。","text":"嗨，最近怎么样呀？"}
+键盘文字输入成功。
+[18:29:35.906] [UI] [keyboard_type] 键盘文字输入成功。
+[18:29:35.908] [TOOL_FULL] task=20261024_182913_676_9bee9de1 step=1
+{"action":"keyboard_type","reason":"当前会话输入框已可见，直接生成并输入自然开场，不切换联系人。","text":"嗨，最近怎么样呀？"}
+键盘文字输入成功。
+[18:29:35.948] [UI] [压缩] WorldState摘要2014字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:29:36.171] [RESOURCE] RAM余量=13920MB 提交余量=9765MB CPU利用率=27% GPU=4907/10240MB余量 使用率2% 温度=53
+[18:29:36.933] [MODEL_STDERR] 0.11.998.834 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 10476876
+
+[18:29:36.944] [MODEL_STDERR] 0.12.009.872 I slot launch_slot_: id  0 | task 299 | processing task, is_child = 0
+
+[18:29:41.331] [RESOURCE] RAM余量=13774MB 提交余量=9511MB CPU利用率=82% GPU=4883/10240MB余量 使用率57% 温度=56
+[18:29:41.499] [MODEL_STDERR] 0.16.565.371 I slot print_timing: id  0 | task 299 | prompt eval time =    1825.68 ms /  2282 tokens (    0.80 ms per token,  1249.95 tokens per second)
+0.16.565.390 I slot print_timing: id  0 | task 299 |        eval time =    2729.80 ms /   226 tokens (   12.13 ms per token,    82.42 tokens per second)
+0.16.565.391 I slot print_timing: id  0 | task 299 |       total time =    4555.48 ms /  2508 tokens
+0.16.565.392 I slot print_timing: id  0 | task 299 |    graphs reused =        551
+
+[18:29:41.500] [MODEL_STDERR] 0.16.565.722 I slot      release: id  0 | task 299 | stop processing: n_tokens = 2508, truncated = 0
+
+[18:29:41.502] [VISION_USAGE] {"completion_tokens":226,"prompt_tokens":2283,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2509} finish_reason=stop
+[18:29:41.505] [UI] [观察] {"frame_id":"45dcf0511ccb4cb8bbe631c12de189d8","image_height":720,"image_width":1200,"screen_state":"当前处于文件管理器界面，显示文件列表，用户目标是与“他”聊天，但当前界面是一个文件下载/浏览界面，没有可见的聊天输入框或联系人。","targets":[],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"当前界面是一个文件浏览器，与用户“和他聊天”的意图不符，无法定位聊天输入框或联系人。"},"valid":true,"visible_text":["选择文件","下载","桌面","文件","图片","assets","windows","OneDrive","3D对象","音乐","系统","网络","名称","修改日期","类型","大小","打开"]}
+[18:29:41.506] [TOOL_FULL] task=20261024_182913_676_9bee9de1 step=2
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"45dcf0511ccb4cb8bbe631c12de189d8","image_height":720,"image_width":1200,"screen_state":"当前处于文件管理器界面，显示文件列表，用户目标是与“他”聊天，但当前界面是一个文件下载/浏览界面，没有可见的聊天输入框或联系人。","targets":[],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"当前界面是一个文件浏览器，与用户“和他聊天”的意图不符，无法定位聊天输入框或联系人。"},"valid":true,"visible_text":["选择文件","下载","桌面","文件","图片","assets","windows","OneDrive","3D对象","音乐","系统","网络","名称","修改日期","类型","大小","打开"]}
+[18:29:41.591] [UI] [压缩] WorldState摘要1801字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:29:41.644] [UI] [事务推进] 世界状态已变化，interaction_epoch=1
+[18:29:41.666] [UI] [动作事务] pending_commit缺少提交控件坐标，进入targeted grounding。
+[18:29:42.219] [MODEL_STDERR] 0.17.284.542 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.781 (> 0.100 thold), f_keep = 0.709
+
+[18:29:42.220] [MODEL_STDERR] 0.17.284.991 I slot launch_slot_: id  0 | task 535 | processing task, is_child = 0
+
+[18:29:45.929] [MODEL_STDERR] 0.20.995.007 I slot print_timing: id  0 | task 535 | prompt eval time =    1563.65 ms /  2275 tokens (    0.69 ms per token,  1454.93 tokens per second)
+0.20.995.012 I slot print_timing: id  0 | task 535 |        eval time =    2146.35 ms /   148 tokens (   14.60 ms per token,    68.49 tokens per second)
+0.20.995.014 I slot print_timing: id  0 | task 535 |       total time =    3710.00 ms /  2423 tokens
+0.20.995.015 I slot print_timing: id  0 | task 535 |    graphs reused =        720
+
+[18:29:45.930] [MODEL_STDERR] 0.20.995.212 I slot      release: id  0 | task 535 | stop processing: n_tokens = 2423, truncated = 0
+
+[18:29:45.933] [VISION_USAGE] {"completion_tokens":148,"prompt_tokens":2276,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2424} finish_reason=stop
+[18:29:45.936] [UI] [观察] {"frame_id":"c7aaad01870b4440a2daa356c0d4d1f6","image_height":720,"image_width":1200,"screen_state":"文件管理器界面，当前在“下载”文件夹中，显示文件列表。","targets":[],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户需要执行“发送/提交”操作，但当前界面是一个文件列表，没有明显的发送或提交按钮。"},"valid":true,"visible_text":["选择文件","下载","名称","修改日期","类型","大小","打开"]}
+[18:29:45.937] [TOOL_FULL] task=20261024_182913_676_9bee9de1 step=3
+{"action":"vision_analyze","prompt":"只定位当前待执行语义目标【发送/提交】。必须返回该目标的norm_x/norm_y；能判断可点击区域时同时返回norm_rect。如果目标确实不可见，targets返回空数组，不要拿联系人、聊天列表、其他控件代替。"}
+{"frame_id":"c7aaad01870b4440a2daa356c0d4d1f6","image_height":720,"image_width":1200,"screen_state":"文件管理器界面，当前在“下载”文件夹中，显示文件列表。","targets":[],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户需要执行“发送/提交”操作，但当前界面是一个文件列表，没有明显的发送或提交按钮。"},"valid":true,"visible_text":["选择文件","下载","名称","修改日期","类型","大小","打开"]}
+[18:29:46.014] [UI] [压缩] WorldState摘要1834字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:29:46.045] [UI] [事务推进] 世界状态已变化，interaction_epoch=2
+[18:29:46.098] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:29:46.099] [UI] [流程] task=20261024_182913_676_9bee9de1 stage=verify_effect step=3 policy=NEED_GROUNDING
+[18:29:46.100] [ACTION_RESOLVE] task=20261024_182913_676_9bee9de1 step=3
+RAW={"action":"mouse_click","reason":"pending_commit事务：提交当前已输入文本","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:29:46.101] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:29:46.342] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=0
+[18:29:46.345] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:29:46.345] [ACTION_RESULT] task=20261024_182913_676_9bee9de1 step=3 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:29:46.346] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:29:46.348] [TOOL_FULL] task=20261024_182913_676_9bee9de1 step=3
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:29:46.491] [UI] [压缩] WorldState摘要1893字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:29:46.541] [RESOURCE] RAM余量=13748MB 提交余量=9606MB CPU利用率=27% GPU=4887/10240MB余量 使用率3% 温度=54
+[18:29:47.437] [MODEL_STDERR] 0.22.503.505 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 20970458
+
+[18:29:47.488] [MODEL_STDERR] 0.22.554.478 I slot launch_slot_: id  0 | task 693 | processing task, is_child = 0
+
+[18:29:51.697] [RESOURCE] RAM余量=14184MB 提交余量=10044MB CPU利用率=90% GPU=4887/10240MB余量 使用率51% 温度=56
+[18:29:52.324] [MODEL_STDERR] 0.27.389.793 I slot print_timing: id  0 | task 693 | n_gen =    213, tg =  70.59 t/s, tg_3s =  70.92 t/s
+
+[18:29:54.176] [MODEL_STDERR] 0.29.242.213 I slot print_timing: id  0 | task 693 | prompt eval time =    1832.02 ms /  2227 tokens (    0.82 ms per token,  1215.60 tokens per second)
+0.29.242.218 I slot print_timing: id  0 | task 693 |        eval time =    4855.66 ms /   344 tokens (   14.16 ms per token,    70.64 tokens per second)
+0.29.242.219 I slot print_timing: id  0 | task 693 |       total time =    6687.68 ms /  2571 tokens
+0.29.242.220 I slot print_timing: id  0 | task 693 |    graphs reused =       1084
+
+[18:29:54.177] [MODEL_STDERR] 0.29.242.404 I slot      release: id  0 | task 693 | stop processing: n_tokens = 2571, truncated = 0
+
+[18:29:54.180] [VISION_USAGE] {"completion_tokens":344,"prompt_tokens":2228,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2572} finish_reason=stop
+[18:29:54.183] [UI] [观察] {"frame_id":"75e8b9b3a4384073aedf55841b89facb","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的输入/发送区域。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.95},{"confidence":0.95,"description":"用于发送消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.93,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户希望与当前选定的联系人进行聊天，咨询关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈晓","工具狼群","大湾区《光合","北交州《光合","路新企业家","带50位学","陈亚","沙明","台州阳光","芜湖","低欲望城市","‘恐’","中悦","发送"]}
+[18:29:54.184] [TOOL_FULL] task=20261024_182913_676_9bee9de1 step=4
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"75e8b9b3a4384073aedf55841b89facb","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的输入/发送区域。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.95},{"confidence":0.95,"description":"用于发送消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.93,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户希望与当前选定的联系人进行聊天，咨询关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈晓","工具狼群","大湾区《光合","北交州《光合","路新企业家","带50位学","陈亚","沙明","台州阳光","芜湖","低欲望城市","‘恐’","中悦","发送"]}
+[18:29:54.240] [UI] [压缩] WorldState摘要2104字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:29:54.280] [UI] [事务推进] 世界状态已变化，interaction_epoch=3
+[18:29:54.282] [UI] [动作事务] pending_commit严格验证通过：未再检测到原输入文字且界面状态已变化。
+[18:29:54.283] [UI] [交互轮次] 当前消息已确认提交，进入WAITING_EXTERNAL。
+[18:29:54.286] [UI] [流程] task=20261024_182913_676_9bee9de1 stage=waiting step=4 policy=WAIT_FOR_CHANGE
+[18:29:54.324] [UI] [压缩] WorldState摘要2087字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:29:54.562] [UI] [压缩] WorldState摘要2023字符，保留近期1步；能力判定与视觉目标直接复用。
+[18:29:54.648] [UI] [上下文恢复] 完整Planner输入超预算，已切换轻量上下文继续执行：1528/5600 tokens
+[18:29:54.649] [UI] [思考] task=20261024_182913_676_9bee9de1 输入估计=1528 tokens 预算=5600；RAM余量=13870MB 提交余量=9675MB CPU利用率=83% GPU=4887/10240MB余量 使用率55% 温度=57
+[18:29:54.653] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:29:54.677] [MODEL_STDERR] 0.29.742.642 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 29217650
+
+[18:29:54.702] [MODEL_STDERR] 0.29.767.548 I slot launch_slot_: id  0 | task 1047 | processing task, is_child = 0
+
+[18:29:55.960] [MODEL_STDERR] 0.31.026.138 I slot print_timing: id  0 | task 1047 | prompt eval time =     678.79 ms /  1067 tokens (    0.64 ms per token,  1571.92 tokens per second)
+0.31.026.142 I slot print_timing: id  0 | task 1047 |        eval time =     579.78 ms /    49 tokens (   12.08 ms per token,    82.79 tokens per second)
+0.31.026.144 I slot print_timing: id  0 | task 1047 |       total time =    1258.57 ms /  1116 tokens
+0.31.026.145 I slot print_timing: id  0 | task 1047 |    graphs reused =       1142
+
+[18:29:55.961] [MODEL_STDERR] 0.31.026.295 I slot      release: id  0 | task 1047 | stop processing: n_tokens = 1116, truncated = 0
+
+[18:29:55.963] [INFERENCE] task=20261024_182913_676_9bee9de1 step=4 role=planner elapsed=1312ms output_chars=135 error=
+[18:29:55.963] [PLANNER_RAW] {"action": "wait", "reason": "等待外部回复或界面变化，当前处于等待外部输入状态。", "target_id": null, "terminal": false, "blocked": false, "done_message": null}
+[18:29:56.846] [RESOURCE] RAM余量=13691MB 提交余量=9505MB CPU利用率=8% GPU=4887/10240MB余量 使用率1% 温度=54
+[18:29:57.104] [ACTION_RESULT] task=20261024_182913_676_9bee9de1 step=4 ok=1
+{"action":"wait","blocked":false,"done_message":null,"reason":"等待外部回复或界面变化，当前处于等待外部输入状态。","target_id":null,"terminal":false,"wait_ms":1000}
+等待1000ms完成。
+[18:29:57.105] [UI] [wait] 等待1000ms完成。
+[18:29:57.106] [TOOL_FULL] task=20261024_182913_676_9bee9de1 step=4
+{"action":"wait","blocked":false,"done_message":null,"reason":"等待外部回复或界面变化，当前处于等待外部输入状态。","target_id":null,"terminal":false,"wait_ms":1000}
+等待1000ms完成。
+[18:29:57.226] [UI] [压缩] WorldState摘要2074字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:30:02.003] [RESOURCE] RAM余量=13528MB 提交余量=9353MB CPU利用率=13% GPU=4898/10240MB余量 使用率2% 温度=50
+[18:30:07.155] [RESOURCE] RAM余量=13572MB 提交余量=9413MB CPU利用率=7% GPU=4899/10240MB余量 使用率4% 温度=49
+[18:30:12.289] [RESOURCE] RAM余量=13574MB 提交余量=9417MB CPU利用率=3% GPU=4899/10240MB余量 使用率6% 温度=49
+[18:30:12.870] [UI] [wait_for_change] 等待期间没有新变化；保持WAIT_FOR_CHANGE，后续继续低频观察，不表示任务失败。
+[18:30:17.454] [RESOURCE] RAM余量=13544MB 提交余量=9365MB CPU利用率=9% GPU=4901/10240MB余量 使用率5% 温度=48
+[18:30:22.593] [RESOURCE] RAM余量=13512MB 提交余量=9367MB CPU利用率=2% GPU=4899/10240MB余量 使用率5% 温度=47
+[18:30:27.726] [RESOURCE] RAM余量=13513MB 提交余量=9367MB CPU利用率=3% GPU=4901/10240MB余量 使用率6% 温度=47
+[18:30:28.282] [UI] [wait_for_change] 等待期间没有新变化；保持WAIT_FOR_CHANGE，后续继续低频观察，不表示任务失败。
+[18:30:32.883] [RESOURCE] RAM余量=13513MB 提交余量=9361MB CPU利用率=9% GPU=4901/10240MB余量 使用率4% 温度=46
+[18:30:34.233] [UI] [任务切换] 退出指定识别；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:30:34.238] [UI] [指定] 指定识别已退出
+[18:30:34.245] [UI] [wait_for_change] 等待已取消
+[18:30:34.336] [UI] [任务] 任务执行结束
+[18:30:36.070] [UI] [任务切换] 开始选择新的指定窗口；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:30:36.684] [UI] [任务切换] 切换到新的指定窗口；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:30:36.703] [UI] [指定] 已锁定：微信 | Process=Weixin.exe | PID=20124 | HWND=268132
+[18:30:38.032] [RESOURCE] RAM余量=13519MB 提交余量=9352MB CPU利用率=4% GPU=4895/10240MB余量 使用率4% 温度=46
+[18:30:41.620] [UI] [主题] 独立任务 20261024_183041_565_dd966cd0，不继承其他任务或普通聊天上下文。
+[18:30:41.657] [UI] [任务] 开始执行指定窗口任务：和他聊天 咨询出 做上面职业为止
+[18:30:41.665] [UI] [授权] WINDOW_CONTROL 已由用户主动选择目标窗口：微信；当前输入被授权在该 HWND 范围内执行。
+[18:30:41.673] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:30:41.677] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:30:41.713] [MODEL_STDERR] 1.16.779.281 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 31001541
+
+[18:30:41.745] [MODEL_STDERR] 1.16.810.658 I slot launch_slot_: id  0 | task 1103 | processing task, is_child = 0
+
+[18:30:42.597] [MODEL_STDERR] 1.17.663.488 I slot print_timing: id  0 | task 1103 | prompt eval time =     489.18 ms /   212 tokens (    2.31 ms per token,   433.38 tokens per second)
+1.17.663.493 I slot print_timing: id  0 | task 1103 |        eval time =     363.63 ms /    31 tokens (   12.12 ms per token,    82.50 tokens per second)
+1.17.663.494 I slot print_timing: id  0 | task 1103 |       total time =     852.81 ms /   243 tokens
+1.17.663.495 I slot print_timing: id  0 | task 1103 |    graphs reused =       1172
+1.17.663.541 I slot      release: id  0 | task 1103 | stop processing: n_tokens = 243, truncated = 0
+
+[18:30:42.603] [UI] [任务理解] {"application":"微信","completion":"","continuous":true,"explicit_action":true,"goal":"和他聊天 咨询出 做上面职业为止","kind":"operate_application"}
+[18:30:42.616] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:30:42.654] [MODEL_STDERR] 1.17.719.587 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 77638787
+
+[18:30:42.662] [MODEL_STDERR] 1.17.728.369 I slot launch_slot_: id  0 | task 1138 | processing task, is_child = 0
+
+[18:30:43.177] [RESOURCE] RAM余量=13438MB 提交余量=9198MB CPU利用率=75% GPU=4885/10240MB余量 使用率31% 温度=50
+[18:30:45.361] [MODEL_STDERR] 1.20.426.607 I slot print_timing: id  0 | task 1138 | prompt eval time =     220.96 ms /   286 tokens (    0.77 ms per token,  1294.34 tokens per second)
+1.20.426.612 I slot print_timing: id  0 | task 1138 |        eval time =    2477.25 ms /   174 tokens (   14.32 ms per token,    69.84 tokens per second)
+1.20.426.614 I slot print_timing: id  0 | task 1138 |       total time =    2698.21 ms /   460 tokens
+1.20.426.615 I slot print_timing: id  0 | task 1138 |    graphs reused =       1346
+1.20.426.697 I slot      release: id  0 | task 1138 | stop processing: n_tokens = 460, truncated = 0
+
+[18:30:45.439] [UI] [运行画像] {"confidence":0.95,"dynamic_generated":true,"likely_targets":["chat_input_field","send_button","contact_list"],"preferred_action_families":["uia","keyboard","vision"],"preferred_observation":"uia_then_vision","process_profile":"Weixin.exe","rationale":"用户意图是与微信中的某个联系人进行聊天咨询，目标是完成对话。微信是一个典型的聊天应用，UI操作（如输入、发送消息）是核心，因此优先使用uia和keyboard进行交互。","source":"dynamic_llm","surface_type":"chat_interface","task_profile":"operate_application"}
+[18:30:45.443] [UI] [能力锁定] Weixin.exe 未配置MCP，本任务后续忽略MCP。
+[18:30:45.459] [UI] [能力锁定] UIA不可用，本任务后续不再重复UIA扫描：UIA信息不足：nodes=2 actionable=0；阈值 nodes>=3 actionable>=1
+[18:30:45.463] [UI] [观察策略] app=Weixin.exe kind=operate_application policy=uia_then_vision UIA可操作=0
+[18:30:45.464] [PROTOCOL] planner=D:/桌面/project/CLion/windows_uia/cmake-build-debug/assets/models/prompts/planner.txt verifier=D:/桌面/project/CLion/windows_uia/cmake-build-debug/assets/models/prompts/verifier.txt version=workflow-v2
+[18:30:46.048] [MODEL_STDERR] 1.21.113.962 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 80401944
+
+[18:30:46.089] [MODEL_STDERR] 1.21.155.625 I slot launch_slot_: id  0 | task 1316 | processing task, is_child = 0
+
+[18:30:48.343] [RESOURCE] RAM余量=13363MB 提交余量=9189MB CPU利用率=90% GPU=4885/10240MB余量 使用率50% 温度=53
+[18:30:50.815] [MODEL_STDERR] 1.25.881.802 I slot print_timing: id  0 | task 1316 | n_gen =    212, tg =  70.09 t/s, tg_3s =  70.42 t/s
+
+[18:30:52.742] [MODEL_STDERR] 1.27.807.633 I slot print_timing: id  0 | task 1316 | prompt eval time =    1715.82 ms /  2227 tokens (    0.77 ms per token,  1297.92 tokens per second)
+1.27.807.638 I slot print_timing: id  0 | task 1316 |        eval time =    4936.16 ms /   348 tokens (   14.23 ms per token,    70.30 tokens per second)
+1.27.807.639 I slot print_timing: id  0 | task 1316 |       total time =    6651.97 ms /  2575 tokens
+1.27.807.640 I slot print_timing: id  0 | task 1316 |    graphs reused =       1714
+
+[18:30:52.743] [MODEL_STDERR] 1.27.807.842 I slot      release: id  0 | task 1316 | stop processing: n_tokens = 2575, truncated = 0
+
+[18:30:52.746] [VISION_USAGE] {"completion_tokens":348,"prompt_tokens":2228,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2576} finish_reason=stop
+[18:30:52.751] [UI] [观察] {"frame_id":"6543afca8612417e91c60ce46f985997","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的输入/发送区域。","targets":[{"confidence":0.95,"description":"用于输入用户想发送的消息的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.93},{"confidence":0.95,"description":"用于发送已输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户希望继续与当前选定的联系人进行聊天，咨询关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈晓","工具狼狼","大湾区《光行","北交州《光行","路新企业家","带50位学","陈亚","沙明","台州阳光","克亚","低欲望城市","‘恐’","中悦","发送"]}
+[18:30:52.752] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=1
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"6543afca8612417e91c60ce46f985997","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的输入/发送区域。","targets":[{"confidence":0.95,"description":"用于输入用户想发送的消息的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.93},{"confidence":0.95,"description":"用于发送已输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户希望继续与当前选定的联系人进行聊天，咨询关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈晓","工具狼狼","大湾区《光行","北交州《光行","路新企业家","带50位学","陈亚","沙明","台州阳光","克亚","低欲望城市","‘恐’","中悦","发送"]}
+[18:30:52.859] [UI] [压缩] WorldState摘要1837字符，保留近期1步；能力判定与视觉目标直接复用。
+[18:30:52.901] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=observe step=1 policy=ACTION_READY
+[18:30:52.937] [UI] [压缩] WorldState摘要1832字符，保留近期1步；能力判定与视觉目标直接复用。
+[18:30:53.183] [UI] [压缩] WorldState摘要1832字符，保留近期1步；能力判定与视觉目标直接复用。
+[18:30:53.295] [UI] [上下文恢复] 完整Planner输入超预算，已切换轻量上下文继续执行：1411/5600 tokens
+[18:30:53.297] [UI] [思考] task=20261024_183041_565_dd966cd0 输入估计=1411 tokens 预算=5600；RAM余量=13540MB 提交余量=9355MB CPU利用率=68% GPU=4885/10240MB余量 使用率46% 温度=54
+[18:30:53.301] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:30:53.341] [MODEL_STDERR] 1.28.407.503 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 87783089
+
+[18:30:53.389] [MODEL_STDERR] 1.28.455.251 I slot launch_slot_: id  0 | task 1674 | processing task, is_child = 0
+
+[18:30:53.501] [RESOURCE] RAM余量=13541MB 提交余量=9346MB CPU利用率=42% GPU=4885/10240MB余量 使用率1% 温度=51
+[18:30:54.817] [MODEL_STDERR] 1.29.882.921 I slot print_timing: id  0 | task 1674 | prompt eval time =     497.46 ms /   544 tokens (    0.91 ms per token,  1093.54 tokens per second)
+1.29.882.925 I slot print_timing: id  0 | task 1674 |        eval time =     930.18 ms /    70 tokens (   13.48 ms per token,    74.18 tokens per second)
+1.29.882.927 I slot print_timing: id  0 | task 1674 |       total time =    1427.65 ms /   614 tokens
+1.29.882.928 I slot print_timing: id  0 | task 1674 |    graphs reused =       1786
+
+[18:30:54.847] [MODEL_STDERR] 1.29.883.029 I slot      release: id  0 | task 1674 | stop processing: n_tokens = 1068, truncated = 0
+
+[18:30:54.849] [INFERENCE] task=20261024_183041_565_dd966cd0 step=1 role=planner elapsed=1551ms output_chars=176 error=
+[18:30:54.850] [PLANNER_RAW] {"action": "keyboard_type", "reason": "用户处于READY_TO_INITIATE状态，需要先发送一条自然口语来开始对话，咨询关于“做上面职业”的问题。", "target_id": "消息输入框", "terminal": false, "blocked": false, "done_message": ""}
+[18:30:54.855] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:30:54.887] [MODEL_STDERR] 1.29.952.748 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 89858275
+
+[18:30:54.919] [MODEL_STDERR] 1.29.985.337 I slot launch_slot_: id  0 | task 1749 | processing task, is_child = 0
+
+[18:30:55.360] [MODEL_STDERR] 1.30.425.750 I slot print_timing: id  0 | task 1749 | prompt eval time =     169.42 ms /   204 tokens (    0.83 ms per token,  1204.09 tokens per second)
+1.30.425.768 I slot print_timing: id  0 | task 1749 |        eval time =     270.97 ms /    23 tokens (   12.32 ms per token,    81.19 tokens per second)
+1.30.425.769 I slot print_timing: id  0 | task 1749 |       total time =     440.39 ms /   227 tokens
+1.30.425.770 I slot print_timing: id  0 | task 1749 |    graphs reused =       1808
+1.30.425.806 I slot      release: id  0 | task 1749 | stop processing: n_tokens = 251, truncated = 0
+
+[18:30:55.362] [TEXT_COMPOSER] task=20261024_183041_565_dd966cd0 step=1 turn=READY_TO_INITIATE chars=33 text=嗨，最近怎么样？我有点想问你关于做那个职业的事情，想听听你的看法。
+[18:30:55.362] [UI] [文本生成] 已自动补全keyboard_type.text：嗨，最近怎么样？我有点想问你关于做那个职业的事情，想听听你的看法。
+[18:30:55.609] [UI] [动作事务] 文本已输入，建立pending_commit=发送按钮
+[18:30:55.610] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=1 ok=1
+{"action":"keyboard_type","blocked":false,"done_message":"","reason":"用户处于READY_TO_INITIATE状态，需要先发送一条自然口语来开始对话，咨询关于“做上面职业”的问题。","terminal":false,"text":"嗨，最近怎么样？我有点想问你关于做那个职业的事情，想听听你的看法。"}
+键盘文字输入成功。
+[18:30:55.611] [UI] [keyboard_type] 键盘文字输入成功。
+[18:30:55.612] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=1
+{"action":"keyboard_type","blocked":false,"done_message":"","reason":"用户处于READY_TO_INITIATE状态，需要先发送一条自然口语来开始对话，咨询关于“做上面职业”的问题。","terminal":false,"text":"嗨，最近怎么样？我有点想问你关于做那个职业的事情，想听听你的看法。"}
+键盘文字输入成功。
+[18:30:55.655] [UI] [压缩] WorldState摘要2085字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:30:56.404] [MODEL_STDERR] 1.31.469.813 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 90401052
+
+[18:30:56.433] [MODEL_STDERR] 1.31.499.092 I slot launch_slot_: id  0 | task 1776 | processing task, is_child = 0
+
+[18:30:58.663] [RESOURCE] RAM余量=13457MB 提交余量=9282MB CPU利用率=85% GPU=4885/10240MB余量 使用率56% 温度=55
+[18:31:00.791] [MODEL_STDERR] 1.35.857.515 I slot print_timing: id  0 | task 1776 | n_gen =    204, tg =  67.43 t/s, tg_3s =  67.76 t/s
+
+[18:31:01.971] [MODEL_STDERR] 1.37.036.710 I slot print_timing: id  0 | task 1776 | prompt eval time =    1347.70 ms /  2227 tokens (    0.61 ms per token,  1652.44 tokens per second)
+1.37.036.715 I slot print_timing: id  0 | task 1776 |        eval time =    4189.88 ms /   288 tokens (   14.60 ms per token,    68.50 tokens per second)
+1.37.036.716 I slot print_timing: id  0 | task 1776 |       total time =    5537.59 ms /  2515 tokens
+1.37.036.717 I slot print_timing: id  0 | task 1776 |    graphs reused =       2117
+
+[18:31:01.972] [MODEL_STDERR] 1.37.036.897 I slot      release: id  0 | task 1776 | stop processing: n_tokens = 2515, truncated = 0
+
+[18:31:01.976] [VISION_USAGE] {"completion_tokens":288,"prompt_tokens":2228,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2516} finish_reason=stop
+[18:31:01.979] [UI] [观察] {"frame_id":"3d824c8f1d454e5ab9a619c5b9040515","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的会话。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.66,"norm_y":0.95},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"哟，近怎么样？有点问你关于那个职业的事情，听你的看法。","summary":"用户希望与当前会话中的对方进行聊天，咨询关于“做上面职业”的事情。"},"valid":true,"visible_text":["哟，近怎么样？有点问你关于那个职业的事情，听你的看法。","发送"]}
+[18:31:01.980] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=2
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"3d824c8f1d454e5ab9a619c5b9040515","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的会话。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.66,"norm_y":0.95},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"哟，近怎么样？有点问你关于那个职业的事情，听你的看法。","summary":"用户希望与当前会话中的对方进行聊天，咨询关于“做上面职业”的事情。"},"valid":true,"visible_text":["哟，近怎么样？有点问你关于那个职业的事情，听你的看法。","发送"]}
+[18:31:02.150] [UI] [压缩] WorldState摘要2083字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:02.194] [UI] [事务推进] 世界状态已变化，interaction_epoch=1
+[18:31:02.199] [UI] [动作事务] pending_commit直接绑定提交目标“发送按钮”
+[18:31:02.201] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=verify_effect step=2 policy=ACTION_READY
+[18:31:02.202] [ACTION_RESOLVE] task=20261024_183041_565_dd966cd0 step=2
+RAW={"action":"mouse_click","button":"left","click_count":1,"frame_id":"3d824c8f1d454e5ab9a619c5b9040515","norm_x":0.88,"norm_y":0.95,"reason":"pending_commit事务：提交当前已输入文本","target":"发送/提交"}
+RESOLVED={"action":"mouse_click","button":"left","click_count":1,"frame_id":"3d824c8f1d454e5ab9a619c5b9040515","norm_x":0.88,"norm_y":0.95,"reason":"pending_commit事务：提交当前已输入文本","target":"发送/提交"}
+NOTE=pending_commit直接绑定提交目标“发送按钮”
+[18:31:02.203] [UI] [动作解析] pending_commit直接绑定提交目标“发送按钮”
+[18:31:02.301] [COMMIT_CLICK] attempt=1 point=(1071,944) norm=(0.8800,0.9500)
+[18:31:02.505] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:31:02.507] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=2 ok=1
+{"action":"mouse_click","button":"left","click_count":1,"frame_id":"3d824c8f1d454e5ab9a619c5b9040515","norm_x":0.88,"norm_y":0.95,"reason":"pending_commit事务：提交当前已输入文本","target":"发送/提交"}
+鼠标点击成功：(1071,944) left。
+[18:31:02.508] [UI] [mouse_click] 鼠标点击成功：(1071,944) left。
+[18:31:02.509] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=2
+{"action":"mouse_click","button":"left","click_count":1,"frame_id":"3d824c8f1d454e5ab9a619c5b9040515","norm_x":0.88,"norm_y":0.95,"reason":"pending_commit事务：提交当前已输入文本","target":"发送/提交"}
+鼠标点击成功：(1071,944) left。
+[18:31:02.606] [UI] [压缩] WorldState摘要2218字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:03.480] [MODEL_STDERR] 1.38.546.408 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.852 (> 0.100 thold), f_keep = 0.755
+
+[18:31:03.482] [MODEL_STDERR] 1.38.546.854 I slot launch_slot_: id  0 | task 2074 | processing task, is_child = 0
+
+[18:31:03.816] [RESOURCE] RAM余量=13316MB 提交余量=9105MB CPU利用率=22% GPU=4885/10240MB余量 使用率57% 温度=54
+[18:31:08.357] [MODEL_STDERR] 1.43.422.363 I slot print_timing: id  0 | task 2074 | n_gen =    205, tg =  67.96 t/s, tg_3s =  68.29 t/s
+
+[18:31:08.972] [RESOURCE] RAM余量=13522MB 提交余量=9275MB CPU利用率=90% GPU=4879/10240MB余量 使用率52% 温度=56
+[18:31:09.676] [MODEL_STDERR] 1.44.741.993 I slot print_timing: id  0 | task 2074 | prompt eval time =    1873.78 ms /  2227 tokens (    0.84 ms per token,  1188.51 tokens per second)
+1.44.741.997 I slot print_timing: id  0 | task 2074 |        eval time =    4321.34 ms /   294 tokens (   14.75 ms per token,    67.80 tokens per second)
+1.44.741.998 I slot print_timing: id  0 | task 2074 |       total time =    6195.12 ms /  2521 tokens
+1.44.741.999 I slot print_timing: id  0 | task 2074 |    graphs reused =       2432
+
+[18:31:09.677] [MODEL_STDERR] 1.44.742.154 I slot      release: id  0 | task 2074 | stop processing: n_tokens = 2521, truncated = 0
+
+[18:31:09.680] [VISION_USAGE] {"completion_tokens":294,"prompt_tokens":2228,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2522} finish_reason=stop
+[18:31:09.683] [UI] [观察] {"frame_id":"be629572749745ee897be57394a2fc66","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的输入/发送区域。","targets":[{"confidence":0.95,"description":"用于输入用户回复的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.96},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.85,"norm_y":0.96}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，近怎么样？有点问你关于那个职业的事情，听你的看法","summary":"用户希望与当前选定的联系人进行聊天，咨询关于“做上面职业”的事情。"},"valid":true,"visible_text":["啥，近怎么样？有点问你关于那个职业的事情，听你的看法","云","搜寻"]}
+[18:31:09.684] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=3
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"be629572749745ee897be57394a2fc66","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的输入/发送区域。","targets":[{"confidence":0.95,"description":"用于输入用户回复的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.96},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.85,"norm_y":0.96}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，近怎么样？有点问你关于那个职业的事情，听你的看法","summary":"用户希望与当前选定的联系人进行聊天，咨询关于“做上面职业”的事情。"},"valid":true,"visible_text":["啥，近怎么样？有点问你关于那个职业的事情，听你的看法","云","搜寻"]}
+[18:31:09.773] [UI] [压缩] WorldState摘要2217字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:09.802] [UI] [事务推进] 世界状态已变化，interaction_epoch=2
+[18:31:09.803] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:31:09.806] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:31:09.854] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:31:09.855] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=verify_effect step=3 policy=NEED_GROUNDING
+[18:31:09.856] [ACTION_RESOLVE] task=20261024_183041_565_dd966cd0 step=3
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:31:09.856] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:31:10.077] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:31:10.078] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:31:10.079] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=3 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:31:10.080] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:31:10.082] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=3
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:31:10.164] [UI] [压缩] WorldState摘要2289字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:11.021] [MODEL_STDERR] 1.46.087.158 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.852 (> 0.100 thold), f_keep = 0.753
+
+[18:31:11.022] [MODEL_STDERR] 1.46.087.449 I slot launch_slot_: id  0 | task 2378 | processing task, is_child = 0
+
+[18:31:14.137] [RESOURCE] RAM余量=13454MB 提交余量=9228MB CPU利用率=100% GPU=4878/10240MB余量 使用率53% 温度=55
+[18:31:15.436] [MODEL_STDERR] 1.50.501.687 I slot print_timing: id  0 | task 2378 | n_gen =    211, tg =  69.76 t/s, tg_3s =  70.10 t/s
+
+[18:31:16.733] [MODEL_STDERR] 1.51.799.683 I slot print_timing: id  0 | task 2378 | prompt eval time =    1404.07 ms /  2227 tokens (    0.63 ms per token,  1586.10 tokens per second)
+1.51.799.687 I slot print_timing: id  0 | task 2378 |        eval time =    4308.14 ms /   304 tokens (   14.22 ms per token,    70.33 tokens per second)
+1.51.799.689 I slot print_timing: id  0 | task 2378 |       total time =    5712.21 ms /  2531 tokens
+1.51.799.690 I slot print_timing: id  0 | task 2378 |    graphs reused =       2757
+
+[18:31:16.734] [MODEL_STDERR] 1.51.799.896 I slot      release: id  0 | task 2378 | stop processing: n_tokens = 2531, truncated = 0
+
+[18:31:16.738] [VISION_USAGE] {"completion_tokens":304,"prompt_tokens":2228,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2532} finish_reason=stop
+[18:31:16.741] [UI] [观察] {"frame_id":"5aae05f7c20e453dbb2d5a49535b6171","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的对话窗口。用户目标是与当前对话对象进行聊天咨询。","targets":[{"confidence":0.95,"description":"用于输入用户回复的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.63,"norm_y":0.94},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.94}],"task_context":{"external_change_detected":false,"latest_relevant_text":"哟，最近咋样？有点问你关于那个职业的事情，听你的看法。","summary":"用户已选择当前聊天窗口，需要输入消息并发送给对方进行咨询。"},"valid":true,"visible_text":["陈晔","哟，最近咋样？有点问你关于那个职业的事情，听你的看法。","发送"]}
+[18:31:16.742] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=4
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"5aae05f7c20e453dbb2d5a49535b6171","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的对话窗口。用户目标是与当前对话对象进行聊天咨询。","targets":[{"confidence":0.95,"description":"用于输入用户回复的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.63,"norm_y":0.94},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.94}],"task_context":{"external_change_detected":false,"latest_relevant_text":"哟，最近咋样？有点问你关于那个职业的事情，听你的看法。","summary":"用户已选择当前聊天窗口，需要输入消息并发送给对方进行咨询。"},"valid":true,"visible_text":["陈晔","哟，最近咋样？有点问你关于那个职业的事情，听你的看法。","发送"]}
+[18:31:16.813] [UI] [压缩] WorldState摘要2291字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:16.849] [UI] [事务推进] 世界状态已变化，interaction_epoch=3
+[18:31:16.850] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:31:16.853] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:31:16.906] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:31:16.908] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=verify_effect step=4 policy=NEED_GROUNDING
+[18:31:16.909] [ACTION_RESOLVE] task=20261024_183041_565_dd966cd0 step=4
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:31:16.910] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:31:17.160] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:31:17.161] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:31:17.163] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=4 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:31:17.164] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:31:17.165] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=4
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:31:17.248] [UI] [压缩] WorldState摘要2369字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:18.164] [MODEL_STDERR] 1.53.230.623 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.852 (> 0.100 thold), f_keep = 0.750
+
+[18:31:18.167] [MODEL_STDERR] 1.53.231.127 I slot launch_slot_: id  0 | task 2692 | processing task, is_child = 0
+
+[18:31:19.286] [RESOURCE] RAM余量=13507MB 提交余量=9300MB CPU利用率=21% GPU=4877/10240MB余量 使用率59% 温度=56
+[18:31:22.884] [MODEL_STDERR] 1.57.950.111 I slot print_timing: id  0 | task 2692 | n_gen =    214, tg =  70.95 t/s, tg_3s =  71.29 t/s
+
+[18:31:24.300] [MODEL_STDERR] 1.59.366.227 I slot print_timing: id  0 | task 2692 | prompt eval time =    1716.99 ms /  2227 tokens (    0.77 ms per token,  1297.03 tokens per second)
+1.59.366.231 I slot print_timing: id  0 | task 2692 |        eval time =    4418.05 ms /   313 tokens (   14.16 ms per token,    70.62 tokens per second)
+1.59.366.232 I slot print_timing: id  0 | task 2692 |       total time =    6135.04 ms /  2540 tokens
+1.59.366.233 I slot print_timing: id  0 | task 2692 |    graphs reused =       3091
+
+[18:31:24.301] [MODEL_STDERR] 1.59.366.414 I slot      release: id  0 | task 2692 | stop processing: n_tokens = 2540, truncated = 0
+
+[18:31:24.303] [VISION_USAGE] {"completion_tokens":313,"prompt_tokens":2228,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2541} finish_reason=stop
+[18:31:24.306] [UI] [观察] {"frame_id":"a0217f93f2794b649d74e030f84e1e13","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的对话。用户目标是与当前对话的联系人进行聊天咨询。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.93},{"confidence":0.95,"description":"用于发送消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，近怎么样？有点想做职业的事情，听你的看法。","summary":"用户已选择当前窗口，目标是继续与当前对话的联系人进行聊天，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈晔","啥，近怎么样？有点想做职业的事情，听你的看法。","7","18:31"]}
+[18:31:24.308] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=5
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"a0217f93f2794b649d74e030f84e1e13","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的对话。用户目标是与当前对话的联系人进行聊天咨询。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.93},{"confidence":0.95,"description":"用于发送消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，近怎么样？有点想做职业的事情，听你的看法。","summary":"用户已选择当前窗口，目标是继续与当前对话的联系人进行聊天，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈晔","啥，近怎么样？有点想做职业的事情，听你的看法。","7","18:31"]}
+[18:31:24.428] [UI] [压缩] WorldState摘要2366字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:24.450] [RESOURCE] RAM余量=13458MB 提交余量=9234MB CPU利用率=82% GPU=4877/10240MB余量 使用率47% 温度=57
+[18:31:24.481] [UI] [事务推进] 世界状态已变化，interaction_epoch=4
+[18:31:24.482] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:31:24.485] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:31:24.532] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:31:24.533] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=verify_effect step=5 policy=NEED_GROUNDING
+[18:31:24.534] [ACTION_RESOLVE] task=20261024_183041_565_dd966cd0 step=5
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:31:24.536] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:31:24.764] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:31:24.765] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:31:24.766] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=5 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:31:24.767] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:31:24.769] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=5
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:31:24.802] [UI] [压缩] WorldState摘要2444字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:25.408] [UI] [观察] {"frame_id":"1233ffa2ecf5492985622ec37b55882c","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的对话。用户目标是与当前对话的联系人进行聊天咨询。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.93},{"confidence":0.95,"description":"用于发送消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，近怎么样？有点想做职业的事情，听你的看法。","summary":"用户已选择当前窗口，目标是继续与当前对话的联系人进行聊天，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈晔","啥，近怎么样？有点想做职业的事情，听你的看法。","7","18:31"]}
+[18:31:25.409] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=6
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"1233ffa2ecf5492985622ec37b55882c","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的对话。用户目标是与当前对话的联系人进行聊天咨询。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.93},{"confidence":0.95,"description":"用于发送消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，近怎么样？有点想做职业的事情，听你的看法。","summary":"用户已选择当前窗口，目标是继续与当前对话的联系人进行聊天，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈晔","啥，近怎么样？有点想做职业的事情，听你的看法。","7","18:31"]}
+[18:31:25.505] [UI] [压缩] WorldState摘要2444字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:25.544] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:31:25.547] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:31:25.595] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:31:25.596] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=verify_effect step=6 policy=NEED_GROUNDING
+[18:31:25.597] [ACTION_RESOLVE] task=20261024_183041_565_dd966cd0 step=6
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:31:25.598] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:31:25.824] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:31:25.825] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:31:25.826] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=6 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:31:25.826] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:31:25.827] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=6
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:31:25.967] [UI] [压缩] WorldState摘要2397字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:31:29.591] [RESOURCE] RAM余量=13339MB 提交余量=9147MB CPU利用率=25% GPU=4875/10240MB余量 使用率4% 温度=52
+[18:31:34.749] [RESOURCE] RAM余量=13788MB 提交余量=9583MB CPU利用率=17% GPU=4877/10240MB余量 使用率4% 温度=50
+[18:31:39.886] [RESOURCE] RAM余量=13359MB 提交余量=9137MB CPU利用率=6% GPU=4877/10240MB余量 使用率7% 温度=49
+[18:31:45.036] [RESOURCE] RAM余量=13360MB 提交余量=9083MB CPU利用率=14% GPU=4875/10240MB余量 使用率4% 温度=49
+[18:31:50.222] [RESOURCE] RAM余量=13314MB 提交余量=9052MB CPU利用率=11% GPU=4875/10240MB余量 使用率5% 温度=48
+[18:31:55.347] [RESOURCE] RAM余量=13312MB 提交余量=9048MB CPU利用率=2% GPU=4878/10240MB余量 使用率6% 温度=47
+[18:31:57.085] [UI] [wait_for_change] 等待期间没有新变化；保持WAIT_FOR_CHANGE，后续继续低频观察，不表示任务失败。
+[18:32:00.493] [RESOURCE] RAM余量=13229MB 提交余量=8990MB CPU利用率=24% GPU=4876/10240MB余量 使用率5% 温度=47
+[18:32:05.652] [RESOURCE] RAM余量=13077MB 提交余量=8749MB CPU利用率=7% GPU=4876/10240MB余量 使用率4% 温度=46
+[18:32:10.772] [RESOURCE] RAM余量=13049MB 提交余量=8784MB CPU利用率=5% GPU=4878/10240MB余量 使用率3% 温度=46
+[18:32:12.464] [UI] [wait_for_change] 等待期间没有新变化；保持WAIT_FOR_CHANGE，后续继续低频观察，不表示任务失败。
+[18:32:15.910] [RESOURCE] RAM余量=12998MB 提交余量=8762MB CPU利用率=15% GPU=4876/10240MB余量 使用率2% 温度=46
+[18:32:21.087] [RESOURCE] RAM余量=13010MB 提交余量=8774MB CPU利用率=3% GPU=4876/10240MB余量 使用率3% 温度=45
+[18:32:24.814] [UI] [wait_for_change] 检测到目标应用画面变化，重新观察。
+[18:32:25.343] [MODEL_STDERR] 3.00.409.848 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.852 (> 0.100 thold), f_keep = 0.748
+
+[18:32:25.344] [MODEL_STDERR] 3.00.410.128 I slot launch_slot_: id  0 | task 3015 | processing task, is_child = 0
+
+[18:32:26.212] [RESOURCE] RAM余量=13026MB 提交余量=8788MB CPU利用率=10% GPU=4878/10240MB余量 使用率69% 温度=46
+[18:32:29.980] [MODEL_STDERR] 3.05.046.270 I slot print_timing: id  0 | task 3015 | n_gen =    219, tg =  72.43 t/s, tg_3s =  72.76 t/s
+
+[18:32:31.215] [MODEL_STDERR] 3.06.281.174 I slot print_timing: id  0 | task 3015 | prompt eval time =    1626.26 ms /  2227 tokens (    0.73 ms per token,  1369.40 tokens per second)
+3.06.281.179 I slot print_timing: id  0 | task 3015 |        eval time =    4244.75 ms /   307 tokens (   13.87 ms per token,    72.09 tokens per second)
+3.06.281.181 I slot print_timing: id  0 | task 3015 |       total time =    5871.00 ms /  2534 tokens
+3.06.281.182 I slot print_timing: id  0 | task 3015 |    graphs reused =       3419
+
+[18:32:31.216] [MODEL_STDERR] 3.06.281.383 I slot      release: id  0 | task 3015 | stop processing: n_tokens = 2534, truncated = 0
+
+[18:32:31.219] [VISION_USAGE] {"completion_tokens":307,"prompt_tokens":2228,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2535} finish_reason=stop
+[18:32:31.223] [UI] [观察] {"frame_id":"d190f284491b469ebf8b7646ec76e3f9","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天界面，用户希望与当前对话对象进行交流，咨询关于“做上面职业”相关的问题。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.63,"norm_y":0.93},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，怎样？有点问问你关于做那个职业的事情，听听的看法。","summary":"用户正在与“于希”进行聊天，需要输入问题并发送给对方。"},"valid":true,"visible_text":["于希","啥，怎样？有点问问你关于做那个职业的事情，听听的看法。","长按鼠标语音输入"]}
+[18:32:31.224] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=7
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"d190f284491b469ebf8b7646ec76e3f9","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天界面，用户希望与当前对话对象进行交流，咨询关于“做上面职业”相关的问题。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.63,"norm_y":0.93},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，怎样？有点问问你关于做那个职业的事情，听听的看法。","summary":"用户正在与“于希”进行聊天，需要输入问题并发送给对方。"},"valid":true,"visible_text":["于希","啥，怎样？有点问问你关于做那个职业的事情，听听的看法。","长按鼠标语音输入"]}
+[18:32:31.311] [UI] [压缩] WorldState摘要2396字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:32:31.339] [UI] [事务推进] 世界状态已变化，interaction_epoch=6
+[18:32:31.340] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:32:31.342] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:32:31.359] [RESOURCE] RAM余量=12958MB 提交余量=8774MB CPU利用率=83% GPU=4878/10240MB余量 使用率52% 温度=52
+[18:32:31.398] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:32:31.400] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=observe step=7 policy=NEED_GROUNDING
+[18:32:31.402] [ACTION_RESOLVE] task=20261024_183041_565_dd966cd0 step=7
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:32:31.403] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:32:31.640] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:32:31.641] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:32:31.642] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=7 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:32:31.643] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:32:31.645] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=7
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:32:31.696] [UI] [压缩] WorldState摘要2395字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:32:32.655] [MODEL_STDERR] 3.07.721.315 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.852 (> 0.100 thold), f_keep = 0.749
+
+[18:32:32.657] [MODEL_STDERR] 3.07.721.782 I slot launch_slot_: id  0 | task 3332 | processing task, is_child = 0
+
+[18:32:36.503] [RESOURCE] RAM余量=13019MB 提交余量=8823MB CPU利用率=89% GPU=4878/10240MB余量 使用率51% 温度=53
+[18:32:37.478] [MODEL_STDERR] 3.12.544.781 I slot print_timing: id  0 | task 3332 | n_gen =    215, tg =  71.05 t/s, tg_3s =  71.38 t/s
+
+[18:32:38.607] [MODEL_STDERR] 3.13.673.303 I slot print_timing: id  0 | task 3332 | prompt eval time =    1810.99 ms /  2227 tokens (    0.81 ms per token,  1229.71 tokens per second)
+3.13.673.307 I slot print_timing: id  0 | task 3332 |        eval time =    4140.51 ms /   295 tokens (   14.08 ms per token,    71.01 tokens per second)
+3.13.673.309 I slot print_timing: id  0 | task 3332 |       total time =    5951.50 ms /  2522 tokens
+3.13.673.310 I slot print_timing: id  0 | task 3332 |    graphs reused =       3735
+
+[18:32:38.608] [MODEL_STDERR] 3.13.673.512 I slot      release: id  0 | task 3332 | stop processing: n_tokens = 2522, truncated = 0
+
+[18:32:38.612] [VISION_USAGE] {"completion_tokens":295,"prompt_tokens":2228,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2523} finish_reason=stop
+[18:32:38.615] [UI] [观察] {"frame_id":"0d219fc9507f44b7821730213a2e5992","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天界面，用户已选择当前会话，目标是继续与对方聊天。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.95},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","summary":"用户希望继续与当前聊天对象进行对话，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈悠","啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","发送"]}
+[18:32:38.616] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=8
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"0d219fc9507f44b7821730213a2e5992","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天界面，用户已选择当前会话，目标是继续与对方聊天。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.95},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","summary":"用户希望继续与当前聊天对象进行对话，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈悠","啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","发送"]}
+[18:32:38.701] [UI] [压缩] WorldState摘要2396字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:32:38.729] [UI] [事务推进] 世界状态已变化，interaction_epoch=7
+[18:32:38.731] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:32:38.733] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:32:38.786] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:32:38.787] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=verify_effect step=8 policy=NEED_GROUNDING
+[18:32:38.788] [ACTION_RESOLVE] task=20261024_183041_565_dd966cd0 step=8
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:32:38.789] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:32:39.018] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:32:39.020] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:32:39.021] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=8 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:32:39.021] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:32:39.023] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=8
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:32:39.061] [UI] [压缩] WorldState摘要2395字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:32:39.720] [UI] [观察] {"frame_id":"7765a242ce984e43aff2a8ed95ea9b19","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天界面，用户已选择当前会话，目标是继续与对方聊天。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.95},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","summary":"用户希望继续与当前聊天对象进行对话，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈悠","啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","发送"]}
+[18:32:39.721] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=9
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"7765a242ce984e43aff2a8ed95ea9b19","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天界面，用户已选择当前会话，目标是继续与对方聊天。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.95},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","summary":"用户希望继续与当前聊天对象进行对话，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈悠","啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","发送"]}
+[18:32:39.804] [UI] [压缩] WorldState摘要2395字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:32:39.835] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:32:39.838] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:32:39.883] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:32:39.883] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=verify_effect step=9 policy=NEED_GROUNDING
+[18:32:39.885] [ACTION_RESOLVE] task=20261024_183041_565_dd966cd0 step=9
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:32:39.886] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:32:40.106] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:32:40.107] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:32:40.108] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=9 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:32:40.108] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:32:40.109] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=9
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:32:40.248] [UI] [压缩] WorldState摘要2395字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:32:40.857] [UI] [观察] {"frame_id":"211e13bddf1d4d89bc73ed5781a25cfc","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天界面，用户已选择当前会话，目标是继续与对方聊天。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.95},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","summary":"用户希望继续与当前聊天对象进行对话，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈悠","啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","发送"]}
+[18:32:40.858] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=10
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 咨询出 做上面职业为止"}
+{"frame_id":"211e13bddf1d4d89bc73ed5781a25cfc","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天界面，用户已选择当前会话，目标是继续与对方聊天。","targets":[{"confidence":0.95,"description":"用于输入回复的文本输入区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.95},{"confidence":0.95,"description":"用于发送当前输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","summary":"用户希望继续与当前聊天对象进行对话，咨询职业发展相关问题。"},"valid":true,"visible_text":["陈悠","啥，最近怎么样？有点问你关于做那个职业的事情，听听你的看法。","发送"]}
+[18:32:40.907] [UI] [压缩] WorldState摘要2395字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:32:40.963] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:32:40.965] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:32:41.010] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:32:41.011] [UI] [流程] task=20261024_183041_565_dd966cd0 stage=verify_effect step=10 policy=NEED_GROUNDING
+[18:32:41.012] [ACTION_RESOLVE] task=20261024_183041_565_dd966cd0 step=10
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:32:41.013] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:32:41.244] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:32:41.245] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:32:41.246] [ACTION_RESULT] task=20261024_183041_565_dd966cd0 step=10 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:32:41.247] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:32:41.248] [TOOL_FULL] task=20261024_183041_565_dd966cd0 step=10
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:32:41.318] [UI] [压缩] WorldState摘要2396字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:32:41.647] [RESOURCE] RAM余量=12923MB 提交余量=8750MB CPU利用率=15% GPU=4876/10240MB余量 使用率3% 温度=49
+[18:32:46.784] [RESOURCE] RAM余量=12902MB 提交余量=8744MB CPU利用率=34% GPU=4876/10240MB余量 使用率3% 温度=47
+[18:32:51.949] [RESOURCE] RAM余量=13033MB 提交余量=8811MB CPU利用率=22% GPU=4878/10240MB余量 使用率4% 温度=46
+[18:32:57.088] [RESOURCE] RAM余量=12980MB 提交余量=8770MB CPU利用率=6% GPU=4876/10240MB余量 使用率4% 温度=46
+[18:33:02.244] [RESOURCE] RAM余量=12980MB 提交余量=8776MB CPU利用率=10% GPU=4876/10240MB余量 使用率4% 温度=45
+[18:33:07.396] [RESOURCE] RAM余量=12974MB 提交余量=8778MB CPU利用率=3% GPU=4879/10240MB余量 使用率5% 温度=45
+[18:33:12.352] [UI] [wait_for_change] 等待期间没有新变化；保持WAIT_FOR_CHANGE，后续继续低频观察，不表示任务失败。
+[18:33:12.527] [RESOURCE] RAM余量=13026MB 提交余量=8860MB CPU利用率=3% GPU=4876/10240MB余量 使用率7% 温度=44
+[18:33:17.701] [RESOURCE] RAM余量=13009MB 提交余量=8858MB CPU利用率=9% GPU=4879/10240MB余量 使用率5% 温度=44
+[18:33:22.865] [RESOURCE] RAM余量=13015MB 提交余量=8856MB CPU利用率=1% GPU=4879/10240MB余量 使用率4% 温度=44
+[18:33:27.771] [UI] [wait_for_change] 等待期间没有新变化；保持WAIT_FOR_CHANGE，后续继续低频观察，不表示任务失败。
+[18:33:27.994] [RESOURCE] RAM余量=13023MB 提交余量=8864MB CPU利用率=19% GPU=4876/10240MB余量 使用率6% 温度=43
+[18:33:29.381] [UI] [任务切换] 退出指定识别；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:33:29.386] [UI] [指定] 指定识别已退出
+[18:33:29.398] [UI] [wait_for_change] 等待已取消
+[18:33:29.492] [UI] [任务] 任务执行结束
+[18:33:33.158] [RESOURCE] RAM余量=13017MB 提交余量=8872MB CPU利用率=10% GPU=4879/10240MB余量 使用率4% 温度=43
+[18:33:38.317] [RESOURCE] RAM余量=13020MB 提交余量=8859MB CPU利用率=4% GPU=4875/10240MB余量 使用率8% 温度=43
+[18:33:40.182] [UI] [任务切换] 开始用户图片/截图分析；已建立新的推理generation。
+[18:33:40.184] [UI] [图片] VLM正在分析图片...
+[18:33:40.246] [MODEL_STDERR] 4.15.311.554 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 193648759
+
+[18:33:40.287] [MODEL_STDERR] 4.15.353.731 I slot launch_slot_: id  0 | task 3637 | processing task, is_child = 0
+
+[18:33:41.686] [MODEL_STDERR] 4.16.751.822 I slot print_timing: id  0 | task 3637 | prompt eval time =     516.62 ms /   253 tokens (    2.04 ms per token,   489.72 tokens per second)
+4.16.751.826 I slot print_timing: id  0 | task 3637 |        eval time =     881.45 ms /    74 tokens (   12.07 ms per token,    82.82 tokens per second)
+4.16.751.828 I slot print_timing: id  0 | task 3637 |       total time =    1398.07 ms /   327 tokens
+4.16.751.829 I slot print_timing: id  0 | task 3637 |    graphs reused =       3807
+4.16.751.870 I slot      release: id  0 | task 3637 | stop processing: n_tokens = 327, truncated = 0
+
+[18:33:41.688] [VISION_USAGE] {"completion_tokens":74,"prompt_tokens":254,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":328} finish_reason=stop
+[18:33:41.704] [UI] [图片] 图片分析完成
+[18:33:43.470] [RESOURCE] RAM余量=12930MB 提交余量=8772MB CPU利用率=41% GPU=4879/10240MB余量 使用率0% 温度=47
+[18:33:45.974] [UI] [任务切换] 切换到用户截图识别；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:33:48.129] [UI] [任务切换] 开始用户图片/截图分析；已建立新的推理generation。
+[18:33:48.132] [UI] [图片] VLM正在分析图片...
+[18:33:48.185] [MODEL_STDERR] 4.23.251.050 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 256727116
+
+[18:33:48.200] [MODEL_STDERR] 4.23.266.021 I slot launch_slot_: id  0 | task 3714 | processing task, is_child = 0
+
+[18:33:48.637] [RESOURCE] RAM余量=12901MB 提交余量=8739MB CPU利用率=42% GPU=4859/10240MB余量 使用率13% 温度=44
+[18:33:49.218] [MODEL_STDERR] 4.24.283.970 I slot print_timing: id  0 | task 3714 | prompt eval time =     419.68 ms /   251 tokens (    1.67 ms per token,   598.07 tokens per second)
+4.24.283.975 I slot print_timing: id  0 | task 3714 |        eval time =     598.24 ms /    45 tokens (   13.60 ms per token,    73.55 tokens per second)
+4.24.283.976 I slot print_timing: id  0 | task 3714 |       total time =    1017.92 ms /   296 tokens
+4.24.283.977 I slot print_timing: id  0 | task 3714 |    graphs reused =       3850
+4.24.284.036 I slot      release: id  0 | task 3714 | stop processing: n_tokens = 296, truncated = 0
+
+[18:33:49.221] [VISION_USAGE] {"completion_tokens":45,"prompt_tokens":252,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":297} finish_reason=stop
+[18:33:49.235] [UI] [图片] 图片分析完成
+[18:33:52.551] [UI] [任务切换] 切换到桌面识别；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:33:52.565] [UI] [桌面] 桌面识别已开启，当前刷新间隔 10000 ms。
+[18:33:53.800] [RESOURCE] RAM余量=12878MB 提交余量=8708MB CPU利用率=9% GPU=4859/10240MB余量 使用率0% 温度=45
+[18:33:56.540] [UI] [主题] 独立任务 20261024_183356_459_77c619f1，不继承其他任务或普通聊天上下文。
+[18:33:56.572] [UI] [任务] 开始执行桌面任务：打开qq
+[18:33:56.575] [UI] [观察] Agent执行期间桌面UIA覆盖层刷新切换为1000ms。
+[18:33:56.577] [UI] [授权] DESKTOP_CONTROL 已由用户主动开启，当前输入被授权为桌面任务。
+[18:33:56.613] [UI] [APP_LIFECYCLE] 确定性打开流程开始：qq
+[18:33:56.615] [APP_LIFECYCLE] stage=resolve app=qq
+[18:33:56.622] [APP_LIFECYCLE] stage=preload app=qq
+[18:33:56.623] [APP_LIFECYCLE] stage=launch app=qq
+[18:33:58.937] [RESOURCE] RAM余量=12867MB 提交余量=8689MB CPU利用率=70% GPU=4859/10240MB余量 使用率0% 温度=44
+[18:34:04.088] [RESOURCE] RAM余量=12963MB 提交余量=8803MB CPU利用率=20% GPU=4859/10240MB余量 使用率0% 温度=44
+[18:34:07.978] [APP_LIFECYCLE] stage=ready app=qq pid=12416 hwnd=2034908 title=QQ
+[18:34:08.054] [UI] [APP_LIFECYCLE] 打开确认完成：pid=12416 hwnd=2034908 title=QQ
+[18:34:08.110] [UI] [观察] Agent结束，桌面UIA覆盖层恢复10000ms空闲刷新。
+[18:34:08.113] [UI] [任务] 任务执行结束
+[18:34:09.254] [RESOURCE] RAM余量=12596MB 提交余量=8148MB CPU利用率=7% GPU=4822/10240MB余量 使用率0% 温度=47
+[18:34:14.407] [RESOURCE] RAM余量=12896MB 提交余量=8704MB CPU利用率=15% GPU=4859/10240MB余量 使用率3% 温度=44
+[18:34:19.586] [RESOURCE] RAM余量=12870MB 提交余量=8692MB CPU利用率=10% GPU=4859/10240MB余量 使用率2% 温度=44
+[18:34:24.701] [RESOURCE] RAM余量=12898MB 提交余量=8700MB CPU利用率=0% GPU=4859/10240MB余量 使用率1% 温度=44
+[18:34:29.847] [RESOURCE] RAM余量=12903MB 提交余量=8714MB CPU利用率=19% GPU=4859/10240MB余量 使用率0% 温度=44
+[18:34:31.258] [UI] [主题] 独立任务 20261024_183431_178_1f171f86，不继承其他任务或普通聊天上下文。
+[18:34:31.290] [UI] [任务] 开始执行桌面任务：打开微信
+[18:34:31.294] [UI] [观察] Agent执行期间桌面UIA覆盖层刷新切换为1000ms。
+[18:34:31.297] [UI] [授权] DESKTOP_CONTROL 已由用户主动开启，当前输入被授权为桌面任务。
+[18:34:31.331] [UI] [APP_LIFECYCLE] 确定性打开流程开始：微信
+[18:34:31.333] [APP_LIFECYCLE] stage=resolve app=微信
+[18:34:31.336] [APP_LIFECYCLE] stage=existing_window app=微信
+[18:34:31.411] [UI] [APP_LIFECYCLE] 打开确认完成：pid=20124 hwnd=268132 title=微信
+[18:34:31.482] [UI] [观察] Agent结束，桌面UIA覆盖层恢复10000ms空闲刷新。
+[18:34:31.486] [UI] [任务] 任务执行结束
+[18:34:35.023] [RESOURCE] RAM余量=12884MB 提交余量=8693MB CPU利用率=10% GPU=4859/10240MB余量 使用率17% 温度=44
+[18:34:40.140] [RESOURCE] RAM余量=12915MB 提交余量=8718MB CPU利用率=2% GPU=4859/10240MB余量 使用率0% 温度=44
+[18:34:45.285] [RESOURCE] RAM余量=12864MB 提交余量=8693MB CPU利用率=13% GPU=4859/10240MB余量 使用率1% 温度=44
+[18:34:50.442] [RESOURCE] RAM余量=13226MB 提交余量=9069MB CPU利用率=15% GPU=4859/10240MB余量 使用率1% 温度=44
+[18:34:55.599] [RESOURCE] RAM余量=12896MB 提交余量=8702MB CPU利用率=1% GPU=4859/10240MB余量 使用率1% 温度=44
+[18:35:00.763] [RESOURCE] RAM余量=12885MB 提交余量=8697MB CPU利用率=16% GPU=4859/10240MB余量 使用率0% 温度=44
+[18:35:01.238] [UI] [任务切换] 退出桌面识别；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:35:01.244] [UI] [桌面] 桌面识别已退出
+[18:35:05.934] [RESOURCE] RAM余量=12894MB 提交余量=8708MB CPU利用率=4% GPU=4856/10240MB余量 使用率2% 温度=44
+[18:35:11.089] [RESOURCE] RAM余量=12904MB 提交余量=8713MB CPU利用率=3% GPU=4860/10240MB余量 使用率0% 温度=44
+[18:35:16.259] [RESOURCE] RAM余量=12891MB 提交余量=8716MB CPU利用率=8% GPU=4860/10240MB余量 使用率2% 温度=44
+[18:35:21.406] [RESOURCE] RAM余量=12908MB 提交余量=8716MB CPU利用率=2% GPU=4860/10240MB余量 使用率1% 温度=44
+[18:35:26.522] [RESOURCE] RAM余量=12904MB 提交余量=8717MB CPU利用率=1% GPU=4860/10240MB余量 使用率1% 温度=44
+[18:35:31.705] [RESOURCE] RAM余量=12893MB 提交余量=8715MB CPU利用率=10% GPU=4860/10240MB余量 使用率0% 温度=44
+[18:35:32.303] [UI] [任务切换] 切换到桌面识别；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:35:32.313] [UI] [桌面] 桌面识别已开启，当前刷新间隔 10000 ms。
+[18:35:36.850] [RESOURCE] RAM余量=12884MB 提交余量=8697MB CPU利用率=1% GPU=4860/10240MB余量 使用率1% 温度=44
+[18:35:40.766] [UI] [主题] 独立任务 20261024_183540_649_a0a107fb，不继承其他任务或普通聊天上下文。
+[18:35:40.793] [UI] [任务] 开始执行桌面任务：打开qq
+[18:35:40.797] [UI] [观察] Agent执行期间桌面UIA覆盖层刷新切换为1000ms。
+[18:35:40.799] [UI] [授权] DESKTOP_CONTROL 已由用户主动开启，当前输入被授权为桌面任务。
+[18:35:40.848] [UI] [APP_LIFECYCLE] 确定性打开流程开始：qq
+[18:35:40.849] [APP_LIFECYCLE] stage=resolve app=qq
+[18:35:40.854] [APP_LIFECYCLE] stage=preload app=qq
+[18:35:40.855] [APP_LIFECYCLE] stage=launch app=qq
+[18:35:41.965] [RESOURCE] RAM余量=12880MB 提交余量=8691MB CPU利用率=14% GPU=4860/10240MB余量 使用率0% 温度=44
+[18:35:47.119] [RESOURCE] RAM余量=12795MB 提交余量=8645MB CPU利用率=19% GPU=4860/10240MB余量 使用率0% 温度=44
+[18:35:51.392] [APP_LIFECYCLE] stage=ready app=qq pid=26500 hwnd=16975836 title=QQ
+[18:35:51.462] [UI] [APP_LIFECYCLE] 打开确认完成：pid=26500 hwnd=16975836 title=QQ
+[18:35:51.527] [UI] [观察] Agent结束，桌面UIA覆盖层恢复10000ms空闲刷新。
+[18:35:51.530] [UI] [任务] 任务执行结束
+[18:35:52.286] [RESOURCE] RAM余量=12601MB 提交余量=8160MB CPU利用率=13% GPU=4822/10240MB余量 使用率0% 温度=47
+[18:35:57.400] [RESOURCE] RAM余量=12575MB 提交余量=8149MB CPU利用率=2% GPU=4835/10240MB余量 使用率0% 温度=45
+[18:36:02.554] [RESOURCE] RAM余量=12543MB 提交余量=8147MB CPU利用率=9% GPU=4835/10240MB余量 使用率0% 温度=45
+[18:36:07.676] [RESOURCE] RAM余量=12872MB 提交余量=8689MB CPU利用率=2% GPU=4860/10240MB余量 使用率0% 温度=45
+[18:36:12.812] [RESOURCE] RAM余量=12880MB 提交余量=8691MB CPU利用率=2% GPU=4860/10240MB余量 使用率5% 温度=45
+[18:36:13.444] [UI] [主题] 独立任务 20261024_183613_302_572eb088，不继承其他任务或普通聊天上下文。
+[18:36:13.489] [UI] [任务] 开始执行桌面任务：打开微信
+[18:36:13.494] [UI] [观察] Agent执行期间桌面UIA覆盖层刷新切换为1000ms。
+[18:36:13.497] [UI] [授权] DESKTOP_CONTROL 已由用户主动开启，当前输入被授权为桌面任务。
+[18:36:13.555] [UI] [APP_LIFECYCLE] 确定性打开流程开始：微信
+[18:36:13.556] [APP_LIFECYCLE] stage=resolve app=微信
+[18:36:13.560] [APP_LIFECYCLE] stage=existing_window app=微信
+[18:36:13.608] [UI] [APP_LIFECYCLE] 打开确认完成：pid=20124 hwnd=268132 title=微信
+[18:36:13.670] [UI] [观察] Agent结束，桌面UIA覆盖层恢复10000ms空闲刷新。
+[18:36:13.673] [UI] [任务] 任务执行结束
+[18:36:17.992] [RESOURCE] RAM余量=12872MB 提交余量=8693MB CPU利用率=10% GPU=4860/10240MB余量 使用率1% 温度=45
+[18:36:23.120] [RESOURCE] RAM余量=12895MB 提交余量=8704MB CPU利用率=3% GPU=4860/10240MB余量 使用率1% 温度=45
+[18:36:24.190] [UI] [任务切换] 退出桌面识别；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:36:24.195] [UI] [桌面] 桌面识别已退出
+[18:36:28.265] [RESOURCE] RAM余量=12889MB 提交余量=8706MB CPU利用率=6% GPU=4860/10240MB余量 使用率1% 温度=45
+[18:36:28.903] [UI] [任务切换] 开始选择新的指定窗口；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:36:29.528] [UI] [任务切换] 切换到新的指定窗口；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:36:29.556] [UI] [指定] 已锁定：微信 | Process=Weixin.exe | PID=20124 | HWND=268132
+[18:36:33.429] [RESOURCE] RAM余量=12930MB 提交余量=8787MB CPU利用率=16% GPU=4860/10240MB余量 使用率4% 温度=45
+[18:36:38.604] [RESOURCE] RAM余量=12860MB 提交余量=8702MB CPU利用率=9% GPU=4860/10240MB余量 使用率4% 温度=45
+[18:36:43.742] [RESOURCE] RAM余量=12860MB 提交余量=8701MB CPU利用率=27% GPU=4859/10240MB余量 使用率6% 温度=45
+[18:36:48.911] [RESOURCE] RAM余量=12868MB 提交余量=8713MB CPU利用率=10% GPU=4859/10240MB余量 使用率6% 温度=45
+[18:36:54.058] [RESOURCE] RAM余量=12862MB 提交余量=8709MB CPU利用率=7% GPU=4859/10240MB余量 使用率4% 温度=45
+[18:36:58.428] [UI] [主题] 独立任务 20261024_183658_384_4c98e1f9，不继承其他任务或普通聊天上下文。
+[18:36:58.461] [UI] [任务] 开始执行指定窗口任务：和他聊天 问出做上面职业
+[18:36:58.464] [UI] [授权] WINDOW_CONTROL 已由用户主动选择目标窗口：微信；当前输入被授权在该 HWND 范围内执行。
+[18:36:58.472] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:36:58.476] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:36:58.516] [MODEL_STDERR] 7.33.580.840 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 264259282
+
+[18:36:58.547] [MODEL_STDERR] 7.33.612.878 I slot launch_slot_: id  0 | task 3762 | processing task, is_child = 0
+
+[18:36:59.204] [RESOURCE] RAM余量=12853MB 提交余量=8699MB CPU利用率=78% GPU=4859/10240MB余量 使用率88% 温度=45
+[18:36:59.265] [MODEL_STDERR] 7.34.331.574 I slot print_timing: id  0 | task 3762 | prompt eval time =     264.13 ms /    45 tokens (    5.87 ms per token,   170.37 tokens per second)
+7.34.331.579 I slot print_timing: id  0 | task 3762 |        eval time =     454.52 ms /    31 tokens (   15.15 ms per token,    66.00 tokens per second)
+7.34.331.580 I slot print_timing: id  0 | task 3762 |       total time =     718.65 ms /    76 tokens
+7.34.331.582 I slot print_timing: id  0 | task 3762 |    graphs reused =       3879
+7.34.331.690 I slot      release: id  0 | task 3762 | stop processing: n_tokens = 242, truncated = 0
+
+[18:36:59.270] [UI] [任务理解] {"application":"微信","completion":"","continuous":true,"explicit_action":true,"goal":"和他聊天 问出做上面职业","kind":"operate_application"}
+[18:36:59.285] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:36:59.324] [MODEL_STDERR] 7.34.390.601 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 454306937
+
+[18:36:59.357] [MODEL_STDERR] 7.34.422.778 I slot launch_slot_: id  0 | task 3796 | processing task, is_child = 0
+
+[18:37:01.536] [MODEL_STDERR] 7.36.602.243 I slot print_timing: id  0 | task 3796 | prompt eval time =     138.41 ms /    91 tokens (    1.52 ms per token,   657.49 tokens per second)
+7.36.602.248 I slot print_timing: id  0 | task 3796 |        eval time =    2041.02 ms /   149 tokens (   13.79 ms per token,    72.51 tokens per second)
+7.36.602.249 I slot print_timing: id  0 | task 3796 |       total time =    2179.43 ms /   240 tokens
+7.36.602.250 I slot print_timing: id  0 | task 3796 |    graphs reused =       4026
+7.36.602.337 I slot      release: id  0 | task 3796 | stop processing: n_tokens = 434, truncated = 0
+
+[18:37:01.612] [UI] [运行画像] {"confidence":0.95,"dynamic_generated":true,"likely_targets":["chat_input_field","send_button"],"preferred_action_families":["keyboard","uia"],"preferred_observation":"uia_then_vision","process_profile":"Weixin.exe","rationale":"用户意图是与微信中的某个联系人进行对话，询问对方的职业。微信是一个典型的聊天应用，操作应聚焦于输入和发送消息。","source":"dynamic_llm","surface_type":"chat_interface","task_profile":"operate_application"}
+[18:37:01.616] [UI] [能力锁定] Weixin.exe 未配置MCP，本任务后续忽略MCP。
+[18:37:01.635] [UI] [能力锁定] UIA不可用，本任务后续不再重复UIA扫描：UIA信息不足：nodes=2 actionable=0；阈值 nodes>=3 actionable>=1
+[18:37:01.638] [UI] [观察策略] app=Weixin.exe kind=operate_application policy=uia_then_vision UIA可操作=0
+[18:37:01.640] [PROTOCOL] planner=D:/桌面/project/CLion/windows_uia/cmake-build-debug/assets/models/prompts/planner.txt verifier=D:/桌面/project/CLion/windows_uia/cmake-build-debug/assets/models/prompts/verifier.txt version=workflow-v2
+[18:37:02.183] [MODEL_STDERR] 7.37.249.180 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 456577583
+
+[18:37:02.224] [MODEL_STDERR] 7.37.289.874 I slot launch_slot_: id  0 | task 3949 | processing task, is_child = 0
+
+[18:37:04.372] [RESOURCE] RAM余量=12851MB 提交余量=8704MB CPU利用率=85% GPU=4860/10240MB余量 使用率51% 温度=53
+[18:37:06.946] [MODEL_STDERR] 7.42.012.373 I slot print_timing: id  0 | task 3949 | n_gen =    217, tg =  71.99 t/s, tg_3s =  72.32 t/s
+
+[18:37:08.108] [MODEL_STDERR] 7.43.174.250 I slot print_timing: id  0 | task 3949 | prompt eval time =    1721.98 ms /  2226 tokens (    0.77 ms per token,  1292.70 tokens per second)
+7.43.174.254 I slot print_timing: id  0 | task 3949 |        eval time =    4162.37 ms /   301 tokens (   13.87 ms per token,    72.07 tokens per second)
+7.43.174.256 I slot print_timing: id  0 | task 3949 |       total time =    5884.35 ms /  2527 tokens
+7.43.174.256 I slot print_timing: id  0 | task 3949 |    graphs reused =       4348
+
+[18:37:08.109] [MODEL_STDERR] 7.43.174.501 I slot      release: id  0 | task 3949 | stop processing: n_tokens = 2527, truncated = 0
+
+[18:37:08.111] [VISION_USAGE] {"completion_tokens":301,"prompt_tokens":2227,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2528} finish_reason=stop
+[18:37:08.114] [UI] [观察] {"frame_id":"b114ead40c1c4c02881b9ee998940efd","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的输入/发送区域。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.93},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户希望与当前选中的联系人进行对话，询问关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈思华","服务号","台州创业服务会","chatpet芙","台州飞鹰快闪","SZCF福益公益","公公"]}
+[18:37:08.115] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=1
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 问出做上面职业"}
+{"frame_id":"b114ead40c1c4c02881b9ee998940efd","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的输入/发送区域。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.93},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户希望与当前选中的联系人进行对话，询问关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈思华","服务号","台州创业服务会","chatpet芙","台州飞鹰快闪","SZCF福益公益","公公"]}
+[18:37:08.200] [UI] [压缩] WorldState摘要1777字符，保留近期1步；能力判定与视觉目标直接复用。
+[18:37:08.236] [UI] [当前会话] 已发现输入框，直接进入keyboard_type，禁止Planner擅自切换联系人。
+[18:37:08.237] [UI] [流程] task=20261024_183658_384_4c98e1f9 stage=observe step=1 policy=ACTION_READY
+[18:37:08.238] [ACTION_RESOLVE] task=20261024_183658_384_4c98e1f9 step=1
+RAW={"action":"keyboard_type","reason":"当前会话输入框已可见，直接生成并输入自然开场，不切换联系人。"}
+RESOLVED={"action":"keyboard_type","reason":"当前会话输入框已可见，直接生成并输入自然开场，不切换联系人。"}
+NOTE=当前会话输入框已可见，C++直接进入自然语言输入
+[18:37:08.239] [UI] [动作解析] 当前会话输入框已可见，C++直接进入自然语言输入
+[18:37:08.243] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:37:08.279] [MODEL_STDERR] 7.43.345.824 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 463149747
+
+[18:37:08.310] [MODEL_STDERR] 7.43.376.621 I slot launch_slot_: id  0 | task 4260 | processing task, is_child = 0
+
+[18:37:08.517] [MODEL_STDERR] 7.43.582.945 I slot print_timing: id  0 | task 4260 | prompt eval time =     150.73 ms /   192 tokens (    0.79 ms per token,  1273.79 tokens per second)
+7.43.582.966 I slot print_timing: id  0 | task 4260 |        eval time =      55.57 ms /     5 tokens (   13.89 ms per token,    71.98 tokens per second)
+7.43.582.968 I slot print_timing: id  0 | task 4260 |       total time =     206.30 ms /   197 tokens
+7.43.582.969 I slot print_timing: id  0 | task 4260 |    graphs reused =       4351
+7.43.583.019 I slot      release: id  0 | task 4260 | stop processing: n_tokens = 221, truncated = 0
+
+[18:37:08.519] [TEXT_COMPOSER] task=20261024_183658_384_4c98e1f9 step=1 turn=READY_TO_INITIATE chars=7 text=最近怎么样呀？
+[18:37:08.520] [UI] [文本生成] 已自动补全keyboard_type.text：最近怎么样呀？
+[18:37:08.775] [INPUT_FOCUS] 使用Vision目标聚焦输入区域 x=665 y=928
+[18:37:08.888] [UI] [动作事务] 文本已输入，建立pending_commit=发送按钮
+[18:37:08.889] [ACTION_RESULT] task=20261024_183658_384_4c98e1f9 step=1 ok=1
+{"action":"keyboard_type","reason":"当前会话输入框已可见，直接生成并输入自然开场，不切换联系人。","text":"最近怎么样呀？"}
+键盘文字输入成功。
+[18:37:08.890] [UI] [keyboard_type] 键盘文字输入成功。
+[18:37:08.891] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=1
+{"action":"keyboard_type","reason":"当前会话输入框已可见，直接生成并输入自然开场，不切换联系人。","text":"最近怎么样呀？"}
+键盘文字输入成功。
+[18:37:08.987] [UI] [压缩] WorldState摘要1973字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:09.526] [RESOURCE] RAM余量=12854MB 提交余量=8676MB CPU利用率=12% GPU=4857/10240MB余量 使用率4% 温度=51
+[18:37:09.841] [MODEL_STDERR] 7.44.907.423 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 463558265
+
+[18:37:09.863] [MODEL_STDERR] 7.44.928.938 I slot launch_slot_: id  0 | task 4269 | processing task, is_child = 0
+
+[18:37:14.251] [MODEL_STDERR] 7.49.316.592 I slot print_timing: id  0 | task 4269 | n_gen =    233, tg =  77.32 t/s, tg_3s =  77.65 t/s
+
+[18:37:14.696] [RESOURCE] RAM余量=12862MB 提交余量=8725MB CPU利用率=100% GPU=4860/10240MB余量 使用率47% 温度=55
+[18:37:14.786] [MODEL_STDERR] 7.49.852.483 I slot print_timing: id  0 | task 4269 | prompt eval time =    1386.95 ms /  2226 tokens (    0.62 ms per token,  1604.96 tokens per second)
+7.49.852.487 I slot print_timing: id  0 | task 4269 |        eval time =    3536.57 ms /   269 tokens (   13.20 ms per token,    75.78 tokens per second)
+7.49.852.489 I slot print_timing: id  0 | task 4269 |       total time =    4923.52 ms /  2495 tokens
+7.49.852.490 I slot print_timing: id  0 | task 4269 |    graphs reused =       4641
+
+[18:37:14.788] [MODEL_STDERR] 7.49.852.694 I slot      release: id  0 | task 4269 | stop processing: n_tokens = 2495, truncated = 0
+
+[18:37:14.790] [VISION_USAGE] {"completion_tokens":269,"prompt_tokens":2227,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2496} finish_reason=stop
+[18:37:14.794] [UI] [观察] {"frame_id":"7def628099cd4e4a9c35f64450506030","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的消息输入区域。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.95},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.93,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"最近怎么样？","summary":"用户希望与当前选中的联系人进行对话，询问关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈思华","最近怎么样？","发送"]}
+[18:37:14.796] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=2
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 问出做上面职业"}
+{"frame_id":"7def628099cd4e4a9c35f64450506030","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和底部的消息输入区域。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.95},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.93,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"最近怎么样？","summary":"用户希望与当前选中的联系人进行对话，询问关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈思华","最近怎么样？","发送"]}
+[18:37:14.883] [UI] [压缩] WorldState摘要1973字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:14.924] [UI] [事务推进] 世界状态已变化，interaction_epoch=1
+[18:37:14.931] [UI] [动作事务] pending_commit直接绑定提交目标“发送按钮”
+[18:37:14.932] [UI] [流程] task=20261024_183658_384_4c98e1f9 stage=verify_effect step=2 policy=ACTION_READY
+[18:37:14.933] [ACTION_RESOLVE] task=20261024_183658_384_4c98e1f9 step=2
+RAW={"action":"mouse_click","button":"left","click_count":1,"frame_id":"7def628099cd4e4a9c35f64450506030","norm_x":0.93,"norm_y":0.95,"reason":"pending_commit事务：提交当前已输入文本","target":"发送/提交"}
+RESOLVED={"action":"mouse_click","button":"left","click_count":1,"frame_id":"7def628099cd4e4a9c35f64450506030","norm_x":0.93,"norm_y":0.95,"reason":"pending_commit事务：提交当前已输入文本","target":"发送/提交"}
+NOTE=pending_commit直接绑定提交目标“发送按钮”
+[18:37:14.934] [UI] [动作解析] pending_commit直接绑定提交目标“发送按钮”
+[18:37:15.039] [COMMIT_CLICK] attempt=1 point=(1006,945) norm=(0.9300,0.9500)
+[18:37:15.232] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:37:15.234] [ACTION_RESULT] task=20261024_183658_384_4c98e1f9 step=2 ok=1
+{"action":"mouse_click","button":"left","click_count":1,"frame_id":"7def628099cd4e4a9c35f64450506030","norm_x":0.93,"norm_y":0.95,"reason":"pending_commit事务：提交当前已输入文本","target":"发送/提交"}
+鼠标点击成功：(1006,945) left。
+[18:37:15.235] [UI] [mouse_click] 鼠标点击成功：(1006,945) left。
+[18:37:15.237] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=2
+{"action":"mouse_click","button":"left","click_count":1,"frame_id":"7def628099cd4e4a9c35f64450506030","norm_x":0.93,"norm_y":0.95,"reason":"pending_commit事务：提交当前已输入文本","target":"发送/提交"}
+鼠标点击成功：(1006,945) left。
+[18:37:15.296] [UI] [压缩] WorldState摘要2108字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:16.149] [MODEL_STDERR] 7.51.215.161 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.852 (> 0.100 thold), f_keep = 0.761
+
+[18:37:16.151] [MODEL_STDERR] 7.51.215.596 I slot launch_slot_: id  0 | task 4548 | processing task, is_child = 0
+
+[18:37:19.867] [RESOURCE] RAM余量=13393MB 提交余量=9232MB CPU利用率=94% GPU=4853/10240MB余量 使用率52% 温度=55
+[18:37:20.904] [MODEL_STDERR] 7.55.970.582 I slot print_timing: id  0 | task 4548 | n_gen =    209, tg =  69.27 t/s, tg_3s =  69.60 t/s
+
+[18:37:21.722] [MODEL_STDERR] 7.56.788.674 I slot print_timing: id  0 | task 4548 | prompt eval time =    1752.21 ms /  2226 tokens (    0.79 ms per token,  1270.39 tokens per second)
+7.56.788.678 I slot print_timing: id  0 | task 4548 |        eval time =    3820.84 ms /   267 tokens (   14.36 ms per token,    69.62 tokens per second)
+7.56.788.680 I slot print_timing: id  0 | task 4548 |       total time =    5573.06 ms /  2493 tokens
+7.56.788.682 I slot print_timing: id  0 | task 4548 |    graphs reused =       4929
+
+[18:37:21.724] [MODEL_STDERR] 7.56.788.874 I slot      release: id  0 | task 4548 | stop processing: n_tokens = 2493, truncated = 0
+
+[18:37:21.726] [VISION_USAGE] {"completion_tokens":267,"prompt_tokens":2227,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2494} finish_reason=stop
+[18:37:21.730] [UI] [观察] {"frame_id":"e198ec3afb71407397375ee348da437c","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的会话。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.93},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"最近怎么样？","summary":"用户希望与当前聊天对象进行对话，询问关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈晔","最近怎么样？","发送"]}
+[18:37:21.731] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=3
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 问出做上面职业"}
+{"frame_id":"e198ec3afb71407397375ee348da437c","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的会话。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.65,"norm_y":0.93},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"最近怎么样？","summary":"用户希望与当前聊天对象进行对话，询问关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈晔","最近怎么样？","发送"]}
+[18:37:21.820] [UI] [压缩] WorldState摘要2109字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:21.870] [UI] [事务推进] 世界状态已变化，interaction_epoch=2
+[18:37:21.871] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:37:21.874] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:37:21.926] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:37:21.927] [UI] [流程] task=20261024_183658_384_4c98e1f9 stage=verify_effect step=3 policy=NEED_GROUNDING
+[18:37:21.928] [ACTION_RESOLVE] task=20261024_183658_384_4c98e1f9 step=3
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:37:21.929] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:37:22.172] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:37:22.173] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:37:22.174] [ACTION_RESULT] task=20261024_183658_384_4c98e1f9 step=3 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:37:22.175] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:37:22.177] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=3
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:37:22.213] [UI] [压缩] WorldState摘要2181字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:23.120] [MODEL_STDERR] 7.58.186.480 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.852 (> 0.100 thold), f_keep = 0.761
+
+[18:37:23.122] [MODEL_STDERR] 7.58.187.213 I slot launch_slot_: id  0 | task 4825 | processing task, is_child = 0
+
+[18:37:25.060] [RESOURCE] RAM余量=12907MB 提交余量=8690MB CPU利用率=60% GPU=4853/10240MB余量 使用率70% 温度=56
+[18:37:27.826] [MODEL_STDERR] 8.02.892.014 I slot print_timing: id  0 | task 4825 | n_gen =    248, tg =  82.07 t/s, tg_3s =  82.40 t/s
+
+[18:37:27.999] [MODEL_STDERR] 8.03.065.206 I slot print_timing: id  0 | task 4825 | prompt eval time =    1695.16 ms /  2226 tokens (    0.76 ms per token,  1313.15 tokens per second)
+8.03.065.211 I slot print_timing: id  0 | task 4825 |        eval time =    3182.80 ms /   262 tokens (   12.19 ms per token,    82.00 tokens per second)
+8.03.065.213 I slot print_timing: id  0 | task 4825 |       total time =    4877.95 ms /  2488 tokens
+8.03.065.214 I slot print_timing: id  0 | task 4825 |    graphs reused =       5212
+
+[18:37:28.000] [MODEL_STDERR] 8.03.065.395 I slot      release: id  0 | task 4825 | stop processing: n_tokens = 2488, truncated = 0
+
+[18:37:28.003] [VISION_USAGE] {"completion_tokens":262,"prompt_tokens":2227,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2489} finish_reason=stop
+[18:37:28.005] [UI] [观察] {"frame_id":"ec8a242b3be74c0ab75e2a34b9473672","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的会话。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.93},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户希望与当前会话中的对方进行对话，询问对方的职业。"},"valid":true,"visible_text":["陈晔","最近怎么样？","最近怎么样？"]}
+[18:37:28.006] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=4
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 问出做上面职业"}
+{"frame_id":"ec8a242b3be74c0ab75e2a34b9473672","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个聊天列表和当前正在进行的会话。","targets":[{"confidence":0.95,"description":"用于输入用户提问的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.93},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.88,"norm_y":0.93}],"task_context":{"external_change_detected":false,"latest_relevant_text":"","summary":"用户希望与当前会话中的对方进行对话，询问对方的职业。"},"valid":true,"visible_text":["陈晔","最近怎么样？","最近怎么样？"]}
+[18:37:28.088] [UI] [压缩] WorldState摘要2181字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:28.115] [UI] [事务推进] 世界状态已变化，interaction_epoch=3
+[18:37:28.116] [UI] [动作事务] 发送验证失败：仍检测到刚输入的文字，判定提交按钮没有真正命中。
+[18:37:28.119] [UI] [动作事务] pending_commit继续保持，准备第2次发送按钮重试。
+[18:37:28.166] [UI] [GROUNDING] 已获得语义目标坐标，恢复待执行动作：发送/提交
+[18:37:28.167] [UI] [流程] task=20261024_183658_384_4c98e1f9 stage=verify_effect step=4 policy=NEED_GROUNDING
+[18:37:28.168] [ACTION_RESOLVE] task=20261024_183658_384_4c98e1f9 step=4
+RAW={"action":"mouse_click","reason":"上一轮点击后输入文字仍然存在，重新定位发送按钮并再次提交","target":"发送/提交"}
+RESOLVED={"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+NOTE=NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:37:28.169] [UI] [动作解析] NeedGrounding恢复：已根据最新视觉绑定语义目标“发送/提交”
+[18:37:28.387] [UI] [动作事务] pending_commit已执行，进入提交效果验证；click_attempt=1
+[18:37:28.389] [UI] [GROUNDING] 待执行语义动作已完成，清除grounding状态。
+[18:37:28.390] [ACTION_RESULT] task=20261024_183658_384_4c98e1f9 step=4 ok=1
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:37:28.391] [UI] [keyboard_hotkey] 组合键执行成功：ENTER
+[18:37:28.392] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=4
+{"action":"keyboard_hotkey","hotkey":"ENTER","reason":"当前视觉帧未返回与发送/提交语义兼容的控件，禁止误绑定其他目标；使用Enter提交。"}
+组合键执行成功：ENTER
+[18:37:28.436] [UI] [压缩] WorldState摘要2259字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:29.411] [MODEL_STDERR] 8.04.477.638 I slot get_availabl: id  0 | task -1 | selected slot by LCP similarity, f_sim_best = 0.852 (> 0.100 thold), f_keep = 0.763
+
+[18:37:29.413] [MODEL_STDERR] 8.04.478.185 I slot launch_slot_: id  0 | task 5097 | processing task, is_child = 0
+
+[18:37:30.212] [RESOURCE] RAM余量=12882MB 提交余量=8703MB CPU利用率=23% GPU=4853/10240MB余量 使用率56% 温度=56
+[18:37:34.204] [MODEL_STDERR] 8.09.269.664 I slot print_timing: id  0 | task 5097 | n_gen =    211, tg =  69.89 t/s, tg_3s =  70.22 t/s
+
+[18:37:35.021] [MODEL_STDERR] 8.10.086.984 I slot print_timing: id  0 | task 5097 | prompt eval time =    1786.81 ms /  2226 tokens (    0.80 ms per token,  1245.79 tokens per second)
+8.10.086.991 I slot print_timing: id  0 | task 5097 |        eval time =    3821.96 ms /   269 tokens (   14.26 ms per token,    70.12 tokens per second)
+8.10.086.992 I slot print_timing: id  0 | task 5097 |       total time =    5608.77 ms /  2495 tokens
+8.10.086.993 I slot print_timing: id  0 | task 5097 |    graphs reused =       5502
+
+[18:37:35.022] [MODEL_STDERR] 8.10.087.215 I slot      release: id  0 | task 5097 | stop processing: n_tokens = 2495, truncated = 0
+
+[18:37:35.025] [VISION_USAGE] {"completion_tokens":269,"prompt_tokens":2227,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":2496} finish_reason=stop
+[18:37:35.028] [UI] [观察] {"frame_id":"b7b65540150f423191f40c76cd6544b5","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个联系人列表和当前正在进行的对话窗口。","targets":[{"confidence":0.95,"description":"用于输入用户回复的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.95},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.93,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"不然咋样","summary":"用户希望继续与当前对话对象进行聊天，询问关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈晔","不然咋样","最近怎样？"]}
+[18:37:35.030] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=5
+{"action":"vision_analyze","prompt":"用户已经手动选定当前应用窗口。不要替用户选择或切换联系人。优先定位当前已经打开会话的消息输入框和发送按钮；如果当前没有打开会话，只说明状态，不要返回任意聊天列表项作为下一步目标。USER_GOAL=和他聊天 问出做上面职业"}
+{"frame_id":"b7b65540150f423191f40c76cd6544b5","image_height":892,"image_width":796,"screen_state":"当前处于一个聊天应用界面，显示了多个联系人列表和当前正在进行的对话窗口。","targets":[{"confidence":0.95,"description":"用于输入用户回复的文本区域","label":"消息输入框","norm_rect":[],"norm_x":0.5,"norm_y":0.95},{"confidence":0.95,"description":"用于发送用户输入消息的按钮","label":"发送按钮","norm_rect":[],"norm_x":0.93,"norm_y":0.95}],"task_context":{"external_change_detected":false,"latest_relevant_text":"不然咋样","summary":"用户希望继续与当前对话对象进行聊天，询问关于“做上面职业”的问题。"},"valid":true,"visible_text":["陈晔","不然咋样","最近怎样？"]}
+[18:37:35.105] [UI] [压缩] WorldState摘要2260字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:35.145] [UI] [事务推进] 世界状态已变化，interaction_epoch=4
+[18:37:35.146] [UI] [动作事务] pending_commit严格验证通过：未再检测到原输入文字且界面状态已变化。
+[18:37:35.147] [UI] [交互轮次] 当前消息已确认提交，进入WAITING_EXTERNAL。
+[18:37:35.152] [UI] [流程] task=20261024_183658_384_4c98e1f9 stage=waiting step=5 policy=WAIT_FOR_CHANGE
+[18:37:35.193] [UI] [压缩] WorldState摘要2243字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:35.360] [RESOURCE] RAM余量=12960MB 提交余量=8795MB CPU利用率=63% GPU=4853/10240MB余量 使用率1% 温度=55
+[18:37:35.517] [UI] [压缩] WorldState摘要2179字符，保留近期1步；能力判定与视觉目标直接复用。
+[18:37:35.632] [UI] [上下文恢复] 完整Planner输入超预算，已切换轻量上下文继续执行：1595/5600 tokens
+[18:37:35.633] [UI] [思考] task=20261024_183658_384_4c98e1f9 输入估计=1595 tokens 预算=5600；RAM余量=12960MB 提交余量=8795MB CPU利用率=63% GPU=4853/10240MB余量 使用率1% 温度=55
+[18:37:35.638] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:37:35.670] [MODEL_STDERR] 8.10.736.066 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 490062462
+
+[18:37:35.719] [MODEL_STDERR] 8.10.784.508 I slot launch_slot_: id  0 | task 5376 | processing task, is_child = 0
+
+[18:37:37.016] [MODEL_STDERR] 8.12.082.510 I slot print_timing: id  0 | task 5376 | prompt eval time =     549.76 ms /   662 tokens (    0.83 ms per token,  1204.15 tokens per second)
+8.12.082.514 I slot print_timing: id  0 | task 5376 |        eval time =     748.21 ms /    54 tokens (   14.12 ms per token,    70.84 tokens per second)
+8.12.082.515 I slot print_timing: id  0 | task 5376 |       total time =    1297.98 ms /   716 tokens
+8.12.082.516 I slot print_timing: id  0 | task 5376 |    graphs reused =       5560
+8.12.082.653 I slot      release: id  0 | task 5376 | stop processing: n_tokens = 1170, truncated = 0
+
+[18:37:37.019] [INFERENCE] task=20261024_183658_384_4c98e1f9 step=5 role=planner elapsed=1385ms output_chars=149 error=
+[18:37:37.020] [PLANNER_RAW] {"action": "wait", "reason": "等待外部回复，当前任务状态为WAIT_FOR_CHANGE，没有新的操作指令。", "target_id": null, "terminal": false, "blocked": false, "done_message": null}
+[18:37:38.157] [ACTION_RESULT] task=20261024_183658_384_4c98e1f9 step=5 ok=1
+{"action":"wait","blocked":false,"done_message":null,"reason":"等待外部回复，当前任务状态为WAIT_FOR_CHANGE，没有新的操作指令。","target_id":null,"terminal":false,"wait_ms":1000}
+等待1000ms完成。
+[18:37:38.158] [UI] [wait] 等待1000ms完成。
+[18:37:38.160] [TOOL_FULL] task=20261024_183658_384_4c98e1f9 step=5
+{"action":"wait","blocked":false,"done_message":null,"reason":"等待外部回复，当前任务状态为WAIT_FOR_CHANGE，没有新的操作指令。","target_id":null,"terminal":false,"wait_ms":1000}
+等待1000ms完成。
+[18:37:38.262] [UI] [压缩] WorldState摘要2230字符，保留近期2步；能力判定与视觉目标直接复用。
+[18:37:40.526] [RESOURCE] RAM余量=12888MB 提交余量=8709MB CPU利用率=9% GPU=4850/10240MB余量 使用率2% 温度=52
+[18:37:45.662] [RESOURCE] RAM余量=12865MB 提交余量=8698MB CPU利用率=18% GPU=4853/10240MB余量 使用率4% 温度=50
+[18:37:50.831] [RESOURCE] RAM余量=12947MB 提交余量=8759MB CPU利用率=15% GPU=4853/10240MB余量 使用率3% 温度=49
+[18:37:53.913] [UI] [wait_for_change] 等待期间没有新变化；保持WAIT_FOR_CHANGE，后续继续低频观察，不表示任务失败。
+[18:37:55.974] [RESOURCE] RAM余量=12889MB 提交余量=8709MB CPU利用率=4% GPU=4850/10240MB余量 使用率2% 温度=48
+[18:38:01.116] [RESOURCE] RAM余量=12885MB 提交余量=8707MB CPU利用率=14% GPU=4853/10240MB余量 使用率4% 温度=48
+[18:38:06.268] [RESOURCE] RAM余量=12882MB 提交余量=8708MB CPU利用率=7% GPU=4850/10240MB余量 使用率4% 温度=47
+[18:38:09.340] [UI] [wait_for_change] 等待期间没有新变化；保持WAIT_FOR_CHANGE，后续继续低频观察，不表示任务失败。
+[18:38:11.377] [RESOURCE] RAM余量=12891MB 提交余量=8713MB CPU利用率=3% GPU=4850/10240MB余量 使用率7% 温度=47
+[18:38:16.513] [RESOURCE] RAM余量=12883MB 提交余量=8711MB CPU利用率=17% GPU=4853/10240MB余量 使用率1% 温度=49
+[18:38:17.309] [UI] [wait_for_change] 等待已取消
+[18:38:17.399] [UI] [任务] 任务执行结束
+[18:38:21.667] [RESOURCE] RAM余量=12907MB 提交余量=8744MB CPU利用率=11% GPU=4853/10240MB余量 使用率5% 温度=46
+[18:38:25.477] [UI] [任务切换] 退出指定识别；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:38:25.482] [UI] [指定] 指定识别已退出
+[18:38:26.782] [RESOURCE] RAM余量=12911MB 提交余量=8746MB CPU利用率=1% GPU=4853/10240MB余量 使用率1% 温度=46
+[18:38:31.055] [UI] [任务切换] 开始用户图片/截图分析；已建立新的推理generation。
+[18:38:31.058] [UI] [图片] VLM正在分析图片...
+[18:38:31.126] [MODEL_STDERR] 9.06.192.695 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 492057900
+
+[18:38:31.197] [MODEL_STDERR] 9.06.262.435 I slot launch_slot_: id  0 | task 5436 | processing task, is_child = 0
+
+[18:38:31.938] [RESOURCE] RAM余量=12874MB 提交余量=8702MB CPU利用率=81% GPU=4853/10240MB余量 使用率53% 温度=50
+[18:38:32.456] [MODEL_STDERR] 9.07.522.791 I slot print_timing: id  0 | task 5436 | prompt eval time =     321.12 ms /     5 tokens (   64.22 ms per token,    15.57 tokens per second)
+9.07.522.812 I slot print_timing: id  0 | task 5436 |        eval time =     939.20 ms /    70 tokens (   13.61 ms per token,    73.47 tokens per second)
+9.07.522.814 I slot print_timing: id  0 | task 5436 |       total time =    1260.32 ms /    75 tokens
+9.07.522.815 I slot print_timing: id  0 | task 5436 |    graphs reused =       5627
+9.07.522.864 I slot      release: id  0 | task 5436 | stop processing: n_tokens = 323, truncated = 0
+
+[18:38:32.459] [VISION_USAGE] {"completion_tokens":70,"prompt_tokens":254,"prompt_tokens_details":{"cached_tokens":249},"total_tokens":324} finish_reason=stop
+[18:38:32.471] [UI] [图片] 图片分析完成
+[18:38:36.903] [UI] [任务切换] 切换到用户截图识别；旧generation已作废，旧推理结果和后续动作全部丢弃。
+[18:38:37.088] [RESOURCE] RAM余量=12839MB 提交余量=8652MB CPU利用率=16% GPU=4835/10240MB余量 使用率0% 温度=47
+[18:38:39.828] [UI] [任务切换] 开始用户图片/截图分析；已建立新的推理generation。
+[18:38:39.831] [UI] [图片] VLM正在分析图片...
+[18:38:39.884] [MODEL_STDERR] 9.14.949.529 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 547498110
+
+[18:38:39.902] [MODEL_STDERR] 9.14.968.972 I slot launch_slot_: id  0 | task 5508 | processing task, is_child = 0
+
+[18:38:40.656] [MODEL_STDERR] 9.15.722.793 I slot print_timing: id  0 | task 5508 | prompt eval time =     405.82 ms /   252 tokens (    1.61 ms per token,   620.96 tokens per second)
+9.15.722.814 I slot print_timing: id  0 | task 5508 |        eval time =     347.98 ms /    30 tokens (   12.00 ms per token,    83.34 tokens per second)
+9.15.722.815 I slot print_timing: id  0 | task 5508 |       total time =     753.80 ms /   282 tokens
+9.15.722.816 I slot print_timing: id  0 | task 5508 |    graphs reused =       5655
+9.15.722.854 I slot      release: id  0 | task 5508 | stop processing: n_tokens = 282, truncated = 0
+
+[18:38:40.659] [VISION_USAGE] {"completion_tokens":30,"prompt_tokens":253,"prompt_tokens_details":{"cached_tokens":1},"total_tokens":283} finish_reason=stop
+[18:38:40.672] [UI] [图片] 图片分析完成
+[18:38:42.240] [RESOURCE] RAM余量=12868MB 提交余量=8679MB CPU利用率=0% GPU=4853/10240MB余量 使用率0% 温度=49
+[18:38:47.399] [RESOURCE] RAM余量=12801MB 提交余量=8622MB CPU利用率=13% GPU=4853/10240MB余量 使用率1% 温度=45
+[18:38:52.558] [RESOURCE] RAM余量=12913MB 提交余量=8714MB CPU利用率=7% GPU=4852/10240MB余量 使用率2% 温度=45
+[18:38:57.385] [UI] [任务切换] 切换到普通聊天；已建立新的推理generation。
+[18:38:57.388] [UI] [聊天] 正在生成回复...
+[18:38:57.405] [MODEL_REUSE] 文本规划复用已加载的同一多模态模型，不重复加载权重
+[18:38:57.453] [MODEL_STDERR] 9.32.518.875 I slot get_availabl: id  0 | task -1 | selected slot by LRU, t_last = 555698100
+
+[18:38:57.465] [MODEL_STDERR] 9.32.530.886 I slot launch_slot_: id  0 | task 5541 | processing task, is_child = 0
+
+[18:38:57.707] [RESOURCE] RAM余量=12895MB 提交余量=8703MB CPU利用率=6% GPU=4852/10240MB余量 使用率2% 温度=44
+[18:39:01.644] [MODEL_STDERR] 9.36.710.516 I slot print_timing: id  0 | task 5541 | n_gen =    214, tg =  70.85 t/s, tg_3s =  71.19 t/s
+
+[18:39:02.860] [RESOURCE] RAM余量=12816MB 提交余量=8636MB CPU利用率=89% GPU=4852/10240MB余量 使用率50% 温度=52
+[18:39:04.650] [MODEL_STDERR] 9.39.716.096 I slot print_timing: id  0 | task 5541 | n_gen =    436, tg =  72.36 t/s, tg_3s =  73.86 t/s
+
+[18:39:07.653] [MODEL_STDERR] 9.42.719.479 I slot print_timing: id  0 | task 5541 | n_gen =    654, tg =  72.43 t/s, tg_3s =  72.58 t/s
+
+[18:39:08.004] [RESOURCE] RAM余量=12823MB 提交余量=8634MB CPU利用率=89% GPU=4852/10240MB余量 使用率51% 温度=53
+[18:39:09.070] [MODEL_STDERR] 9.44.136.391 I slot print_timing: id  0 | task 5541 | prompt eval time =    1173.41 ms /  1358 tokens (    0.86 ms per token,  1157.31 tokens per second)
+9.44.136.396 I slot print_timing: id  0 | task 5541 |        eval time =   10432.07 ms /   760 tokens (   13.74 ms per token,    72.76 tokens per second)
+9.44.136.414 I slot print_timing: id  0 | task 5541 |       total time =   11605.48 ms /  2118 tokens
+9.44.136.415 I slot print_timing: id  0 | task 5541 |    graphs reused =       6424
+
+[18:39:09.071] [MODEL_STDERR] 9.44.136.571 I slot      release: id  0 | task 5541 | stop processing: n_tokens = 2118, truncated = 0
+
+[18:39:09.097] [UI] [聊天] 回复完成
+[18:39:13.135] [RESOURCE] RAM余量=12830MB 提交余量=8640MB CPU利用率=7% GPU=4852/10240MB余量 使用率1% 温度=48
+[18:39:18.277] [RESOURCE] RAM余量=12826MB 提交余量=8643MB CPU利用率=8% GPU=4852/10240MB余量 使用率2% 温度=46
+[18:39:23.441] [RESOURCE] RAM余量=12828MB 提交余量=8641MB CPU利用率=1% GPU=4852/10240MB余量 使用率0% 温度=46
+[18:39:28.570] [RESOURCE] RAM余量=12825MB 提交余量=8632MB CPU利用率=48% GPU=4852/10240MB余量 使用率1% 温度=45
+[18:39:33.734] [RESOURCE] RAM余量=12825MB 提交余量=8639MB CPU利用率=12% GPU=4852/10240MB余量 使用率0% 温度=45
+[18:39:38.850] [RESOURCE] RAM余量=12831MB 提交余量=8642MB CPU利用率=1% GPU=4852/10240MB余量 使用率0% 温度=44
+[18:39:43.964] [RESOURCE] RAM余量=12802MB 提交余量=8611MB CPU利用率=23% GPU=4852/10240MB余量 使用率0% 温度=44
+[18:39:49.133] [RESOURCE] RAM余量=12838MB 提交余量=8644MB CPU利用率=9% GPU=4852/10240MB余量 使用率0% 温度=44
+[18:39:54.256] [RESOURCE] RAM余量=12831MB 提交余量=8644MB CPU利用率=2% GPU=4852/10240MB余量 使用率1% 温度=43
+[18:39:59.398] [RESOURCE] RAM余量=12833MB 提交余量=8644MB CPU利用率=16% GPU=4852/10240MB余量 使用率1% 温度=43
+[18:40:00.496] [UI] [退出] 1/10 停止接收新任务...
+[18:40:00.499] [UI] [退出] 2/10 停止当前Agent与持续任务...
+[18:40:00.512] [UI] [退出] 3/10 等待Agent Worker结束...
+[18:40:00.515] [UI] [退出] Agent Worker 已退出
+[18:40:00.518] [UI] [退出] 4/10 停止LLM/VLM请求与模型服务...
+[18:40:03.860] [UI] [退出] LLM/VLM服务与Model Worker已退出
+[18:40:03.863] [UI] [退出] 5/10 停止UIA扫描与UIA Worker...
+[18:40:03.867] [UI] [退出] UIAutomationEngine与UIA Worker已退出
+[18:40:03.870] [UI] [退出] 6/10 等待IO Worker结束...
+[18:40:03.874] [UI] [退出] IO Worker已退出
+[18:40:03.876] [UI] [退出] 7/10 关闭SQLite / wood.db...
+[18:40:04.024] [UI] [退出] SQLite连接已关闭
+[18:40:04.027] [UI] [退出] 8/10 关闭Overlay与系统托盘...
+[18:40:04.034] [UI] [退出] 9/10 释放界面与运行资源...
+[18:40:04.050] [EXIT] Worker状态：agent=stopped model=stopped uia=stopped io=stopped
+[18:40:04.084] [UI] [退出] 10/10 程序关闭...
+[18:40:04.159] [EXIT] 程序退出请求已提交
+[18:40:04.219] [SYSTEM] [退出] Qt事件循环准备退出
+[18:40:04.221] [SYSTEM] [退出] Qt事件循环已结束
+[18:40:04.221] [SYSTEM] [退出] 主线程COM已释放，进程返回

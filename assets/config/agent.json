@@ -1,0 +1,493 @@
+{
+  "agent": {
+    "enabled": true,
+    "mode": "assist",
+    "max_steps": 80,
+    "max_retries_per_step": 3,
+    "max_same_action_repeat": 3,
+    "step_timeout_ms": 45000,
+    "tool_timeout_ms": 120000,
+    "step_delay_ms": 200,
+    "observe_before_action": true,
+    "verify_after_action": true,
+    "reobserve_after_failure": true,
+    "auto_retry_failed_action": true,
+    "normalize_unknown_actions": true
+  },
+  "work_mode": {
+    "default": "chat",
+    "restore_last_control_mode_on_startup": false,
+    "allow_chat": true,
+    "allow_desktop_control": true,
+    "allow_window_control": true,
+    "allow_image_chat": true,
+    "allow_screenshot_chat": true
+  },
+  "modes": {
+    "observe": {
+      "allow_action": false,
+      "allow_uia_read": true,
+      "allow_vision": true,
+      "allow_shell": false
+    },
+    "assist": {
+      "allow_action": true,
+      "confirm_high_risk": true,
+      "allow_uia": true,
+      "allow_shell": true,
+      "allow_vision": true
+    },
+    "auto": {
+      "allow_action": true,
+      "confirm_high_risk": true,
+      "allow_uia": true,
+      "allow_shell": true,
+      "allow_vision": true
+    }
+  },
+  "control_scope": {
+    "desktop_control": {
+      "enabled": true,
+      "scope": "desktop",
+      "allow_cross_window": true,
+      "uia_refresh_interval_ms": 10000,
+      "overlay_refresh_interval_ms": 250,
+      "show_overlay": true,
+      "show_clickable_only": true,
+      "show_id": true,
+      "show_type": true,
+      "show_name": true,
+      "idle_uia_refresh_interval_ms": 10000,
+      "active_uia_refresh_interval_ms": 1000,
+      "overview_max_depth": 2,
+      "overview_max_items": 500,
+      "full_scan_only_when_agent_active": true,
+      "stable_overlay_swap": true,
+      "preserve_previous_overlay_until_new_scan_ready": true
+    },
+    "window_control": {
+      "enabled": true,
+      "scope": "selected_window",
+      "restrict_to_selected_hwnd": true,
+      "allow_cross_window": false,
+      "window_rect_refresh_interval_ms": 150,
+      "uia_refresh_interval_ms": 1000,
+      "overlay_refresh_interval_ms": 150,
+      "vlm_refresh_mode": "on_demand",
+      "stop_when_window_closed": true,
+      "show_overlay": true,
+      "show_clickable_only": true,
+      "show_id": true,
+      "show_type": true,
+      "show_name": true,
+      "stable_overlay_swap": true,
+      "preserve_previous_overlay_until_new_scan_ready": true,
+      "overlay_fill_enabled": false,
+      "overlay_edge_only": true
+    }
+  },
+  "tool_priority": [
+    "mcp",
+    "uia",
+    "vision",
+    "coordinate"
+  ],
+  "observation": {
+    "scan_uia_before_first_step": true,
+    "scan_uia_after_window_change": true,
+    "scan_uia_after_click": true,
+    "scan_uia_after_text_input": true,
+    "screenshot_only_when_needed": true,
+    "vlm_only_when_needed": true,
+    "maximum_uia_items_in_prompt": 120,
+    "desktop_uia_scope": "desktop",
+    "window_uia_scope": "selected_window"
+  },
+  "verification": {
+    "enabled": true,
+    "use_llm_verifier": true,
+    "use_uia_verification": true,
+    "use_visual_verification": true,
+    "minimum_confidence": 0.75,
+    "require_scope_match": true,
+    "window_control_verify_selected_hwnd_only": true,
+    "verify_observations_locally": true
+  },
+  "history": {
+    "max_steps_in_context": 6,
+    "max_tool_results_in_context": 4,
+    "summarize_old_steps": true,
+    "max_summary_chars": 6000
+  },
+  "user_interrupt": {
+    "enabled": true,
+    "mouse_move": true,
+    "mouse_click": true,
+    "keyboard_input": true,
+    "ignore_ai_injected_input": true,
+    "pause_agent_on_user_input": true,
+    "sustain_ms": 5000,
+    "continuity_gap_ms": 700,
+    "single_mouse_move_interrupt": false,
+    "single_click_interrupt": false,
+    "single_key_interrupt": false
+  },
+  "fallback": {
+    "allow_vision_fallback": true,
+    "allow_coordinate_fallback": true,
+    "allow_shell_fallback": false,
+    "allow_retry_with_new_observation": true
+  },
+  "completion": {
+    "require_final_verification": true,
+    "allow_model_done_action": true,
+    "show_completion_message": true,
+    "chat_show_only_user_message": true,
+    "hide_internal_json_from_chat": true,
+    "write_internal_json_to_log": true,
+    "stop_on_terminal_failure": true,
+    "stop_on_blocked": true
+  },
+  "task": {
+    "default_type": "one_shot",
+    "continuous_keywords": [
+      "一直",
+      "持续",
+      "不断",
+      "连续聊天",
+      "一直聊天",
+      "持续监控",
+      "直到",
+      "为止",
+      "一直聊",
+      "聊到",
+      "一直回复",
+      "持续回复",
+      "做客服",
+      "客服值守",
+      "有消息就回复",
+      "来了消息就回复"
+    ],
+    "continuous_max_steps": 200,
+    "continuous_idle_wait_ms": 1200,
+    "continuous_stop_on_user_request": true,
+    "customer_service_continuous": true,
+    "waiting_consumes_step_budget": false
+  },
+  "context": {
+    "version": 2,
+    "strategy": "local_bounded_state",
+    "keep_recent_steps": 2,
+    "summary_max_events": 4,
+    "summary_persist_enabled": true,
+    "recover_from_summary": true,
+    "overflow_error_keywords": [
+      "exceeds the available context size",
+      "exceed_context_size_error",
+      "context_length_exceeded",
+      "maximum context length"
+    ]
+  },
+  "threading": {
+    "enabled": true,
+    "ui_thread": {
+      "responsibility": "UI rendering, user input, tray, overlay presentation only",
+      "block_long_tasks": false
+    },
+    "agent_worker": {
+      "enabled": true,
+      "name": "AgentWorker",
+      "queue_max_pending": 32,
+      "shutdown_timeout_ms": 5000
+    },
+    "model_worker": {
+      "enabled": true,
+      "name": "ModelWorker",
+      "stream_chat": true,
+      "queue_max_pending": 16,
+      "shutdown_timeout_ms": 8000
+    },
+    "uia_worker": {
+      "enabled": true,
+      "name": "UIAWorker",
+      "com_apartment": "MTA",
+      "queue_max_pending": 16,
+      "shutdown_timeout_ms": 5000
+    },
+    "io_worker": {
+      "enabled": true,
+      "name": "IOWorker",
+      "queue_max_pending": 32,
+      "shutdown_timeout_ms": 3000
+    }
+  },
+  "startup": {
+    "show_stage_logs": true,
+    "stages": [
+      "config",
+      "database",
+      "uia_worker",
+      "llm_service",
+      "llm_model",
+      "vlm_service",
+      "vlm_model",
+      "agent_worker",
+      "ready"
+    ],
+    "stage_timeout_ms": 120000,
+    "fail_fast_on_required_stage": true
+  },
+  "shutdown": {
+    "show_stage_logs": true,
+    "stop_new_tasks_first": true,
+    "stages": [
+      "agent_task",
+      "continuous_task",
+      "uia_scan",
+      "model_requests",
+      "model_services",
+      "worker_threads",
+      "database",
+      "overlay",
+      "tray",
+      "resources",
+      "quit"
+    ],
+    "graceful_timeout_ms": 8000,
+    "force_kill_fallback_delay_ms": 3000
+  },
+  "workflow": {
+    "version": 2,
+    "allow_explicit_tasks_from_chat": true,
+    "launch_timeout_ms": 15000,
+    "allow_visual_launch_fallback": true,
+    "visual_launch_max_steps": 10,
+    "allow_expert_shell": false,
+    "idle_poll_ms": 1500,
+    "idle_heartbeat_ms": 15000,
+    "external_prompts_first": true,
+    "application_resolve_scan_budget_ms": 2500,
+    "application_close_timeout_ms": 15000,
+    "wait_for_change_model_free": true,
+    "wait_for_change_replan_only_on_change": true,
+    "default_wait_ms": 1000
+  },
+  "resource_safety": {
+    "auto_allocate": true,
+    "ram_budget_percent": 75,
+    "vram_budget_percent": 80,
+    "commit_budget_percent": 85,
+    "cpu_thread_percent": 75,
+    "ram_emergency_percent": 92,
+    "vram_emergency_percent": 95,
+    "commit_emergency_percent": 95,
+    "llm_target_context": 16384,
+    "vlm_target_context": 8192,
+    "single_model_resident": true,
+    "reuse_multimodal_for_text": true,
+    "vlm_max_tokens": 1024
+  },
+  "routing": {
+    "authorization_source": "program_state",
+    "desktop_control_authorizes_task_execution": true,
+    "window_control_authorizes_selected_hwnd_execution": true,
+    "model_explicit_action_is_authorization": false,
+    "window_control_chat_kind_is_application_operation": true,
+    "deterministic_task_classification_first": true,
+    "allow_explicit_no_control_request": true
+  },
+  "observation_policy": {
+    "default": "uia_then_vision",
+    "customer_service": "uia_then_vision",
+    "creative_workflow": "vision_first",
+    "document_workflow": "uia_first",
+    "operate_application": "uia_then_vision",
+    "vision_after_uia_failure": true,
+    "do_not_run_vlm_every_step": true,
+    "verify_creative_stage_after_mouse_path": true
+  },
+  "capability_lock": {
+    "enabled": true,
+    "lock_mcp_unavailable_for_task": true,
+    "lock_uia_unusable_for_task": true,
+    "uia_min_nodes_default": 3,
+    "uia_min_actionable_default": 3,
+    "allow_reprobe_only_on_explicit_reset": true,
+    "remove_locked_actions_from_planner": true
+  },
+  "world_state": {
+    "enabled": true,
+    "summary_mode": "current_world_state",
+    "keep_recent_actions": 2,
+    "persist_window_roi": true,
+    "persist_capability_state": true,
+    "persist_last_screenshot_path": true,
+    "persist_visual_targets": true,
+    "do_not_persist_old_uia_ids_as_current": true,
+    "persist_target_entity": true,
+    "persist_visual_watchdog": true
+  },
+  "visual_audit": {
+    "enabled": true,
+    "directory": "assets/uppic/log",
+    "save_every_poll": false,
+    "save_agent_observation": true
+  },
+  "visual_grounding": {
+    "enabled": true,
+    "customer_service_target_from_goal": true,
+    "direct_click_when_target_found": true,
+    "refine_when_visible_text_matches_but_target_missing": true,
+    "max_refine_attempts": 2,
+    "minimum_confidence": 0.7,
+    "max_vision_only_cycles": 3,
+    "stop_instead_of_blind_retry": true,
+    "max_semantic_target_attempts": 3,
+    "resume_pending_semantic_action": true,
+    "semantic_target_missing_is_failure": false
+  },
+  "runtime_app_profile": {
+    "enabled": true,
+    "static_registry_is_hint_only": true,
+    "allow_unknown_process": true,
+    "generate_for_selected_window_tasks": true,
+    "minimum_confidence": 0.45,
+    "persist_audit_profile": true,
+    "allowed_observation_policies": [
+      "uia_first",
+      "uia_then_vision",
+      "vision_first"
+    ],
+    "preferred_action_families": [
+      "mcp",
+      "uia",
+      "vision",
+      "mouse",
+      "keyboard",
+      "system"
+    ],
+    "legacy_allowed_action_families_is_preference_only": true,
+    "model_may_disable_system_capability": false,
+    "model_may_create_new_tools": false
+  },
+  "generic_policy": {
+    "enabled": true,
+    "phase_action_ready_when_targets_exist": true,
+    "hide_observation_tools_while_action_ready": false,
+    "max_planner_observation_violations": 4,
+    "max_no_progress_cycles": 6,
+    "reset_after_real_action": true,
+    "software_specific_state_machine_required": false,
+    "continuous_observation_to_wait": true,
+    "targeted_grounding_is_observation_violation": false,
+    "pending_commit_verification_is_observation_violation": false,
+    "wait_for_change_is_observation_violation": false,
+    "chat_wait_requires_sent_interaction": true,
+    "locked_uia_never_replan_as_uia": true
+  },
+  "tool_authority": {
+    "runtime_profile_is_permission_source": false,
+    "permission_sources": [
+      "permissions.json",
+      "tools.json",
+      "agent_mode",
+      "capability_probe"
+    ],
+    "runtime_profile_role": "preference_and_strategy_only",
+    "guarantee_observation_fallback": true,
+    "when_uia_unavailable_keep_vision_if_system_allowed": true,
+    "when_mcp_unavailable_keep_uia_or_vision_if_system_allowed": true
+  },
+  "action_resolver": {
+    "enabled": true,
+    "resolve_before_schema_validation": true,
+    "bind_semantic_target_from_latest_vision": true,
+    "accept_target_id_normalized_pair_compatibility": true,
+    "accept_coordinates_from_reason_compatibility": true,
+    "single_high_confidence_target_fallback": true,
+    "minimum_visual_target_confidence": 0.55,
+    "pending_text_commit": {
+      "enabled": true,
+      "conversation_surface_only": true,
+      "prefer_visible_send_or_submit_target": true,
+      "enter_fallback_when_send_target_missing": true,
+      "block_wait_until_commit_dispatched": true
+    }
+  },
+  "lightweight_progress": {
+    "enabled": true,
+    "max_recent_success_actions": 5,
+    "block_immediate_duplicate_side_effect": true,
+    "explicit_target_requires_semantic_match": true,
+    "allow_single_target_fallback_only_when_target_unspecified": true
+  },
+  "context_recovery": {
+    "fallback_to_lightweight_planner_when_over_budget": true,
+    "preserve_user_goal": true,
+    "preserve_latest_vision_targets": true,
+    "preserve_available_actions": true,
+    "preserve_recent_progress": true,
+    "do_not_abort_on_first_over_budget": true
+  },
+  "task_lifecycle": {
+    "exclusive_generation": true,
+    "cancel_previous_on_mode_switch": true,
+    "cancel_previous_on_chat": true,
+    "cancel_previous_on_image_analysis": true,
+    "drop_stale_results": true
+  },
+  "interaction_transactions": {
+    "enabled": true,
+    "advance_on_world_state_change": true,
+    "duplicate_guard_same_epoch_only": true,
+    "pending_commit_bypasses_duplicate_guard": true
+  },
+  "vision_routing": {
+    "human_modes_natural_language": true,
+    "agent_modes_json_only": true,
+    "never_show_agent_json_to_user": true,
+    "prefer_norm_rect_for_hit_testing": true
+  },
+  "vision_semantic_context": {
+    "enabled": true,
+    "summary_max_chars": 500,
+    "latest_relevant_text_max_chars": 1000,
+    "include_in_planner": true,
+    "separate_semantics_from_targets": true
+  },
+  "simple_interaction": {
+    "enabled": true,
+    "conversation_first_turn_must_act": true,
+    "wait_only_after_verified_commit": true,
+    "prefer_natural_keyboard_type_for_conversation": true,
+    "software_specific_rules": false
+  },
+  "text_composer": {
+    "enabled": true,
+    "auto_complete_missing_keyboard_text": true,
+    "conversation_only": true,
+    "max_output_chars": 500,
+    "remove_keyboard_target_id": true,
+    "focus_visual_input_before_typing": true
+  },
+  "current_conversation_protection": {
+    "enabled": true,
+    "block_random_contact_switch_without_explicit_target": true,
+    "direct_keyboard_type_when_input_visible": true,
+    "target_current_input_when_input_not_visible": true,
+    "clean_empty_relevant_text_markers": true
+  },
+  "user_image_analysis": {
+    "dedicated_short_prompt": true,
+    "validate_output_before_success": true,
+    "retry_invalid_output_once": true,
+    "max_retries": 1
+  },
+  "pending_commit": {
+    "strict_conversation_verification": true,
+    "max_click_attempts": 3,
+    "retry_downward_norm_step": 0.012,
+    "prefer_norm_rect_center": true,
+    "do_not_enter_wait_if_typed_text_still_visible": true
+  }
+}

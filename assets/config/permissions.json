@@ -1,0 +1,118 @@
+{
+  "default_policy": "confirm",
+  "shell": {
+    "enabled": false,
+    "cmd_enabled": false,
+    "powershell_enabled": false,
+    "unknown_command_policy": "confirm"
+  },
+  "safe_prefixes": [
+    "where",
+    "whoami",
+    "hostname"
+  ],
+  "confirm_contains": [
+    "del ",
+    "erase ",
+    "rmdir",
+    "rd ",
+    "move ",
+    "rename ",
+    "copy ",
+    "xcopy ",
+    "robocopy ",
+    "taskkill",
+    "reg add",
+    "reg delete",
+    "shutdown",
+    "restart-computer",
+    "stop-process",
+    "remove-item",
+    "set-content",
+    "clear-content",
+    "invoke-webrequest",
+    "curl ",
+    "wget ",
+    "start-process"
+  ],
+  "forbidden_contains": [
+    "format ",
+    "diskpart",
+    "clean all",
+    "clean disk",
+    "bcdedit /delete",
+    "bcdedit /deletevalue",
+    "vssadmin delete shadows",
+    "cipher /w:",
+    "wmic shadowcopy delete"
+  ],
+  "file_access": {
+    "allow_read": true,
+    "allow_write": true,
+    "allow_create": true,
+    "allow_delete": false,
+    "delete_requires_confirmation": true,
+    "allow_agent_context_summary_write": true,
+    "agent_context_summary_directory": "assets/uppic/log/agent_context"
+  },
+  "uia": {
+    "allow_scan": true,
+    "allow_invoke": true,
+    "allow_set_value": true,
+    "allow_toggle": true,
+    "allow_select": true,
+    "allow_scroll": true,
+    "allow_focus": true
+  },
+  "input": {
+    "allow_mouse_move": true,
+    "allow_mouse_click": true,
+    "allow_mouse_drag": true,
+    "allow_keyboard_type": true,
+    "allow_hotkey": true,
+    "require_agent_injected_marker": true,
+    "window_control_require_point_inside_selected_window": true,
+    "allow_mouse_path": true,
+    "continuous_human_interference_ms": 5000,
+    "ignore_single_mouse_move": true,
+    "ignore_single_mouse_click": true,
+    "ignore_single_keypress": true
+  },
+  "system": {
+    "allow_start_process": true,
+    "allow_stop_process": false,
+    "allow_registry_write": false,
+    "allow_service_control": false,
+    "allow_admin_elevation": false,
+    "explicit_task_launch_is_authorized": true
+  },
+  "scope": {
+    "chat_allow_action": false,
+    "desktop_control_allow_all_visible_windows": true,
+    "window_control_restrict_to_selected_hwnd": true,
+    "window_control_allow_taskbar": false,
+    "window_control_allow_other_windows": false,
+    "window_control_coordinate_must_be_inside_target_rect": true,
+    "window_control_allow_shell": false
+  },
+  "confirmation": {
+    "use_custom_dialog": true,
+    "high_risk_color": "#fb6a22",
+    "danger_color": "#ff6764",
+    "timeout_enabled": false
+  },
+  "threading": {
+    "allow_background_model_worker": true,
+    "allow_background_uia_worker": true,
+    "allow_background_io_worker": true,
+    "allow_ui_thread_blocking_model_calls": false,
+    "allow_ui_thread_blocking_uia_scan": false
+  },
+  "context": {
+    "allow_local_summary_persistence": true,
+    "allow_summary_recovery": true,
+    "allow_summary_overwrite_same_task": true,
+    "allow_summary_delete_on_task_success": false
+  },
+  "version": 2
+}

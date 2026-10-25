@@ -1,0 +1,31 @@
+{
+    "created_at": "2026-10-24T18:37:01.540",
+    "goal": "和他聊天 问出做上面职业",
+    "process": "Weixin.exe",
+    "runtime_profile": {
+        "confidence": 0.95,
+        "dynamic_generated": true,
+        "likely_targets": [
+            "chat_input_field",
+            "send_button"
+        ],
+        "preferred_action_families": [
+            "keyboard",
+            "uia"
+        ],
+        "preferred_observation": "uia_then_vision",
+        "process_profile": "Weixin.exe",
+        "rationale": "用户意图是与微信中的某个联系人进行对话，询问对方的职业。微信是一个典型的聊天应用，操作应聚焦于输入和发送消息。",
+        "source": "dynamic_llm",
+        "surface_type": "chat_interface",
+        "task_profile": "operate_application"
+    },
+    "task_id": "20261024_183658_384_4c98e1f9",
+    "window_rect": [
+        267,
+        99,
+        796,
+        892
+    ],
+    "window_title": "微信"
+}

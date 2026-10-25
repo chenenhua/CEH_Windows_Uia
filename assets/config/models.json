@@ -1,0 +1,194 @@
+{
+  "active_profile": "local_gemma",
+  "profiles": {
+    "local_gemma": {
+      "llm": {
+        "provider": "llama_cpp",
+        "role": "planner",
+        "enabled": true,
+        "llama_cpp": {
+          "runtime": "cuda13",
+          "model": "D:/桌面/project/models/gemma-4/gemma-4-E4B-it-Q4_0.gguf",
+          "mmproj": "",
+          "server_executable": "llama-server.exe",
+          "host": "127.0.0.1",
+          "port": 8888,
+          "context": 32768,
+          "batch_size": 512,
+          "ubatch_size": 512,
+          "gpu_layers": 999,
+          "threads": 8,
+          "parallel": 1,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "min_p": 0.05,
+          "repeat_penalty": 1.05,
+          "max_tokens": 4096,
+          "timeout_ms": 120000
+        },
+        "ollama": {
+          "base_url": "http://127.0.0.1:11434",
+          "model": "gemma4:e4b",
+          "context": 32768,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "max_tokens": 4096,
+          "timeout_ms": 120000
+        },
+        "online": {
+          "base_url": "https://api.openai.com/v1",
+          "api_key": "",
+          "model": "",
+          "context": 32768,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "max_tokens": 4096,
+          "timeout_ms": 120000
+        }
+      },
+      "vlm": {
+        "provider": "llama_cpp",
+        "role": "vision",
+        "enabled": true,
+        "llama_cpp": {
+          "runtime": "cuda13",
+          "model": "D:/桌面/project/models/gemma-4/gemma-4-E4B-it-Q4_0.gguf",
+          "mmproj": "D:/桌面/project/models/gemma-4/mmproj-gemma-4-E4B-it-Q8_0.gguf",
+          "server_executable": "llama-server.exe",
+          "host": "127.0.0.1",
+          "port": 8889,
+          "context": 16384,
+          "batch_size": 512,
+          "ubatch_size": 512,
+          "gpu_layers": 999,
+          "threads": 8,
+          "parallel": 1,
+          "temperature": 0.1,
+          "top_p": 0.9,
+          "top_k": 40,
+          "max_tokens": 2048,
+          "timeout_ms": 120000
+        },
+        "ollama": {
+          "base_url": "http://127.0.0.1:11434",
+          "model": "",
+          "context": 16384,
+          "temperature": 0.1,
+          "max_tokens": 2048,
+          "timeout_ms": 120000
+        },
+        "online": {
+          "base_url": "https://api.openai.com/v1",
+          "api_key": "",
+          "model": "",
+          "context": 16384,
+          "temperature": 0.1,
+          "max_tokens": 2048,
+          "timeout_ms": 120000
+        }
+      },
+      "verifier": {
+        "provider": "same_as_llm",
+        "enabled": true,
+        "temperature": 0.0,
+        "max_tokens": 512
+      }
+    },
+    "ollama_default": {
+      "llm": {
+        "provider": "ollama",
+        "role": "planner",
+        "enabled": true,
+        "ollama": {
+          "base_url": "http://127.0.0.1:11434",
+          "model": "gemma4:e4b",
+          "context": 32768,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "top_k": 40,
+          "max_tokens": 4096,
+          "timeout_ms": 120000
+        }
+      },
+      "vlm": {
+        "provider": "ollama",
+        "role": "vision",
+        "enabled": false,
+        "ollama": {
+          "base_url": "http://127.0.0.1:11434",
+          "model": "",
+          "context": 16384,
+          "temperature": 0.1,
+          "max_tokens": 2048,
+          "timeout_ms": 120000
+        }
+      },
+      "verifier": {
+        "provider": "same_as_llm",
+        "enabled": true,
+        "temperature": 0.0,
+        "max_tokens": 512
+      }
+    },
+    "online_api": {
+      "llm": {
+        "provider": "online",
+        "role": "planner",
+        "enabled": true,
+        "online": {
+          "base_url": "https://api.openai.com/v1",
+          "api_key": "",
+          "model": "",
+          "context": 32768,
+          "temperature": 0.2,
+          "top_p": 0.9,
+          "max_tokens": 4096,
+          "timeout_ms": 120000
+        }
+      },
+      "vlm": {
+        "provider": "online",
+        "role": "vision",
+        "enabled": true,
+        "online": {
+          "base_url": "https://api.openai.com/v1",
+          "api_key": "",
+          "model": "",
+          "context": 16384,
+          "temperature": 0.1,
+          "max_tokens": 2048,
+          "timeout_ms": 120000
+        }
+      },
+      "verifier": {
+        "provider": "same_as_llm",
+        "enabled": true,
+        "temperature": 0.0,
+        "max_tokens": 512
+      }
+    }
+  },
+  "runtime": {
+    "auto_select": true,
+    "priority": [
+      "cuda13",
+      "vulkan",
+      "cpu"
+    ],
+    "paths": {
+      "cpu": "runtime/Windows/cpu",
+      "cuda13": "runtime/Windows/cuda13",
+      "vulkan": "runtime/Windows/vulkan"
+    }
+  },
+  "server": {
+    "health_endpoint": "/health",
+    "chat_endpoint": "/v1/chat/completions",
+    "startup_timeout_ms": 120000,
+    "shutdown_timeout_ms": 5000,
+    "auto_restart_on_failure": true,
+    "maximum_restart_count": 3
+  }
+}

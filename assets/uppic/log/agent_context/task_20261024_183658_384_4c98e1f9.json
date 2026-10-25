@@ -1,0 +1,94 @@
+{
+    "capability": {
+        "control_channel": "VisionMouse",
+        "mcp_checked": true,
+        "mcp_usable": false,
+        "uia_actionable": 0,
+        "uia_checked": true,
+        "uia_nodes": 2,
+        "uia_usable": false
+    },
+    "generic_policy_phase": "WAIT_FOR_CHANGE",
+    "goal": "和他聊天 问出做上面职业",
+    "last_screenshot": "D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/24/2026_10_24_18_37_28_966_task_20261024_183658_384_4c98e1f9_step_005_window_observe.png",
+    "observation_policy": "uia_then_vision",
+    "pending_action": {
+    },
+    "recent_history": [
+        {
+            "action": {
+                "action": "vision_analyze",
+                "value_excerpt": ""
+            },
+            "result": "视觉观察已校验；目标与坐标在LATEST_VISION_OBSERVATION中。",
+            "tool_success": true,
+            "verification": {
+                "goal_success": false,
+                "reason": "",
+                "step_success": false
+            }
+        },
+        {
+            "action": {
+                "action": "wait",
+                "target_id": null,
+                "value_excerpt": ""
+            },
+            "result": "等待1000ms完成。",
+            "tool_success": true,
+            "verification": {
+                "goal_success": false,
+                "reason": "工具已执行，最终目标尚待确认",
+                "step_success": true
+            }
+        }
+    ],
+    "resume_rule": "恢复时重新核对进程、窗口位置、联系人和消息发送状态；旧UIA ID、旧frame_id和旧坐标全部失效，不得直接重放未确认动作。",
+    "runtime_app_profile": {
+        "confidence": 0.95,
+        "dynamic_generated": true,
+        "likely_targets": [
+            "chat_input_field",
+            "send_button"
+        ],
+        "preferred_action_families": [
+            "keyboard",
+            "uia"
+        ],
+        "preferred_observation": "uia_then_vision",
+        "process_profile": "Weixin.exe",
+        "rationale": "用户意图是与微信中的某个联系人进行对话，询问对方的职业。微信是一个典型的聊天应用，操作应聚焦于输入和发送消息。",
+        "source": "dynamic_llm",
+        "surface_type": "chat_interface",
+        "task_profile": "operate_application"
+    },
+    "scope": "window",
+    "status": "cancelled",
+    "step": 5,
+    "summary": "{\"action_resolution\":{\"last_note\":\"pending_commit直接绑定提交目标“发送按钮”\",\"last_target_label\":\"发送按钮\",\"last_typed_text\":\"最近怎么样呀？\",\"pending_commit\":false,\"pending_commit_label\":\"\"},\"capability\":{\"control_channel\":\"VisionMouse\",\"mcp\":\"unavailable\",\"mcp_reason\":\"未配置MCP\",\"uia\":\"unavailable\",\"uia_reason\":\"UIA信息不足：nodes=2 actionable=0；阈值 nodes>=3 actionable>=1\",\"vision_required\":false},\"conversation_state\":\"\",\"current_contact\":\"\",\"frame_id\":\"b7b65540150f423191f40c76cd6544b5\",\"generic_policy_phase\":\"WAIT_FOR_CHANGE\",\"known_visual_targets\":[{\"confidence\":0.95,\"description\":\"用于输入用户回复的文本区域\",\"label\":\"消息输入框\",\"norm_rect\":[],\"norm_x\":0.5,\"norm_y\":0.95},{\"confidence\":0.95,\"description\":\"用于发送用户输入消息的按钮\",\"label\":\"发送按钮\",\"norm_rect\":[],\"norm_x\":0.93,\"norm_y\":0.95}],\"last_screenshot\":\"D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/24/2026_10_24_18_37_28_966_task_20261024_183658_384_4c98e1f9_step_005_window_observe.png\",\"next_objective\":\"等待外部回复或界面变化；没有变化时不要重新规划\",\"phase\":\"waiting\",\"recent_facts\":[{\"action\":\"vision_analyze\",\"ok\":true,\"result\":\"视觉观察已校验；目标与坐标在LATEST_VISION_OBSERVATION中。\"},{\"action\":\"wait\",\"ok\":true,\"result\":\"等待1000ms完成。\"}],\"recent_progress\":[{\"action\":\"keyboard_type\",\"result\":\"键盘文字输入成功。\",\"step\":1,\"target\":\"当前输入焦点\",\"text_excerpt\":\"最近怎么样呀？\"},{\"action\":\"mouse_click\",\"result\":\"鼠标点击成功：(1006,945) left。\",\"step\":2,\"target\":\"发送按钮\"},{\"action\":\"keyboard_hotkey\",\"result\":\"组合键执行成功：ENTER\",\"step\":3,\"target\":\"发送按钮\"},{\"action\":\"keyboard_hotkey\",\"result\":\"组合键执行成功：ENTER\",\"step\":4,\"target\":\"发送按钮\"}],\"rule\":\"旧UIA ID、旧截图坐标不可直接复用；窗口移动或重新截图后必须重新观察。\",\"runtime_app_profile\":{\"confidence\":0.95,\"dynamic_generated\":true,\"likely_targets\":[\"chat_input_field\",\"send_button\"],\"preferred_action_families\":[\"keyboard\",\"uia\"],\"preferred_observation\":\"uia_then_vision\",\"process_profile\":\"Weixin.exe\",\"rationale\":\"用户意图是与微信中的某个联系人进行对话，询问对方的职业。微信是一个典型的聊天应用，操作应聚焦于输入和发送消息。\",\"source\":\"dynamic_llm\",\"surface_type\":\"chat_interface\",\"task_profile\":\"operate_application\"},\"target\":{\"hwnd\":\"268132\",\"process\":\"Weixin.exe\",\"screen_rect\":[267,99,796,892],\"title\":\"微信\"},\"target_entity\":\"\",\"task\":\"和他聊天 问出做上面职业\",\"task_mode\":\"CONTINUOUS\",\"vision_watchdog\":{\"consecutive_observations\":1,\"grounding_failures\":0,\"grounding_target\":\"\"},\"workflow\":\"operate_application\"}",
+    "target_entity": "",
+    "target_hwnd": "268132",
+    "target_pid": 20124,
+    "target_process": "Weixin.exe",
+    "target_rect": [
+        267,
+        99,
+        796,
+        892
+    ],
+    "target_title": "微信",
+    "task_id": "20261024_183658_384_4c98e1f9",
+    "task_mode": "CONTINUOUS",
+    "task_request": {
+        "application": "微信",
+        "completion": "",
+        "continuous": true,
+        "explicit_action": true,
+        "goal": "和他聊天 问出做上面职业",
+        "kind": "operate_application"
+    },
+    "updated_at": "2026-10-24T18:38:17.312",
+    "version": 3,
+    "workflow_phase": "waiting",
+    "world_state": "{\"action_resolution\":{\"last_note\":\"pending_commit直接绑定提交目标“发送按钮”\",\"last_target_label\":\"发送按钮\",\"last_typed_text\":\"最近怎么样呀？\",\"pending_commit\":false,\"pending_commit_label\":\"\"},\"capability\":{\"control_channel\":\"VisionMouse\",\"mcp\":\"unavailable\",\"mcp_reason\":\"未配置MCP\",\"uia\":\"unavailable\",\"uia_reason\":\"UIA信息不足：nodes=2 actionable=0；阈值 nodes>=3 actionable>=1\",\"vision_required\":false},\"conversation_state\":\"\",\"current_contact\":\"\",\"frame_id\":\"b7b65540150f423191f40c76cd6544b5\",\"generic_policy_phase\":\"WAIT_FOR_CHANGE\",\"known_visual_targets\":[{\"confidence\":0.95,\"description\":\"用于输入用户回复的文本区域\",\"label\":\"消息输入框\",\"norm_rect\":[],\"norm_x\":0.5,\"norm_y\":0.95},{\"confidence\":0.95,\"description\":\"用于发送用户输入消息的按钮\",\"label\":\"发送按钮\",\"norm_rect\":[],\"norm_x\":0.93,\"norm_y\":0.95}],\"last_screenshot\":\"D:/桌面/project/CLion/windows_uia/assets/uppic/log/2026/10/24/2026_10_24_18_37_28_966_task_20261024_183658_384_4c98e1f9_step_005_window_observe.png\",\"next_objective\":\"等待外部回复或界面变化；没有变化时不要重新规划\",\"phase\":\"waiting\",\"recent_facts\":[{\"action\":\"vision_analyze\",\"ok\":true,\"result\":\"视觉观察已校验；目标与坐标在LATEST_VISION_OBSERVATION中。\"},{\"action\":\"wait\",\"ok\":true,\"result\":\"等待1000ms完成。\"}],\"recent_progress\":[{\"action\":\"keyboard_type\",\"result\":\"键盘文字输入成功。\",\"step\":1,\"target\":\"当前输入焦点\",\"text_excerpt\":\"最近怎么样呀？\"},{\"action\":\"mouse_click\",\"result\":\"鼠标点击成功：(1006,945) left。\",\"step\":2,\"target\":\"发送按钮\"},{\"action\":\"keyboard_hotkey\",\"result\":\"组合键执行成功：ENTER\",\"step\":3,\"target\":\"发送按钮\"},{\"action\":\"keyboard_hotkey\",\"result\":\"组合键执行成功：ENTER\",\"step\":4,\"target\":\"发送按钮\"}],\"rule\":\"旧UIA ID、旧截图坐标不可直接复用；窗口移动或重新截图后必须重新观察。\",\"runtime_app_profile\":{\"confidence\":0.95,\"dynamic_generated\":true,\"likely_targets\":[\"chat_input_field\",\"send_button\"],\"preferred_action_families\":[\"keyboard\",\"uia\"],\"preferred_observation\":\"uia_then_vision\",\"process_profile\":\"Weixin.exe\",\"rationale\":\"用户意图是与微信中的某个联系人进行对话，询问对方的职业。微信是一个典型的聊天应用，操作应聚焦于输入和发送消息。\",\"source\":\"dynamic_llm\",\"surface_type\":\"chat_interface\",\"task_profile\":\"operate_application\"},\"target\":{\"hwnd\":\"268132\",\"process\":\"Weixin.exe\",\"screen_rect\":[267,99,796,892],\"title\":\"微信\"},\"target_entity\":\"\",\"task\":\"和他聊天 问出做上面职业\",\"task_mode\":\"CONTINUOUS\",\"vision_watchdog\":{\"consecutive_observations\":1,\"grounding_failures\":0,\"grounding_target\":\"\"},\"workflow\":\"operate_application\"}"
+}

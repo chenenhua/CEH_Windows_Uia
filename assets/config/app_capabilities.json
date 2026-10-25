@@ -1,0 +1,332 @@
+{
+  "version": 2,
+  "description": "应用身份与已配置接口。MCP必须真实连接并成功读取工具；未配置/失败时继续UIA与视觉。支持stdio、2025系列Streamable HTTP，不自动安装第三方服务。",
+  "applications": {
+    "Photoshop.exe": {
+      "adapter": "",
+      "mcp": {
+        "enabled": false,
+        "endpoint": "",
+        "transport": "streamable_http",
+        "protocol_version": "2025-11-25",
+        "timeout_ms": 10000
+      },
+      "com": {
+        "enabled": false
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "display_name": "Photoshop",
+      "aliases": [
+        "Photoshop",
+        "PS"
+      ],
+      "process_names": [
+        "Photoshop.exe"
+      ],
+      "executable_paths": [],
+      "observation_policy": "vision_first",
+      "task_profile": "creative_workflow",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 1,
+      "capability_lock_after_probe": true
+    },
+    "Weixin.exe": {
+      "adapter": "",
+      "mcp": {
+        "enabled": false,
+        "endpoint": "",
+        "transport": "streamable_http",
+        "protocol_version": "2025-11-25",
+        "timeout_ms": 10000,
+        "command": "",
+        "args": [],
+        "env": {},
+        "headers": {}
+      },
+      "com": {
+        "enabled": false
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "display_name": "微信",
+      "aliases": [
+        "微信",
+        "WeChat",
+        "Weixin"
+      ],
+      "process_names": [
+        "Weixin.exe",
+        "WeChat.exe"
+      ],
+      "executable_paths": [],
+      "observation_policy": "uia_then_vision",
+      "task_profile": "customer_service",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 1,
+      "capability_lock_after_probe": true
+    },
+    "BaiduNetdisk.exe": {
+      "display_name": "百度网盘",
+      "aliases": [
+        "百度网盘",
+        "BaiduNetdisk",
+        "百度云"
+      ],
+      "process_names": [
+        "BaiduNetdisk.exe"
+      ],
+      "executable_paths": [],
+      "mcp": {
+        "enabled": false,
+        "transport": "streamable_http",
+        "endpoint": "",
+        "protocol_version": "2025-11-25"
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "observation_policy": "uia_first",
+      "task_profile": "operate_application",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 3,
+      "capability_lock_after_probe": true
+    },
+    "notepad.exe": {
+      "display_name": "记事本",
+      "aliases": [
+        "记事本",
+        "Notepad"
+      ],
+      "process_names": [
+        "notepad.exe"
+      ],
+      "executable_paths": [],
+      "mcp": {
+        "enabled": false,
+        "transport": "streamable_http",
+        "endpoint": "",
+        "protocol_version": "2025-11-25"
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "observation_policy": "uia_first",
+      "task_profile": "document_workflow",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 3,
+      "capability_lock_after_probe": true
+    },
+    "explorer.exe": {
+      "display_name": "文件资源管理器",
+      "aliases": [
+        "文件资源管理器",
+        "资源管理器",
+        "Explorer"
+      ],
+      "process_names": [
+        "explorer.exe"
+      ],
+      "executable_paths": [],
+      "mcp": {
+        "enabled": false,
+        "transport": "streamable_http",
+        "endpoint": "",
+        "protocol_version": "2025-11-25"
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "observation_policy": "uia_first",
+      "task_profile": "operate_application",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 3,
+      "capability_lock_after_probe": true
+    },
+    "CalculatorApp.exe": {
+      "display_name": "计算器",
+      "aliases": [
+        "计算器",
+        "Calculator",
+        "calc"
+      ],
+      "process_names": [
+        "CalculatorApp.exe",
+        "calc.exe"
+      ],
+      "executable_paths": [],
+      "mcp": {
+        "enabled": false,
+        "transport": "streamable_http",
+        "endpoint": "",
+        "protocol_version": "2025-11-25"
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "observation_policy": "uia_first",
+      "task_profile": "operate_application",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 3,
+      "capability_lock_after_probe": true
+    },
+    "mspaint.exe": {
+      "display_name": "画图",
+      "aliases": [
+        "画图",
+        "Paint",
+        "mspaint"
+      ],
+      "process_names": [
+        "mspaint.exe"
+      ],
+      "executable_paths": [],
+      "mcp": {
+        "enabled": false,
+        "transport": "streamable_http",
+        "endpoint": "",
+        "protocol_version": "2025-11-25"
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "observation_policy": "vision_first",
+      "task_profile": "creative_workflow",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 3,
+      "capability_lock_after_probe": true
+    },
+    "wps.exe": {
+      "display_name": "WPS文字",
+      "aliases": [
+        "WPS",
+        "WPS文字",
+        "WPS Writer",
+        "文字"
+      ],
+      "process_names": [
+        "wps.exe"
+      ],
+      "executable_paths": [],
+      "mcp": {
+        "enabled": false,
+        "transport": "streamable_http",
+        "endpoint": "",
+        "protocol_version": "2025-11-25"
+      },
+      "com": {
+        "enabled": false
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "observation_policy": "uia_first",
+      "task_profile": "document_workflow",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 3,
+      "capability_lock_after_probe": true
+    },
+    "et.exe": {
+      "display_name": "WPS表格",
+      "aliases": [
+        "WPS表格",
+        "WPS ET",
+        "ET",
+        "表格"
+      ],
+      "process_names": [
+        "et.exe"
+      ],
+      "executable_paths": [],
+      "mcp": {
+        "enabled": false,
+        "transport": "streamable_http",
+        "endpoint": "",
+        "protocol_version": "2025-11-25"
+      },
+      "com": {
+        "enabled": false
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "observation_policy": "uia_first",
+      "task_profile": "document_workflow",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 3,
+      "capability_lock_after_probe": true
+    },
+    "wpp.exe": {
+      "display_name": "WPS演示",
+      "aliases": [
+        "WPS演示",
+        "WPS PPT",
+        "WPP",
+        "演示"
+      ],
+      "process_names": [
+        "wpp.exe"
+      ],
+      "executable_paths": [],
+      "mcp": {
+        "enabled": false,
+        "transport": "streamable_http",
+        "endpoint": "",
+        "protocol_version": "2025-11-25"
+      },
+      "com": {
+        "enabled": false
+      },
+      "uia": true,
+      "vision": true,
+      "mouse_fallback": true,
+      "observation_policy": "uia_first",
+      "task_profile": "document_workflow",
+      "uia_min_nodes": 3,
+      "uia_min_actionable_items": 3,
+      "capability_lock_after_probe": true
+    }
+  },
+  "registry_policy": {
+    "role": "optional_static_hint_cache",
+    "unknown_process_allowed": true,
+    "dynamic_runtime_profile_enabled": true,
+    "entries_are_not_whitelist": true,
+    "missing_entry_does_not_block_agent": true
+  },
+  "lifecycle_schema": {
+    "preload": {
+      "enabled": false,
+      "commands": [
+        {
+          "program": "",
+          "args": [],
+          "working_directory": "",
+          "wait_for_finished": true,
+          "timeout_ms": 10000
+        }
+      ],
+      "settle_ms": 0
+    },
+    "close": {
+      "mode": "graceful_window_close",
+      "verify_process_exit": true,
+      "allow_force_kill": false
+    },
+    "launch_success": {
+      "require_window": true,
+      "allow_process_only": false,
+      "description": "默认GUI应用必须确认有效顶层HWND才算启动成功；后台/托盘应用可在具体application.lifecycle.launch_success中显式允许process_only。"
+    },
+    "per_application_override_example": {
+      "lifecycle": {
+        "launch_success": {
+          "require_window": false,
+          "allow_process_only": true
+        }
+      }
+    }
+  }
+}

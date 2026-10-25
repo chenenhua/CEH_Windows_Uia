@@ -1,0 +1,51 @@
+{
+    "capability": {
+        "control_channel": "unknown",
+        "mcp_checked": false,
+        "mcp_usable": false,
+        "uia_actionable": 0,
+        "uia_checked": false,
+        "uia_nodes": 0,
+        "uia_usable": true
+    },
+    "generic_policy_phase": "OBSERVE_OR_VERIFY",
+    "goal": "打开qq",
+    "last_screenshot": "",
+    "observation_policy": "uia_then_vision",
+    "pending_action": {
+    },
+    "recent_history": [
+    ],
+    "resume_rule": "恢复时重新核对进程、窗口位置、联系人和消息发送状态；旧UIA ID、旧frame_id和旧坐标全部失效，不得直接重放未确认动作。",
+    "runtime_app_profile": {
+    },
+    "scope": "window",
+    "status": "completed",
+    "step": 0,
+    "summary": "{\"action_resolution\":{\"last_note\":\"\",\"last_target_label\":\"\",\"last_typed_text\":\"\",\"pending_commit\":false,\"pending_commit_label\":\"\"},\"capability\":{\"control_channel\":\"unknown\",\"mcp\":\"unknown\",\"uia\":\"unknown\",\"vision_required\":false},\"conversation_state\":\"\",\"current_contact\":\"\",\"frame_id\":\"\",\"generic_policy_phase\":\"OBSERVE_OR_VERIFY\",\"known_visual_targets\":[],\"last_screenshot\":\"\",\"next_objective\":\"\",\"phase\":\"completed\",\"recent_facts\":[],\"recent_progress\":[],\"rule\":\"旧UIA ID、旧截图坐标不可直接复用；窗口移动或重新截图后必须重新观察。\",\"runtime_app_profile\":{},\"target\":{\"hwnd\":\"16975836\",\"process\":\"QQ.exe\",\"screen_rect\":[1342,500,680,440],\"title\":\"QQ\"},\"target_entity\":\"\",\"task\":\"打开qq\",\"task_mode\":\"ONE_SHOT\",\"vision_watchdog\":{\"consecutive_observations\":0,\"grounding_failures\":0,\"grounding_target\":\"\"},\"workflow\":\"open_application\"}",
+    "target_entity": "",
+    "target_hwnd": "16975836",
+    "target_pid": 26500,
+    "target_process": "QQ.exe",
+    "target_rect": [
+        1342,
+        500,
+        680,
+        440
+    ],
+    "target_title": "QQ",
+    "task_id": "20261024_183540_649_a0a107fb",
+    "task_mode": "ONE_SHOT",
+    "task_request": {
+        "application": "qq",
+        "completion": "",
+        "continuous": false,
+        "explicit_action": true,
+        "goal": "打开qq",
+        "kind": "open_application"
+    },
+    "updated_at": "2026-10-24T18:35:51.463",
+    "version": 3,
+    "workflow_phase": "completed",
+    "world_state": "{\"action_resolution\":{\"last_note\":\"\",\"last_target_label\":\"\",\"last_typed_text\":\"\",\"pending_commit\":false,\"pending_commit_label\":\"\"},\"capability\":{\"control_channel\":\"unknown\",\"mcp\":\"unknown\",\"uia\":\"unknown\",\"vision_required\":false},\"conversation_state\":\"\",\"current_contact\":\"\",\"frame_id\":\"\",\"generic_policy_phase\":\"OBSERVE_OR_VERIFY\",\"known_visual_targets\":[],\"last_screenshot\":\"\",\"next_objective\":\"\",\"phase\":\"completed\",\"recent_facts\":[],\"recent_progress\":[],\"rule\":\"旧UIA ID、旧截图坐标不可直接复用；窗口移动或重新截图后必须重新观察。\",\"runtime_app_profile\":{},\"target\":{\"hwnd\":\"16975836\",\"process\":\"QQ.exe\",\"screen_rect\":[1342,500,680,440],\"title\":\"QQ\"},\"target_entity\":\"\",\"task\":\"打开qq\",\"task_mode\":\"ONE_SHOT\",\"vision_watchdog\":{\"consecutive_observations\":0,\"grounding_failures\":0,\"grounding_target\":\"\"},\"workflow\":\"open_application\"}"
+}
